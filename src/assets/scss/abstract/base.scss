@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1;
+    // overflow: hidden;
+    height: 10000px;
+}
+
+div#container:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    height: 600px;
+    filter: blur(220px);
+    background: #419efc;
+    opacity: 0.4;
+}
+
+div#container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 500px;
+    filter: blur(220px);
+    background: #6d507b;
+    opacity: 0.8;
+}
+
+div#container {
+    background: #161620;
+}

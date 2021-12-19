@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Platform';
+    src: url('Platform-Regular.eot');
+    src: local('Platform Regular'), local('Platform-Regular'),
+        url('Platform-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Platform-Regular.woff2') format('woff2'),
+        url('Platform-Regular.woff') format('woff'),
+        url('Platform-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Platform';
+    src: url('Platform-MediumItalic.eot');
+    src: local('Platform Medium Italic'), local('Platform-MediumItalic'),
+        url('Platform-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Platform-MediumItalic.woff2') format('woff2'),
+        url('Platform-MediumItalic.woff') format('woff'),
+        url('Platform-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Platform';
+    src: url('Platform-BoldItalic.eot');
+    src: local('Platform Bold Italic'), local('Platform-BoldItalic'),
+        url('Platform-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Platform-BoldItalic.woff2') format('woff2'),
+        url('Platform-BoldItalic.woff') format('woff'),
+        url('Platform-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Platform Hairline';
+    src: url('Platform-Hairline.eot');
+    src: local('Platform Hairline'), local('Platform-Hairline'),
+        url('Platform-Hairline.eot?#iefix') format('embedded-opentype'),
+        url('Platform-Hairline.woff2') format('woff2'),
+        url('Platform-Hairline.woff') format('woff'),
+        url('Platform-Hairline.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Platform Hairline';
+    src: url('Platform-HairlineItalic.eot');
+    src: local('Platform Hairline Italic'), local('Platform-HairlineItalic'),
+        url('Platform-HairlineItalic.eot?#iefix') format('embedded-opentype'),
+        url('Platform-HairlineItalic.woff2') format('woff2'),
+        url('Platform-HairlineItalic.woff') format('woff'),
+        url('Platform-HairlineItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Platform';
+    src: url('Platform-Medium.eot');
+    src: local('Platform Medium'), local('Platform-Medium'),
+        url('Platform-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Platform-Medium.woff2') format('woff2'),
+        url('Platform-Medium.woff') format('woff'),
+        url('Platform-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Platform';
+    src: url('Platform-RegularItalic.eot');
+    src: local('Platform Regular Italic'), local('Platform-RegularItalic'),
+        url('Platform-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('Platform-RegularItalic.woff2') format('woff2'),
+        url('Platform-RegularItalic.woff') format('woff'),
+        url('Platform-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Platform';
+    src: url('Platform-Bold.eot');
+    src: local('Platform Bold'), local('Platform-Bold'),
+        url('Platform-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Platform-Bold.woff2') format('woff2'),
+        url('Platform-Bold.woff') format('woff'),
+        url('Platform-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Platform';
+    src: url('Platform-Light.eot');
+    src: local('Platform Light'), local('Platform-Light'),
+        url('Platform-Light.eot?#iefix') format('embedded-opentype'),
+        url('Platform-Light.woff2') format('woff2'),
+        url('Platform-Light.woff') format('woff'),
+        url('Platform-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Platform';
+    src: url('Platform-LightItalic.eot');
+    src: local('Platform Light Italic'), local('Platform-LightItalic'),
+        url('Platform-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Platform-LightItalic.woff2') format('woff2'),
+        url('Platform-LightItalic.woff') format('woff'),
+        url('Platform-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
