@@ -1,5 +1,5 @@
 ## Live
-https://hypeople-emot.netlify.app/
+https://loadmance-website.vercel.app/
 
 ## Setup
 ``` bash
