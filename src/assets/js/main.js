@@ -18,7 +18,8 @@ var light, light2;
 const gui = new dat.GUI()
 const debugParameters = {
     objectScale: 1,
-    sceneBackground: 0x141414
+    sceneBackground: 0x141414,
+    objectColor: 0x8366b7,
 }
 
 init();
@@ -419,7 +420,7 @@ function init() {
     scene.add(light2);
 
     const loader = new GLTFLoader()
-    loader.load('./Earth2.glb', modelLoad);
+    loader.load('./Earth_3.glb', modelLoad);
 
     let object
     function modelLoad(gltf) {
@@ -441,15 +442,20 @@ function init() {
 
         object.children[3].material.opacity = 0
         object.children[3].material.transparent = true
+        object.children[2].material.transparent = true
 
 
-        window.addEventListener("mousemove", function (e) {
-            gsap.to(object.rotation, {
-                x: (-e.clientY * 0.00001),
-                y: (e.clientX * 0.0001) - 1.15,
-                duration: 0.4,
-            })
-        })
+        object.children[2].material.color = new THREE.Color(debugParameters.objectColor)
+        object.children[3].material.color = new THREE.Color(debugParameters.objectColor)
+
+
+        // window.addEventListener("mousemove", function (e) {
+        //     gsap.to(object.rotation, {
+        //         x: (-e.clientY * 0.00001),
+        //         y: -(e.clientX * 0.0001) - 1.15,
+        //         duration: 0.4,
+        //     })
+        // })
 
 
         gsap.fromTo(object.position, {
@@ -474,9 +480,9 @@ function init() {
         })
 
         gsap.to(object.scale, {
-            x: 3,
-            y: 3,
-            z: 3,
+            x: 5.6,
+            y: 5.6,
+            z: 5.6,
             duration: 1,
             delay: 1,
         })
@@ -488,13 +494,43 @@ function init() {
         })
 
         gsap.fromTo(object.scale, {
-            x: 3,
-            y: 3,
-            z: 3,
+            x: 5.6,
+            y: 5.6,
+            z: 5.6,
         }, {
             x: 2.5,
             y: 2.5,
             z: 2.5,
+            scrollTrigger: {
+                trigger: "body",
+                start: "1001px top",
+                end: "2000px top",
+                scrub: true,
+                markers: false,
+            }
+        })
+
+        gsap.to(object.children[2].material, {
+            opacity: 1,
+        })
+
+        gsap.to(object.children[2].material, {
+            opacity: 0.2,
+
+            scrollTrigger: {
+                trigger: "body",
+                start: "top+=10px top",
+                end: "1000px top",
+                scrub: true,
+                markers: false,
+            }
+        })
+
+        gsap.fromTo(object.children[2].material, {
+            opacity: 0.2,
+        }, {
+            opacity: 1,
+
             scrollTrigger: {
                 trigger: "body",
                 start: "1001px top",
@@ -514,11 +550,15 @@ function init() {
         objectFolder.add(debugParameters, 'objectScale').min(0).max(10).step(0.1).name("scale").onChange(() => {
             object.scale.set(debugParameters.objectScale, debugParameters.objectScale, debugParameters.objectScale)
         });
+        objectFolder.addColor(debugParameters, 'objectColor').onChange(() => {
+            object.children[2].material.color = new THREE.Color(debugParameters.objectColor)
+            object.children[3].material.color = new THREE.Color(debugParameters.objectColor)
+        })
         objectFolder.open()
 
         scene.add(object);
 
-        // console.log(object);
+        console.log(object);
 
         if (object) {
             modalAnimation()
