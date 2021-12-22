@@ -1,0 +1,270 @@
+.usecase-detail {
+    background: #fff;
+}
+
+.usecase-detail .detail-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 64px 32px;
+
+    p {
+        color: #04202A;
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 24px;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: normal;
+        margin-bottom: 32px;
+    }
+
+    .detail-text {
+        text-align: center;
+        margin: 64px 0;
+
+        h2 {
+            text-align: left;
+        }
+
+        >span {
+            display: block;
+            margin-bottom: 24px;
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 0 80px;
+        }
+
+        p {
+            font-size: 50px;
+            margin-top: 60px;
+
+            >span {
+                color: #3367E6;
+            }
+        }
+    }
+
+    p a {
+        color: #2763f7;
+    }
+
+    @media (max-width: 1199px) {
+        max-width: 70%;
+
+        .detail-text p {
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .detail-text p {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        max-width: 100%;
+        padding: 44px 24px;
+
+        p {
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 24px;
+        }
+
+        .detail-text {
+            margin: 44px 0;
+
+            p {
+                font-size: 24px;
+                margin-top: 40px;
+            }
+
+            >span {
+                padding: 0;
+                font-size: 14px;
+                line-height: normal;
+            }
+        }
+    }
+}
+
+.usecase-footer {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    padding-top: 100px;
+    margin-top: -1px;
+
+    .usecase-cards-circle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0px);
+        width: 110%;
+        height: 110vw;
+        border-radius: 100%;
+        background: linear-gradient(#edf4ff 0%, rgba(237, 244, 255, 0) 100%);
+        border: 1px solid rgba(0, 0, 0, 0);
+    }
+
+    .usecase-cards {
+        position: relative;
+
+        .s-container {
+            text-align: center;
+
+            h3 {
+                font-size: 50px;
+                color: #04202a;
+                font-weight: normal;
+                margin-bottom: 35px;
+            }
+
+            .cards-list {
+                display: flex;
+                flex-wrap: nowrap;
+                margin: 0 -10px;
+
+                .card-item {
+                    border-radius: 10px;
+                    background: #0063F7;
+                    min-height: 300px;
+                    flex: 0 0 calc(33% - 20px);
+                    margin: 0 10px;
+
+                    p {
+                        padding: 30px 30px 60px;
+                        font-size: 20px;
+                        text-align: left;
+                        color: #fff;
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+    }
+
+    .usecase-extra {
+        text-align: center;
+        padding: 100px 0;
+        position: relative;
+        z-index: 1;
+
+        .s-container {
+            max-width: 600px;
+        }
+
+        h4 {
+            font-size: 65px;
+            line-height: 80px;
+            color: #04202a;
+            font-weight: normal;
+        }
+
+        p {
+            font-size: 25px;
+            color: #04202a;
+            margin-top: 24px;
+        }
+
+        a {
+            font-weight: bold;
+            font-size: 20px;
+            color: #fff;
+            border: 1px solid #0c2549;
+            background-color: #07071C;
+            padding: 16px 24px;
+            border-radius: 100px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .usecase-extra {
+            h4 {
+                font-size: 44px;
+                line-height: normal;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .usecase-cards .s-container {
+            h3 {
+                font-size: 44px;
+            }
+
+            .cards-list {
+                overflow-x: auto;
+                overflow-y: hidden;
+                margin: 0 -50px;
+                padding: 0 60px;
+
+                .card-item {
+                    flex: 0 0 400px;
+                }
+
+                &::-webkit-scrollbar {
+                    height: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 60px;
+
+        .usecase-cards .s-container {
+            h3 {
+                font-size: 24px;
+            }
+
+            .cards-list .card-item {
+                flex: 0 0 240px;
+                min-height: 200px;
+
+                p {
+                    font-size: 14px;
+                    padding: 24px;
+                }
+            }
+        }
+
+        .usecase-extra {
+            padding: 64px 20px;
+
+            h4 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+                margin-top: 14px;
+            }
+
+            a {
+                font-size: 14px;
+                padding: 10px 13px;
+                margin-top: 32px;
+            }
+        }
+
+        .usecase-cards-circle {
+            height: 300vw;
+            width: 200vw;
+        }
+    }
+}

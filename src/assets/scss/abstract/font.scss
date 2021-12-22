@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Pangram';
+    src: local('Pangram Black'), local('Pangram-Black'),
+        url('../font/Pangram-Black.woff') format('woff');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pangram';
+    src: local('Pangram Bold'), local('Pangram-Bold'),
+        url('../font/Pangram-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pangram';
+    src: local('Pangram ExtraLight'), local('Pangram-ExtraLight'),
+        url('../font/Pangram-ExtraLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pangram';
+    src: local('Pangram Regular'), local('Pangram-Regular'),
+        url('../font/Pangram-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

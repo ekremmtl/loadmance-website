@@ -6,6 +6,12 @@
 
 // Abstract
 @import './abstract/base.scss';
+@import './abstract/font.scss';
+
+@import './layouts/footer.scss';
+@import './layouts/header.scss';
+
+@import './pages/use-case.scss';
 
 #container {
     position: fixed;

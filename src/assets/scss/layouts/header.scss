@@ -1,0 +1,100 @@
+header {
+    padding: 16px 0;
+    position: relative;
+    z-index: 1;
+
+    .header-row {
+        a img {
+            width: 170px;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header-right {
+            display: flex;
+            align-items: center;
+
+            >ul {
+                display: flex;
+                align-items: center;
+
+                >li {
+                    position: relative;
+                    padding-bottom: 40px;
+                    margin-bottom: -40px;
+
+                    >ul {
+                        position: absolute;
+                        top: 40px;
+                        left: -12px;
+                        opacity: 0;
+                        visibility: hidden;
+                        background: #0c0c26;
+                        box-shadow: 0px 6px 20px 0px rgb(255 255 255 / 8%);
+                        border-radius: 16px;
+                        padding: 16px 14px;
+                        min-width: 160px;
+                    }
+
+                    +li {
+                        margin-left: 32px;
+                    }
+
+                    >a {
+                        font-size: 16px;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            margin-top: 3px;
+                            margin-left: 4px;
+                        }
+                    }
+                }
+            }
+
+            .header-button {
+                margin-left: 32px;
+
+                a {
+                    display: inline-block;
+                    font-size: 16px;
+                    color: #fff;
+                    background: #0063F7;
+                    border-radius: 8px;
+                    padding: 15px 24px;
+                }
+            }
+
+            >ul>li {
+                &:hover>ul {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                >ul>li {
+                    +li {
+                        margin-top: 8px;
+                    }
+
+                    a {
+                        padding: 4px 0;
+                        display: block;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .header-row {
+            .header-right {
+                display: none;
+            }
+        }
+    }
+}
