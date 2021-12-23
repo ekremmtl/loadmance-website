@@ -29,11 +29,14 @@ ul {
 body {
     font-family: 'Pangram';
     line-height: 1;
-    background: #07071C;
+    background: #fff;
     // overflow: hidden;
     // height: 10000px;
 }
 
+.annual-item{
+    display: none;
+}
 
 .page-banner {
     position: relative;
@@ -41,6 +44,7 @@ body {
     padding-top: calc(110px + 90px);
     padding-bottom: 120px;
     overflow: hidden;
+    background: #07071c;
 
     .banner-circle.circle-1 {
         position: absolute;

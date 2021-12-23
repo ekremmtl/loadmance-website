@@ -7,6 +7,34 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 
+
+var pricingPlanOffset = $(".pricing-content .content-plan").offset()
+
+$(window).scroll(function () {
+    var scrollTop = $(this).scrollTop()
+
+    if (scrollTop > (pricingPlanOffset.top + $(".pricing-content .content-plan").height())) {
+        $(".pricing-fixed").addClass("active");
+    } else {
+        $(".pricing-fixed").removeClass("active");
+    }
+})
+
+
+
+$(".pricing-banner .switch-plan .switch-item > input").change(function () {
+    if ($(this).is(":checked")) {
+        $(".annual-item").css("display", "none")
+        $(".monthly-item").css("display", "inline-block")
+    } else {
+        $(".annual-item").css("display", "inline-block")
+        $(".monthly-item").css("display", "none")
+    }
+})
+
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
