@@ -13,29 +13,29 @@ import './page/homepage'
 // import ScrollToPlugin from 'gsap/ScrollToPlugin'
 
 
-// var pricingPlanOffset = $(".pricing-content .content-plan").offset()
+var pricingPlanOffset = $(".pricing-content .content-plan").offset()
 
-// $(window).scroll(function () {
-//     var scrollTop = $(this).scrollTop()
+$(window).scroll(function () {
+    var scrollTop = $(this).scrollTop()
 
-//     if (scrollTop > (pricingPlanOffset.top + $(".pricing-content .content-plan").height())) {
-//         $(".pricing-fixed").addClass("active");
-//     } else {
-//         $(".pricing-fixed").removeClass("active");
-//     }
-// })
+    if (scrollTop > (pricingPlanOffset.top + $(".pricing-content .content-plan").height())) {
+        $(".pricing-fixed").addClass("active");
+    } else {
+        $(".pricing-fixed").removeClass("active");
+    }
+})
 
 
 
-// $(".pricing-banner .switch-plan .switch-item > input").change(function () {
-//     if ($(this).is(":checked")) {
-//         $(".annual-item").css("display", "none")
-//         $(".monthly-item").css("display", "inline-block")
-//     } else {
-//         $(".annual-item").css("display", "inline-block")
-//         $(".monthly-item").css("display", "none")
-//     }
-// })
+$(".switch-plan .switch-item > input").change(function () {
+    if ($(this).is(":checked")) {
+        $(".annual-item").css("display", "none")
+        $(".monthly-item").css("display", "inline-block")
+    } else {
+        $(".annual-item").css("display", "inline-block")
+        $(".monthly-item").css("display", "none")
+    }
+})
 
 
 
