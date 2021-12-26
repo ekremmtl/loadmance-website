@@ -18,7 +18,7 @@
             {% block content %}{% endblock %}
         </main>
 
-        {% include "./layouts/footer.njk" %}
+        {% block footer %}{% endblock %}
 
         {# <script src="https://unpkg.com/three@0.87.1/build/three.js"></script>
         <script src="https://unpkg.com/three@0.87.1/examples/js/controls/OrbitControls.js"></script>

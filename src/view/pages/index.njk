@@ -6,11 +6,11 @@
 
 {% block header %}
     {% from "../layouts/header.njk" import header %}
-    {{ header(null, "home-header") }}
+    {{ header() }}
 {% endblock %}
 
 {% block content %}
-    <div class="pre-loader">
+    {# <div class="pre-loader">
             Loading
         </div>
 
@@ -157,5 +157,10 @@
                     </g>
                 </svg>
             </div>
-        </div>
-    {% endblock %}
+        </div> #}
+{% endblock %}
+
+{% block footer %}
+    {% from "../layouts/footer.njk" import footer %}
+    {{ footer(true, "home-footer") }}
+{% endblock %}

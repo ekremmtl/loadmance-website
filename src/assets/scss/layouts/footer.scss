@@ -2,6 +2,22 @@ footer {
     background: #07071C;
     overflow: hidden;
 
+    &.home-footer {
+        .footer-container {
+            .footer-row {
+                .footer-col {
+                    &:nth-child(1) {
+                        a {
+                            background: none;
+                            color: #fff;
+                            border: 1px solid #8F90A6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .footer-copyright {
         position: relative;
         padding: 30px 0;

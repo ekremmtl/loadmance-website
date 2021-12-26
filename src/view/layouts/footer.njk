@@ -1,52 +1,60 @@
-<footer>
-    <div class="footer-container">
-        <div class="footer-circle circle-1"></div>
-        <div class="footer-circle circle-2"></div>
-
-        <div class="footer-row">
-            <div class="footer-col">
-                <div class="footer-logo">
-                    <img src="./assets/img/footer-logo.svg" alt="Loadmance">
-                </div>
-
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-
-                <a href="javascript:;">Ask Question</a>
-            </div>
-
-            <div class="footer-col">
-                <ul>
-                    <li>
-                        <a href="javascript:;">Documentation</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">Use Cases</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">Sign in</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <div class="footer-contact">
-                    <span>Contact</span>
-
-                    <p>Feel free to get in touch with us via phone or send us a message.</p>
-
-                    <a href="tel:+44001234455">+44 00 123 44 55</a>
-                    <a href="mailto:info@loadmance.com">info@loadmance.com</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-copyright">
+{% macro footer(homeCheck=false, footerClass="inner-header") -%}
+    <footer class="{{ footerClass }}">
         <div class="footer-container">
-            <p>© Loadmance 2021, All Rights Reserved</p>
+            {% if homeCheck == false %}
+                <div class="footer-circle circle-1"></div>
+                <div class="footer-circle circle-2"></div>
+            {% endif %}
+
+            <div class="footer-row">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        {% if homeCheck %}
+                            <img src="./assets/img/logo-text.svg" alt="Loadmance">
+                        {% else %}
+                            <img src="./assets/img/footer-logo.svg" alt="Loadmance">
+                        {% endif %}
+                    </div>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+                    <a href="javascript:;">Ask Question</a>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li>
+                            <a href="javascript:;">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Use Cases</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Sign in</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <div class="footer-contact">
+                        <span>Contact</span>
+
+                        <p>Feel free to get in touch with us via phone or send us a message.</p>
+
+                        <a href="tel:+44001234455">+44 00 123 44 55</a>
+                        <a href="mailto:info@loadmance.com">info@loadmance.com</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+
+        <div class="footer-copyright">
+            <div class="footer-container">
+                <p>© Loadmance 2021, All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+{%- endmacro %}
