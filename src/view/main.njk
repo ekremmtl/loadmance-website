@@ -9,6 +9,11 @@
             {% block page_title %}{% endblock %}
         </title>
 
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+
         <link rel="stylesheet" href="./assets/css/main.css">
     </head>
     <body>
@@ -19,6 +24,8 @@
         </main>
 
         {% block footer %}{% endblock %}
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         {# <script src="https://unpkg.com/three@0.87.1/build/three.js"></script>
         <script src="https://unpkg.com/three@0.87.1/examples/js/controls/OrbitControls.js"></script>
