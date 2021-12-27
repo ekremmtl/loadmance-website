@@ -1,6 +1,9 @@
 header {
+    position: absolute;
     padding: 16px 0;
-    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
 
     .header-row {
