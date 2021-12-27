@@ -13,19 +13,20 @@ import './page/homepage'
 // import ScrollToPlugin from 'gsap/ScrollToPlugin'
 
 
-var pricingPlanOffset = $(".pricing-content .content-plan").offset()
+var pricingPlanItem = $(".pricing-content .content-plan");
+var pricingPlanOffset = pricingPlanItem.offset()
 
-$(window).scroll(function () {
-    var scrollTop = $(this).scrollTop()
+if (pricingPlanItem.length) {
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop()
 
-    if (scrollTop > (pricingPlanOffset.top + $(".pricing-content .content-plan").height())) {
-        $(".pricing-fixed").addClass("active");
-    } else {
-        $(".pricing-fixed").removeClass("active");
-    }
-})
-
-
+        if (scrollTop > (pricingPlanOffset.top + $(".pricing-content .content-plan").height())) {
+            $(".pricing-fixed").addClass("active");
+        } else {
+            $(".pricing-fixed").removeClass("active");
+        }
+    })
+}
 
 $(".switch-plan .switch-item > input").change(function () {
     if ($(this).is(":checked")) {
@@ -36,8 +37,6 @@ $(".switch-plan .switch-item > input").change(function () {
         $(".monthly-item").css("display", "none")
     }
 })
-
-
 
 
 // gsap.registerPlugin(ScrollTrigger);
