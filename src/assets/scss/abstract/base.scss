@@ -204,9 +204,6 @@ body {
 }
 
 
-
-
-
 div#container:after {
     content: "";
     position: absolute;
@@ -233,4 +230,12 @@ div#container:before {
 
 div#container {
     background: #161620;
+}
+
+div#earth-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
