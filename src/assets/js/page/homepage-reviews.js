@@ -3,7 +3,9 @@ const homeReviewsLength = $(".home-reviews-slider .swiper-slide").length
 new Swiper('.home-reviews .swiper-container', {
     slidesPerView: 1,
     spaceBetween: 24,
-    autoplay: 5000,
+    autoplay: {
+        delay: 5000
+    },
     speed: 800,
     loop: homeReviewsLength === 1 ? false : true,
     navigation: {

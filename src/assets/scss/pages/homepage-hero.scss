@@ -1,14 +1,23 @@
 .home-hero {
     background: #0D0D33;
-    min-height: 100vh;
+    height: 10000px;
     overflow: hidden;
     position: relative;
+
+    &-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
 
     .s-container {
         height: 100vh;
         display: flex;
         align-items: center;
         position: relative;
+        z-index: 1;
     }
 
     .home-hero-light {
@@ -26,6 +35,7 @@
 
     .home-hero-content {
         max-width: 500px;
+        perspective: 200px;
 
         h1 {
             font-weight: bold;

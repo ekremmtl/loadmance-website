@@ -1,4 +1,5 @@
-import './page/homepage'
+import './page/homepage-hero'
+import './page/homepage-reviews'
 
 import * as THREE from 'three';
 import Stats from 'three/examples/jsm/libs/stats.module.js'
@@ -98,326 +99,881 @@ animate();
 // var left = Math.floor(viewportOffset.left);
 // console.log(top, left);
 
-// var viewportOffset = document.querySelector(".logo-container .logo-sprites .logo-sprites-bar").getBoundingClientRect();
+var viewportOffset = document.querySelector(".logo-container .logo-sprites .logo-sprites-bar").getBoundingClientRect();
 
-// gsap.to(".logo-container.logo-container-bar", {
-//     opacity: 1,
-// })
+gsap.to(".logo-container.logo-container-bar", {
+    opacity: 1,
+})
 
-// gsap.to(".logo-container .logo-sprites .logo-sprites-bar", {
-//     opacity: 0,
-// })
+gsap.to(".logo-container .logo-sprites .logo-sprites-bar", {
+    opacity: 0,
+})
 
-// gsap.to(".logo-container-bar .logo-sprites-meteor > svg", {
-//     scale: 1,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "1001px top",
-//         end: "2000px top",
-//         scrub: true,
-//         markers: false,
-//         onEnter: () => $(".logo-container-bar .logo-sprites-bar").addClass('shake-active'),
-//         onLeave: () => $(".logo-container-bar .logo-sprites-bar").removeClass('shake-active'),
-//         onEnterBack: () => $(".logo-container-bar .logo-sprites-bar").addClass('shake-active'),
-//         onLeaveBack: () => $(".logo-container-bar .logo-sprites-bar").removeClass('shake-active'),
-//     }
-// })
+gsap.to(".logo-container-bar .logo-sprites-meteor > svg", {
+    scale: 1,
+    scrollTrigger: {
+        trigger: "body",
+        start: "1001px top",
+        end: "2000px top",
+        scrub: true,
+        markers: false,
+        onEnter: () => $(".logo-container-bar .logo-sprites-bar").addClass('shake-active'),
+        onLeave: () => $(".logo-container-bar .logo-sprites-bar").removeClass('shake-active'),
+        onEnterBack: () => $(".logo-container-bar .logo-sprites-bar").addClass('shake-active'),
+        onLeaveBack: () => $(".logo-container-bar .logo-sprites-bar").removeClass('shake-active'),
+    }
+})
 
-// gsap.to(".logo-container-bar-light-2", {
-//     scale: 0,
-// })
+gsap.to(".logo-container-bar-light-2", {
+    scale: 0,
+})
 
-// gsap.to(".logo-container-bar-light-2", {
-//     scale: 1,
-//     y: 0,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "1001px top",
-//         end: "1300px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+gsap.to(".logo-container-bar-light-2", {
+    scale: 1,
+    y: 0,
+    scrollTrigger: {
+        trigger: "body",
+        start: "1001px top",
+        end: "1300px top",
+        scrub: true,
+        markers: false,
+    }
+})
 
-// gsap.to(".logo-container-bar .logo-sprites-meteor > span", {
-//     scale: 0,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "1001px top",
-//         end: "1300px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+gsap.to(".logo-container-bar .logo-sprites-meteor > span", {
+    scale: 0,
+    scrollTrigger: {
+        trigger: "body",
+        start: "1001px top",
+        end: "1300px top",
+        scrub: true,
+        markers: false,
+    }
+})
 
-// gsap.to(".logo-container-bar .logo-sprites-meteor-flame", {
-//     opacity: 1,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "1001px top",
-//         end: "2000px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+gsap.to(".logo-container-bar .logo-sprites-meteor-flame", {
+    opacity: 1,
+    scrollTrigger: {
+        trigger: "body",
+        start: "1001px top",
+        end: "2000px top",
+        scrub: true,
+        markers: false,
+    }
+})
 
-// gsap.to(".logo-container-bar .logo-sprites-bar > svg", {
-//     opacity: 1,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "1001px top",
-//         end: "2000px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+gsap.to(".logo-container-bar .logo-sprites-bar > svg", {
+    opacity: 1,
+    scrollTrigger: {
+        trigger: "body",
+        start: "1001px top",
+        end: "2000px top",
+        scrub: true,
+        markers: false,
+    }
+})
 
-// gsap.to(".logo-container.logo-container-bar", {
-//     x: Math.floor(viewportOffset.left) + 27.7,
-//     y: Math.floor(viewportOffset.top) + 68.346,
-//     scale: 1,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "1001px top",
-//         end: "4000px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+gsap.to(".logo-container.logo-container-bar", {
+    x: Math.floor(viewportOffset.left) + 27.7,
+    y: Math.floor(viewportOffset.top) + 68.346,
+    scale: 1,
+    scrollTrigger: {
+        trigger: "body",
+        start: "1001px top",
+        end: "4000px top",
+        scrub: true,
+        markers: false,
+    }
+})
 
-// gsap.fromTo(".logo-container-bar-light-2", {
-//     scale: 1,
-// }, {
-//     scale: 0.3,
-//     opacity: 0,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "1400px top",
-//         end: "3000px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+gsap.fromTo(".logo-container-bar-light-2", {
+    scale: 1,
+}, {
+    scale: 0.3,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: "body",
+        start: "1400px top",
+        end: "3000px top",
+        scrub: true,
+        markers: false,
+    }
+})
 
-// gsap.fromTo(".logo-container.logo-container-bar", {
-//     opacity: 1,
-// }, {
-//     opacity: 0,
+gsap.fromTo(".logo-container.logo-container-bar", {
+    opacity: 1,
+}, {
+    opacity: 0,
 
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4000px top",
-//         end: "4001px top",
-//         scrub: true,
-//         markers: false
-//     }
-// })
+    scrollTrigger: {
+        trigger: "body",
+        start: "4000px top",
+        end: "4001px top",
+        scrub: true,
+        markers: false
+    }
+})
 
-// gsap.fromTo(".logo-container-center .logo-sprites-bar", {
-//     opacity: 0,
-// }, {
-//     opacity: 1,
+gsap.fromTo(".logo-container-center .logo-sprites-bar", {
+    opacity: 0,
+}, {
+    opacity: 1,
 
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4000px top",
-//         end: "4001px top",
-//         scrub: true,
-//         markers: false
-//     }
-// })
-
-
-
-// gsap.to(".logo-container-center .logo-sprites-bar", {
-//     rotation: -50,
-// })
-
-// gsap.to(".logo-container-center", {
-//     x: "-20%",
-// })
-
-// gsap.to(".image-container .image-bg", {
-//     opacity: 1,
-
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4001px top",
-//         end: "4100px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
-
-// gsap.to(".logo-container-center .logo-sprites-circle", {
-//     opacity: 1,
-
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4001px top",
-//         end: "4100px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
-
-// gsap.fromTo(".logo-container-center .logo-sprites-bar", {
-//     rotation: -50,
-// }, {
-//     rotation: -80,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4101px top",
-//         end: "4200px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
-
-// gsap.fromTo(".logo-container-center .logo-sprites-bar", {
-//     rotation: -80,
-// }, {
-//     rotation: -60,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4201px top",
-//         end: "4300px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
-
-// gsap.fromTo(".logo-container-center .logo-sprites-bar", {
-//     rotation: -60,
-// }, {
-//     rotation: -70,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4301px top",
-//         end: "4400px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
-
-// gsap.fromTo(".logo-container-center .logo-sprites-bar", {
-//     rotation: -70,
-// }, {
-//     rotation: 80,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4401px top",
-//         end: "4500px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
-
-// gsap.fromTo(".logo-container-center .logo-sprites-bar", {
-//     rotation: 80,
-// }, {
-//     rotation: 50,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4501px top",
-//         end: "4600px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
-
-// gsap.fromTo(".logo-container-center", {
-//     x: "-20%",
-// }, {
-//     x: "-50%",
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4501px top",
-//         end: "4600px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+    scrollTrigger: {
+        trigger: "body",
+        start: "4000px top",
+        end: "4001px top",
+        scrub: true,
+        markers: false
+    }
+})
 
 
-// gsap.to(".image-container .image-bg", {
-//     x: "-50%",
-//     width: "40%",
 
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4501px top",
-//         end: "4600px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+gsap.to(".logo-container-center .logo-sprites-bar", {
+    rotation: -50,
+})
+
+gsap.to(".logo-container-center", {
+    x: "-20%",
+})
+
+gsap.to(".image-container .image-bg", {
+    opacity: 1,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "4001px top",
+        end: "4100px top",
+        scrub: true,
+        markers: false,
+    }
+})
+
+gsap.to(".logo-container-center .logo-sprites-circle", {
+    opacity: 1,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "4001px top",
+        end: "4100px top",
+        scrub: true,
+        markers: false,
+    }
+})
+
+gsap.fromTo(".logo-container-center .logo-sprites-bar", {
+    rotation: -50,
+}, {
+    rotation: -80,
+    scrollTrigger: {
+        trigger: "body",
+        start: "4101px top",
+        end: "4200px top",
+        scrub: true,
+        markers: false,
+    }
+})
+
+gsap.fromTo(".logo-container-center .logo-sprites-bar", {
+    rotation: -80,
+}, {
+    rotation: -60,
+    scrollTrigger: {
+        trigger: "body",
+        start: "4201px top",
+        end: "4300px top",
+        scrub: true,
+        markers: false,
+    }
+})
+
+gsap.fromTo(".logo-container-center .logo-sprites-bar", {
+    rotation: -60,
+}, {
+    rotation: -70,
+    scrollTrigger: {
+        trigger: "body",
+        start: "4301px top",
+        end: "4400px top",
+        scrub: true,
+        markers: false,
+    }
+})
+
+gsap.fromTo(".logo-container-center .logo-sprites-bar", {
+    rotation: -70,
+}, {
+    rotation: 80,
+    scrollTrigger: {
+        trigger: "body",
+        start: "4401px top",
+        end: "4500px top",
+        scrub: true,
+        markers: false,
+    }
+})
+
+gsap.fromTo(".logo-container-center .logo-sprites-bar", {
+    rotation: 80,
+}, {
+    rotation: 50,
+    scrollTrigger: {
+        trigger: "body",
+        start: "4501px top",
+        end: "4600px top",
+        scrub: true,
+        markers: false,
+    }
+})
+
+gsap.fromTo(".logo-container-center", {
+    x: "-20%",
+}, {
+    x: "-50%",
+    scrollTrigger: {
+        trigger: "body",
+        start: "4501px top",
+        end: "4600px top",
+        scrub: true,
+        markers: false,
+    }
+})
 
 
-// gsap.to(".logo-container-center .logo-title > span", {
-//     opacity: 1,
-//     y: 0,
-//     stagger: 0.2,
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4501px top",
-//         end: "4600px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+gsap.to(".image-container .image-bg", {
+    x: "-50%",
+    width: "40%",
 
-// gsap.to(".image-container .image-bg", {
-//     width: "20%"
-// })
+    scrollTrigger: {
+        trigger: "body",
+        start: "4501px top",
+        end: "4600px top",
+        scrub: true,
+        markers: false,
+    }
+})
 
-// gsap.fromTo(".image-container .image-bg", {
-//     width: "40%"
-// }, {
-//     width: "100%",
-//     height: "100%",
 
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4601px top",
-//         end: "5000px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+gsap.to(".logo-container-center .logo-title > span", {
+    opacity: 1,
+    y: 0,
+    stagger: 0.2,
+    scrollTrigger: {
+        trigger: "body",
+        start: "4501px top",
+        end: "4600px top",
+        scrub: true,
+        markers: false,
+    }
+})
 
-// gsap.fromTo(".logo-container.logo-container-center", {
-//     x: "-50%",
-// }, {
-//     x: 40,
-//     y: 23,
-//     scale: 0.2,
-//     left: 0,
-//     top: 0,
-//     transformOrigin: "left top",
+gsap.to(".image-container .image-bg", {
+    width: "20%"
+})
 
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4650px top",
-//         end: "5000px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+gsap.fromTo(".image-container .image-bg", {
+    width: "40%"
+}, {
+    width: "100%",
+    height: "100%",
 
-// gsap.to(".image-header-right svg", {
-//     y: 0,
-//     opacity: 1,
-//     stagger: 0.1,
+    scrollTrigger: {
+        trigger: "body",
+        start: "4601px top",
+        end: "8000px top",
+        scrub: true,
+        markers: false,
+    }
+})
 
-//     scrollTrigger: {
-//         trigger: "body",
-//         start: "4700px top",
-//         end: "5000px top",
-//         scrub: true,
-//         markers: false,
-//     }
-// })
+gsap.fromTo(".logo-container.logo-container-center", {
+    x: "-50%",
+}, {
+    x: 40,
+    y: 23,
+    scale: 0.2,
+    left: 0,
+    top: 0,
+    transformOrigin: "left top",
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "4650px top",
+        end: "8000px top",
+        scrub: true,
+        markers: false,
+    }
+})
+
+//-- Image Container
+const easeValue = "Expo.easeOut";
+
+gsap.to(".image-container .image-header-right", {
+    x: 0,
+    y: 0,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "6800px top",
+        end: "8000px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-header-right .right-item", {
+    scale: 1,
+    opacity: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "6800px top",
+        end: "8000px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-header-right .right-item > span", {
+    scale: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "6850px top",
+        end: "8900px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body-bg", {
+    y: 0,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "6500px top",
+        end: "8000px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-page-title > span", {
+    x: 0,
+    y: 0,
+    scale: 1,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "7950px top",
+        end: "8200px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-page-title ul", {
+    x: 0,
+    y: 0,
+    scale: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8000px top",
+        end: "8300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-page-title ul li", {
+    y: 0,
+    opacity: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8000px top",
+        end: "8300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-sidebar .image-body-sidebar-bg", {
+    x: 0,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8000px top",
+        end: "8300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-sidebar ul li svg", {
+    scale: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8100px top",
+        end: "8300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-sidebar ul li > span", {
+    x: 0,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8200px top",
+        end: "8300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item", {
+    y: 0,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8300px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item .item-bg", {
+    y: 0,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8300px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item .item-bg > span", {
+    y: 0,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8300px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item:nth-child(1) .item-header > span", {
+    y: 0,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8300px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item:nth-child(2) .item-header > span", {
+    y: 10,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8310px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item .item-header > span svg", {
+    scale: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8300px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item .item-header > svg", {
+    scale: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8300px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item .item-select > span", {
+    y: 0,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8300px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item .item-select .select", {
+    y: 0,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8300px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item .item-select .select > span", {
+    y: 0,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8300px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item .item-select .select svg", {
+    y: 0,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8300px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col .image-body-sidebar-item .item-body ul li", {
+    y: 0,
+    opacity: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8350px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-menu .image-menu-bg", {
+    x: 0,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8500px top",
+        end: "9500px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-menu .image-menu-bg > span", {
+    x: 0,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8500px top",
+        end: "9500px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-menu .image-menu-add span:nth-child(1)", {
+    scale: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8550px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-menu .image-menu-add span:nth-child(1) svg", {
+    scale: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8550px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-menu .image-menu-add > span", {
+    x: 0,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8550px top",
+        end: "8600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-menu .image-menu-center ul li svg", {
+    scale: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8580px top",
+        end: "8650px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-menu .image-menu-center ul li span", {
+    x: 0,
+    opacity: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8580px top",
+        end: "8800px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-menu .image-menu-profile", {
+    scale: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "9000px top",
+        end: "9500px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-menu .image-menu-profile img", {
+    scale: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "9010px top",
+        end: "9500px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+//-
+gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content-header .body-content-header-title > span", {
+    y: 0,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8500px top",
+        end: "9000px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content-header .body-content-header-title > p", {
+    y: 0,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8540px top",
+        end: "9000px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(2) .body-content-header .body-content-header-buttons .button", {
+    x: 0,
+    opacity: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8500px top",
+        end: "9000px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(2) .body-content-charts .chart-item", {
+    y: 0,
+    opacity: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8700px top",
+        end: "9300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(2) .body-content-charts .chart-item .item-header span:nth-child(1)", {
+    y: 0,
+    opacity: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8700px top",
+        end: "9300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(2) .body-content-charts .chart-item .item-header span:nth-child(2)", {
+    y: 0,
+    opacity: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8710px top",
+        end: "9300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content-charts .chart-item .item-icon", {
+    scale: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8720px top",
+        end: "9300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content-charts .chart-item .item-data", {
+    x: 0,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8740px top",
+        end: "9300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content-charts .chart-item .item-data svg", {
+    x: 0,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8740px top",
+        end: "9300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+//-- Image Container
+
 
 function init() {
     camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
@@ -737,7 +1293,7 @@ function init() {
     stats = new Stats();
 
     container = document.getElementById('earth-container');
-    container.appendChild(renderer.domElement);
+    // container.appendChild(renderer.domElement);
     // container.appendChild(stats.dom);
 
     window.addEventListener('resize', onWindowResize, false);
