@@ -67,6 +67,10 @@
             position: relative;
             margin: 0 30px 90px;
 
+            &:nth-child(1){
+                opacity: 0;
+            }
+
             .item-green-circle {
                 position: absolute;
                 top: 200px;

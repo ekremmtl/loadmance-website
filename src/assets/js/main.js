@@ -343,7 +343,7 @@ gsap.fromTo(".logo-container-center", {
 
 gsap.to(".image-container .image-bg", {
     x: "-50%",
-    width: "40%",
+    width: 1000,
 
     scrollTrigger: {
         trigger: "body",
@@ -369,19 +369,20 @@ gsap.to(".logo-container-center .logo-title > span", {
 })
 
 gsap.to(".image-container .image-bg", {
-    width: "20%"
+    width: 365
 })
 
 gsap.fromTo(".image-container .image-bg", {
-    width: "40%"
+    width: 1000
 }, {
     width: "100%",
     height: "100%",
+    y: "-50%",
 
     scrollTrigger: {
         trigger: "body",
         start: "4601px top",
-        end: "8000px top",
+        end: "7000px top",
         scrub: true,
         markers: false,
     }
@@ -390,9 +391,9 @@ gsap.fromTo(".image-container .image-bg", {
 gsap.fromTo(".logo-container.logo-container-center", {
     x: "-50%",
 }, {
-    x: 40,
-    y: 23,
-    scale: 0.2,
+    x: 110,
+    y: 15,
+    scale: 0.21,
     left: 0,
     top: 0,
     transformOrigin: "left top",
@@ -400,11 +401,16 @@ gsap.fromTo(".logo-container.logo-container-center", {
     scrollTrigger: {
         trigger: "body",
         start: "4650px top",
-        end: "8000px top",
+        end: "7000px top",
         scrub: true,
         markers: false,
     }
 })
+
+
+
+
+
 
 //-- Image Container
 const easeValue = "Expo.easeOut";
@@ -459,6 +465,19 @@ gsap.to(".image-container .image-body-bg", {
         trigger: "body",
         start: "6500px top",
         end: "8000px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".logo-sprites-bar > svg > rect", {
+    fill: "#161620",
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "6500px top",
+        end: "6600px top",
         scrub: 1,
         markers: false,
     }
@@ -841,7 +860,8 @@ gsap.to(".image-menu .image-menu-profile img", {
         markers: false,
     }
 })
-//-
+// //-
+
 gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content-header .body-content-header-title > span", {
     y: 0,
     opacity: 1,
@@ -849,8 +869,8 @@ gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content
 
     scrollTrigger: {
         trigger: "body",
-        start: "8500px top",
-        end: "10000px top",
+        start: "10000px top",
+        end: "12000px top",
         scrub: 1,
         markers: false,
     }
@@ -863,8 +883,8 @@ gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content
 
     scrollTrigger: {
         trigger: "body",
-        start: "8540px top",
-        end: "10000px top",
+        start: "10040px top",
+        end: "12000px top",
         scrub: 1,
         markers: false,
     }
@@ -878,8 +898,8 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(
 
     scrollTrigger: {
         trigger: "body",
-        start: "8500px top",
-        end: "10000px top",
+        start: "10100px top",
+        end: "12000px top",
         scrub: 1,
         markers: false,
     }
@@ -893,8 +913,8 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(
 
     scrollTrigger: {
         trigger: "body",
-        start: "8700px top",
-        end: "10300px top",
+        start: "10300px top",
+        end: "12300px top",
         scrub: 1,
         markers: false,
     }
@@ -908,8 +928,8 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(
 
     scrollTrigger: {
         trigger: "body",
-        start: "8700px top",
-        end: "10300px top",
+        start: "10400px top",
+        end: "12300px top",
         scrub: 1,
         markers: false,
     }
@@ -923,8 +943,8 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(
 
     scrollTrigger: {
         trigger: "body",
-        start: "8710px top",
-        end: "10300px top",
+        start: "10410px top",
+        end: "12300px top",
         scrub: 1,
         markers: false,
     }
@@ -937,8 +957,8 @@ gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content
 
     scrollTrigger: {
         trigger: "body",
-        start: "8720px top",
-        end: "10300px top",
+        start: "10420px top",
+        end: "12300px top",
         scrub: 1,
         markers: false,
     }
@@ -951,8 +971,8 @@ gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content
 
     scrollTrigger: {
         trigger: "body",
-        start: "8740px top",
-        end: "10300px top",
+        start: "10440px top",
+        end: "12300px top",
         scrub: 1,
         markers: false,
     }
@@ -965,12 +985,14 @@ gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content
 
     scrollTrigger: {
         trigger: "body",
-        start: "8740px top",
-        end: "10300px top",
+        start: "10440px top",
+        end: "12300px top",
         scrub: 1,
         markers: false,
     }
 })
+
+//--
 
 gsap.to(".body-content-overview-bg", {
     y: 0,
@@ -979,8 +1001,8 @@ gsap.to(".body-content-overview-bg", {
 
     scrollTrigger: {
         trigger: "body",
-        start: "8700px top",
-        end: "9900px top",
+        start: "10500px top",
+        end: "11000px top",
         scrub: 1,
         markers: false,
     }
@@ -995,8 +1017,8 @@ gsap.to(".body-content-overview .overview-header > span", {
 
     scrollTrigger: {
         trigger: "body",
-        start: "8800px top",
-        end: "10200px top",
+        start: "10600px top",
+        end: "11500px top",
         scrub: 1,
         markers: false,
     }
@@ -1011,8 +1033,8 @@ gsap.to(".body-content-overview .overview-header .overview-header-icon", {
 
     scrollTrigger: {
         trigger: "body",
-        start: "8820px top",
-        end: "10200px top",
+        start: "10620px top",
+        end: "11500px top",
         scrub: 1,
         markers: false,
     }
@@ -1027,8 +1049,8 @@ gsap.to(".body-content-overview .overview-header .overview-header-icon", {
 
     scrollTrigger: {
         trigger: "body",
-        start: "8820px top",
-        end: "10200px top",
+        start: "10620px top",
+        end: "11500px top",
         scrub: 1,
         markers: false,
     }
@@ -1042,8 +1064,8 @@ gsap.to(".body-content-overview .overview-chart .chart-value > span", {
 
     scrollTrigger: {
         trigger: "body",
-        start: "8830px top",
-        end: "10200px top",
+        start: "11000px top",
+        end: "12000px top",
         scrub: 1,
         markers: false,
     }
@@ -1055,8 +1077,8 @@ gsap.to(".body-content-overview .overview-sizer", {
 
     scrollTrigger: {
         trigger: "body",
-        start: "8830px top",
-        end: "10200px top",
+        start: "11100px top",
+        end: "12000px top",
         scrub: 1,
         markers: false,
     }
@@ -1068,8 +1090,8 @@ gsap.to(".body-content-overview .overview-sizer > span", {
 
     scrollTrigger: {
         trigger: "body",
-        start: "8830px top",
-        end: "10200px top",
+        start: "11200px top",
+        end: "12000px top",
         scrub: 1,
         markers: false,
     }
@@ -1081,8 +1103,8 @@ gsap.to(".body-content-overview .overview-sizer > span > span", {
 
     scrollTrigger: {
         trigger: "body",
-        start: "9000px top",
-        end: "10200px top",
+        start: "11600px top",
+        end: "12000px top",
         scrub: 1,
         markers: false,
     }
@@ -1094,8 +1116,8 @@ gsap.to(".body-content-overview .overview-chart .chart-item .item-value .line sp
 
     scrollTrigger: {
         trigger: "body",
-        start: "9100px top",
-        end: "10200px top",
+        start: "11900px top",
+        end: "12000px top",
         scrub: 1,
         markers: false,
     }
@@ -1108,8 +1130,8 @@ gsap.to(".body-content-overview .overview-chart .chart-item .item-value .line sp
 
     scrollTrigger: {
         trigger: "body",
-        start: "9100px top",
-        end: "10600px top",
+        start: "11900px top",
+        end: "12600px top",
         scrub: 1,
         markers: false,
     }
@@ -1122,8 +1144,8 @@ gsap.to(".body-content-overview .overview-chart .chart-item .item-value .value-s
 
     scrollTrigger: {
         trigger: "body",
-        start: "9100px top",
-        end: "10600px top",
+        start: "11900px top",
+        end: "12600px top",
         scrub: 1,
         markers: false,
     }
@@ -1136,8 +1158,8 @@ gsap.to(".body-content-overview .overview-chart .chart-item .item-time-value .li
 
     scrollTrigger: {
         trigger: "body",
-        start: "9300px top",
-        end: "10600px top",
+        start: "12300px top",
+        end: "12600px top",
         scrub: 1,
         markers: false,
     }
@@ -1150,12 +1172,75 @@ gsap.to(".body-content-overview .overview-chart .chart-item .item-time-value .va
 
     scrollTrigger: {
         trigger: "body",
-        start: "9350px top",
-        end: "10600px top",
+        start: "12300px top",
+        end: "12600px top",
         scrub: 1,
         markers: false,
     }
 })
+
+//--
+
+const homeCardElement = $(".home-cards-list .home-cards-list-row .home-cards-list-row-item:nth-child(1)");
+const homeCardElementOffset = document.querySelector(".home-cards-list .home-cards-list-row .home-cards-list-row-item:nth-child(1)").getBoundingClientRect();
+
+gsap.to(".card-container", {
+    width: homeCardElement.width(),
+    height: homeCardElement.height(),
+    background: "rgba(255, 255, 255, 0.07)",
+    // backdropFilter: "blur(10px)",
+    borderRadius: 45,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "12800px top",
+        end: "14000px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".card-container", {
+    x: 360,
+    y: 20,
+    xPercent: 0,
+    Percent: 0,
+    left: 0,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "13000px top",
+        end: "14000px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".image-container", {
+    width: "80vw",
+    height: "100vh",
+    x: "-23.6%",
+    y: "27%",
+    scale: 0.45,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "12800px top",
+        end: "14000px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+ScrollTrigger.create({
+    trigger: "body",
+    pin: ".sticky-container",
+    start: "top top",
+    end: "14050px top"
+});
 
 //-- Image Container
 
