@@ -474,7 +474,7 @@ gsap.to(".image-container .image-body .image-body-page-title > span", {
     scrollTrigger: {
         trigger: "body",
         start: "7950px top",
-        end: "8200px top",
+        end: "8500px top",
         scrub: 1,
         markers: false,
     }
@@ -489,7 +489,7 @@ gsap.to(".image-container .image-body .image-body-page-title ul", {
     scrollTrigger: {
         trigger: "body",
         start: "8000px top",
-        end: "8300px top",
+        end: "8500px top",
         scrub: 1,
         markers: false,
     }
@@ -504,7 +504,7 @@ gsap.to(".image-container .image-body .image-body-page-title ul li", {
     scrollTrigger: {
         trigger: "body",
         start: "8000px top",
-        end: "8300px top",
+        end: "8500px top",
         scrub: 1,
         markers: false,
     }
@@ -517,7 +517,7 @@ gsap.to(".image-container .image-body .image-body-sidebar .image-body-sidebar-bg
     scrollTrigger: {
         trigger: "body",
         start: "8000px top",
-        end: "8300px top",
+        end: "8800px top",
         scrub: 1,
         markers: false,
     }
@@ -531,7 +531,7 @@ gsap.to(".image-container .image-body .image-body-sidebar ul li svg", {
     scrollTrigger: {
         trigger: "body",
         start: "8100px top",
-        end: "8300px top",
+        end: "8800px top",
         scrub: 1,
         markers: false,
     }
@@ -544,7 +544,7 @@ gsap.to(".image-container .image-body .image-body-sidebar ul li > span", {
     scrollTrigger: {
         trigger: "body",
         start: "8200px top",
-        end: "8300px top",
+        end: "8800px top",
         scrub: 1,
         markers: false,
     }
@@ -558,7 +558,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8300px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -572,7 +572,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8300px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -586,7 +586,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8300px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -600,7 +600,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8300px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -614,7 +614,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8310px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -628,7 +628,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8300px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -642,7 +642,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8300px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -656,7 +656,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8300px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -670,7 +670,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8300px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -684,7 +684,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8300px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -698,7 +698,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8300px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -713,7 +713,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col .image-bod
     scrollTrigger: {
         trigger: "body",
         start: "8350px top",
-        end: "8600px top",
+        end: "9000px top",
         scrub: 1,
         markers: false,
     }
@@ -726,7 +726,7 @@ gsap.to(".image-menu .image-menu-bg", {
     scrollTrigger: {
         trigger: "body",
         start: "8500px top",
-        end: "9500px top",
+        end: "10000px top",
         scrub: 1,
         markers: false,
     }
@@ -739,7 +739,7 @@ gsap.to(".image-menu .image-menu-bg > span", {
     scrollTrigger: {
         trigger: "body",
         start: "8500px top",
-        end: "9500px top",
+        end: "10000px top",
         scrub: 1,
         markers: false,
     }
@@ -752,7 +752,7 @@ gsap.to(".image-menu .image-menu-add span:nth-child(1)", {
     scrollTrigger: {
         trigger: "body",
         start: "8550px top",
-        end: "8600px top",
+        end: "8900px top",
         scrub: 1,
         markers: false,
     }
@@ -765,7 +765,7 @@ gsap.to(".image-menu .image-menu-add span:nth-child(1) svg", {
     scrollTrigger: {
         trigger: "body",
         start: "8550px top",
-        end: "8600px top",
+        end: "8900px top",
         scrub: 1,
         markers: false,
     }
@@ -779,7 +779,7 @@ gsap.to(".image-menu .image-menu-add > span", {
     scrollTrigger: {
         trigger: "body",
         start: "8550px top",
-        end: "8600px top",
+        end: "8900px top",
         scrub: 1,
         markers: false,
     }
@@ -793,7 +793,7 @@ gsap.to(".image-menu .image-menu-center ul li svg", {
     scrollTrigger: {
         trigger: "body",
         start: "8580px top",
-        end: "8650px top",
+        end: "8950px top",
         scrub: 1,
         markers: false,
     }
@@ -808,7 +808,7 @@ gsap.to(".image-menu .image-menu-center ul li span", {
     scrollTrigger: {
         trigger: "body",
         start: "8580px top",
-        end: "8800px top",
+        end: "8900px top",
         scrub: 1,
         markers: false,
     }
@@ -822,7 +822,7 @@ gsap.to(".image-menu .image-menu-profile", {
     scrollTrigger: {
         trigger: "body",
         start: "9000px top",
-        end: "9500px top",
+        end: "10500px top",
         scrub: 1,
         markers: false,
     }
@@ -836,7 +836,7 @@ gsap.to(".image-menu .image-menu-profile img", {
     scrollTrigger: {
         trigger: "body",
         start: "9010px top",
-        end: "9500px top",
+        end: "10500px top",
         scrub: 1,
         markers: false,
     }
@@ -850,7 +850,7 @@ gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content
     scrollTrigger: {
         trigger: "body",
         start: "8500px top",
-        end: "9000px top",
+        end: "10000px top",
         scrub: 1,
         markers: false,
     }
@@ -864,7 +864,7 @@ gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content
     scrollTrigger: {
         trigger: "body",
         start: "8540px top",
-        end: "9000px top",
+        end: "10000px top",
         scrub: 1,
         markers: false,
     }
@@ -879,7 +879,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(
     scrollTrigger: {
         trigger: "body",
         start: "8500px top",
-        end: "9000px top",
+        end: "10000px top",
         scrub: 1,
         markers: false,
     }
@@ -894,7 +894,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(
     scrollTrigger: {
         trigger: "body",
         start: "8700px top",
-        end: "9300px top",
+        end: "10300px top",
         scrub: 1,
         markers: false,
     }
@@ -909,7 +909,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(
     scrollTrigger: {
         trigger: "body",
         start: "8700px top",
-        end: "9300px top",
+        end: "10300px top",
         scrub: 1,
         markers: false,
     }
@@ -924,7 +924,7 @@ gsap.to(".image-container .image-body .image-body-row .image-body-col:nth-child(
     scrollTrigger: {
         trigger: "body",
         start: "8710px top",
-        end: "9300px top",
+        end: "10300px top",
         scrub: 1,
         markers: false,
     }
@@ -938,7 +938,7 @@ gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content
     scrollTrigger: {
         trigger: "body",
         start: "8720px top",
-        end: "9300px top",
+        end: "10300px top",
         scrub: 1,
         markers: false,
     }
@@ -952,7 +952,7 @@ gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content
     scrollTrigger: {
         trigger: "body",
         start: "8740px top",
-        end: "9300px top",
+        end: "10300px top",
         scrub: 1,
         markers: false,
     }
@@ -966,7 +966,192 @@ gsap.to(".image-container .image-body .image-body-col:nth-child(2) .body-content
     scrollTrigger: {
         trigger: "body",
         start: "8740px top",
-        end: "9300px top",
+        end: "10300px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview-bg", {
+    y: 0,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8700px top",
+        end: "9900px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-header > span", {
+    x: 0,
+    y: 0,
+    scale: 1,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8800px top",
+        end: "10200px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-header .overview-header-icon", {
+    x: 0,
+    y: 0,
+    scale: 1,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8820px top",
+        end: "10200px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-header .overview-header-icon", {
+    x: 0,
+    y: 0,
+    scale: 1,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8820px top",
+        end: "10200px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-chart .chart-value > span", {
+    y: 0,
+    opacity: 1,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8830px top",
+        end: "10200px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-sizer", {
+    width: "100%",
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8830px top",
+        end: "10200px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-sizer > span", {
+    width: "50%",
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "8830px top",
+        end: "10200px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-sizer > span > span", {
+    scale: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "9000px top",
+        end: "10200px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-chart .chart-item .item-value .line span", {
+    borderWidth: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "9100px top",
+        end: "10200px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-chart .chart-item .item-value .line span", {
+    width: "100%",
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "9100px top",
+        end: "10600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-chart .chart-item .item-value .value-svg svg", {
+    strokeDashoffset: 0,
+    stagger: 0.1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "9100px top",
+        end: "10600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-chart .chart-item .item-time-value .line-row", {
+    y: 0,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "9300px top",
+        end: "10600px top",
+        scrub: 1,
+        markers: false,
+    }
+})
+
+gsap.to(".body-content-overview .overview-chart .chart-item .item-time-value .value-row", {
+    y: 0,
+    opacity: 1,
+    ease: easeValue,
+
+    scrollTrigger: {
+        trigger: "body",
+        start: "9350px top",
+        end: "10600px top",
         scrub: 1,
         markers: false,
     }

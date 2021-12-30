@@ -1,9 +1,19 @@
 .body-content-overview {
     margin-top: 16px;
-    background: #1C1C28;
-    box-shadow: 0px -13px 80px rgba(0, 0, 0, 0.07), 0px -1.6278px 10.0172px rgba(0, 0, 0, 0.035);
     border-radius: 16px;
     padding: 20px 16px 55px;
+    position: relative;
+
+    &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #1C1C28;
+        border-radius: 16px;
+        box-shadow: 0px -13px 80px rgba(0, 0, 0, 0.07), 0px -1.6278px 10.0172px rgba(0, 0, 0, 0.035);
+    }
 
     .overview-header {
         display: flex;
