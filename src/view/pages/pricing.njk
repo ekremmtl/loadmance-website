@@ -6,361 +6,309 @@
 
 {% block header %}
     {% from "../layouts/header.njk" import header %}
-    {{ header() }}
-{% endblock %}
+    <main data-barba="container" data-barba-namespace="pricing-section">
+        {{ header() }}
+    {% endblock %}
 
-{% block content %}
-    <section class="pricing-banner">
-        <div class="s-container">
-            <h1>Compare Marketing <span>plans</span></h1>
+    {% block content %}
+        <section class="pricing-banner">
+            <div class="pricing-banner-color"></div>
 
-            <div class="switch-plan">
-                <span>Annual</span>
-
-                <div class="switch-item">
-                    <input type="checkbox" name="switch-plan" id="switch-plan" checked>
-                    <label for="switch-plan">
-                        <div class="switch-bar">
-                            <span></span>
-                        </div>
-                    </label>
-                </div>
-
-                <span>Monthly</span>
+            <div class="pricing-banner-bg">
+                <span></span>
             </div>
-        </div>
-    </section>
 
-    <section class="pricing-fixed">
-        <div class="s-container">
-            <div class="plan-row">
+            <div class="s-container">
+                <h1>Compare Marketing <span>plans</span></h1>
 
-                <div class="plan-item">
-                    <h2>Free</h2>
+                <div class="switch-plan">
+                    <span>Annual</span>
 
-                    <div class="price">
-                        <span></span>
-                        <span>
-                            <span>$</span>0
-                        </span>
-                        <p>/free</p>
+                    <div class="switch-item">
+                        <input type="checkbox" name="switch-plan" id="switch-plan" checked>
+                        <label for="switch-plan">
+                            <div class="switch-bar">
+                                <span></span>
+                            </div>
+                        </label>
                     </div>
 
-                    <a href="javascript:;">Sign Up Free</a>
-                </div>
-
-                <div class="plan-item">
-                    <h2>Basic</h2>
-
-                    <div class="price">
-                        <span></span>
-                        <span>
-                            <span>$</span>
-                            <span class="monthly-item">129</span>
-                            <span class="annual-item">99</span>
-                        </span>
-                        <p>
-                            <span class="monthly-item">/monthly</span>
-                            <span class="annual-item">/annual</span>
-                        </p>
-                    </div>
-
-                    <a href="javascript:;">Buy Now</a>
-                </div>
-
-                <div class="plan-item">
-                    <h2>Standard</h2>
-
-                    <div class="price">
-                        <span></span>
-                        <span>
-                            <span>$</span>
-                            <span class="monthly-item">499</span>
-                            <span class="annual-item">349</span>
-                        </span>
-                        <p>
-                            <span class="monthly-item">/monthly</span>
-                            <span class="annual-item">/annual</span>
-                        </p>
-                    </div>
-
-                    <a href="javascript:;">Buy Now</a>
-                </div>
-
-                <div class="plan-item">
-                    <h2>Enterprise</h2>
-
-                    <div class="price">
-                        <span>Find the perfect plan for you</span>
-                    </div>
-
-                    <a href="javascript:;">Talk To Sales</a>
+                    <span>Monthly</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="pricing-content">
-        <div class="s-container">
-            <div class="content-plan">
-                <span>PLAN</span>
+        <section class="pricing-content">
+            <div class="content-plan-container">
+                <div class="content-plan">
+                    <div class="s-container">
+                        <span>PLAN</span>
 
-                <div class="plan-row">
-                    <div class="plan-title">
-                        <span>PRICING</span>
-                    </div>
+                        <div class="plan-row">
+                            <div class="plan-title">
+                                <span>PRICING</span>
+                            </div>
 
-                    <div class="plan-item">
-                        <div class="item-header">
-                            <h2>Free</h2>
+                            <div class="plan-item">
+                                <div class="item-header">
+                                    <h2>Free</h2>
 
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                        </div>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                </div>
 
-                        <div class="item-content">
-                            <div class="price">
-                                <span>Starts at</span>
-                                <span>
-                                    <span>$</span>0
+                                <div class="item-content">
+                                    <div class="price">
+                                        <span>Starts at</span>
+                                        <span>
+                                            <span>$</span>0
                             </span>
-                                <p>/free</p>
+                                        <p>/free</p>
+                                    </div>
+
+                                    <a href="javascript:;">Sign Up Free</a>
+                                </div>
                             </div>
 
-                            <a href="javascript:;">Sign Up Free</a>
-                        </div>
-                    </div>
+                            <div class="plan-item">
+                                <div class="item-header">
+                                    <h2>Basic</h2>
 
-                    <div class="plan-item">
-                        <div class="item-header">
-                            <h2>Basic</h2>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                </div>
 
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                        </div>
+                                <div class="item-content">
+                                    <div class="price">
+                                        <span>Starts at</span>
+                                        <span>
+                                            <span>$</span>
+                                            <span class="monthly-item">129</span>
+                                            <span class="annual-item">99</span>
+                                        </span>
+                                        <p>
+                                            <span class="monthly-item">/monthly</span>
+                                            <span class="annual-item">/annual</span>
+                                        </p>
+                                    </div>
 
-                        <div class="item-content">
-                            <div class="price">
-                                <span>Starts at</span>
-                                <span>
-                                    <span>$</span>
-                                    <span class="monthly-item">129</span>
-                                    <span class="annual-item">99</span>
-                                </span>
-                                <p>
-                                    <span class="monthly-item">/monthly</span>
-                                    <span class="annual-item">/annual</span>
-                                </p>
+                                    <a href="javascript:;">Buy Now</a>
+                                </div>
                             </div>
 
-                            <a href="javascript:;">Buy Now</a>
-                        </div>
-                    </div>
+                            <div class="plan-item">
+                                <div class="item-header">
+                                    <h2>Standard</h2>
 
-                    <div class="plan-item">
-                        <div class="item-header">
-                            <h2>Standard</h2>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                                </div>
 
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                        </div>
+                                <div class="item-content">
+                                    <div class="price">
+                                        <span>Starts at</span>
+                                        <span>
+                                            <span>$</span>
+                                            <span class="monthly-item">499</span>
+                                            <span class="annual-item">349</span>
+                                        </span>
+                                        <p>
+                                            <span class="monthly-item">/monthly</span>
+                                            <span class="annual-item">/annual</span>
+                                        </p>
+                                    </div>
 
-                        <div class="item-content">
-                            <div class="price">
-                                <span>Starts at</span>
-                                <span>
-                                    <span>$</span>
-                                    <span class="monthly-item">499</span>
-                                    <span class="annual-item">349</span>
-                                </span>
-                                <p>
-                                    <span class="monthly-item">/monthly</span>
-                                    <span class="annual-item">/annual</span>
-                                </p>
+                                    <a href="javascript:;">Buy Now</a>
+                                </div>
                             </div>
 
-                            <a href="javascript:;">Buy Now</a>
-                        </div>
-                    </div>
+                            <div class="plan-item">
+                                <div class="item-header">
+                                    <h2>Enterprise</h2>
 
-                    <div class="plan-item">
-                        <div class="item-header">
-                            <h2>Enterprise</h2>
+                                    <p>Find the perfect plan for you</p>
+                                </div>
 
-                            <p>Find the perfect plan for you</p>
-                        </div>
-
-                        <div class="item-content">
-                            <a href="javascript:;">Talk To Sales</a>
+                                <div class="item-content">
+                                    <a href="javascript:;">Talk To Sales</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="content-body">
-                <div class="body-item">
-                    <span class="item-title">Features</span>
+            <div class="s-container">
+                <div class="content-body">
+                    <div class="body-item">
+                        <span class="item-title">Features</span>
 
-                    <div class="item-list">
-                        <div class="list-item">
-                            <span class="list-title"></span>
+                        <div class="item-list">
+                            <div class="list-item">
+                                <span class="list-title"></span>
 
-                            <div class="list-row">
-                                <div class="row-item">
-                                    <span>Features</span>
+                                <div class="list-row">
+                                    <div class="row-item">
+                                        <span>Features</span>
 
-                                    <span>Concurrent User</span>
+                                        <span>Concurrent User</span>
 
-                                    <span>Test Count (Monthly)</span>
+                                        <span>Test Count (Monthly)</span>
 
-                                    <span>Test Count (Annually)</span>
+                                        <span>Test Count (Annually)</span>
 
-                                    <span>Load Generator</span>
+                                        <span>Load Generator</span>
 
-                                    <span>Max. Test Duration</span>
+                                        <span>Max. Test Duration</span>
 
-                                    <span>API Calls Limitation</span>
+                                        <span>API Calls Limitation</span>
 
-                                    <span>
+                                        <span>
                                         Sandbox
                                     </span>
 
-                                    <span>Geographic Distrubition of Load</span>
+                                        <span>Geographic Distrubition of Load</span>
 
-                                    <span>Dedicated IP</span>
+                                        <span>Dedicated IP</span>
 
-                                    <span>Parallel Test</span>
+                                        <span>Parallel Test</span>
 
-                                    <span>Data Retention</span>
+                                        <span>Data Retention</span>
 
-                                    <span>Subscription</span>
-                                </div>
+                                        <span>Subscription</span>
+                                    </div>
 
-                                <div class="row-item">
-                                    <span>Free</span>
+                                    <div class="row-item">
+                                        <span>Free</span>
 
-                                    <span>250</span>
+                                        <span>250</span>
 
-                                    <span>10</span>
+                                        <span>10</span>
 
-                                    <span>10</span>
+                                        <span>10</span>
 
-                                    <span>1 Engines</span>
+                                        <span>1 Engines</span>
 
-                                    <span>10 Min</span>
+                                        <span>10 Min</span>
 
-                                    <span>10.000</span>
+                                        <span>10.000</span>
 
-                                    <span>∞</span>
+                                        <span>∞</span>
 
-                                    <span>No</span>
+                                        <span>No</span>
 
-                                    <span>No</span>
+                                        <span>No</span>
 
-                                    <span>2</span>
+                                        <span>2</span>
 
-                                    <span>1 Month</span>
+                                        <span>1 Month</span>
 
-                                    <span>Subscription active</span>
-                                </div>
+                                        <span>Subscription active</span>
+                                    </div>
 
-                                <div class="row-item">
-                                    <span>Basic</span>
+                                    <div class="row-item">
+                                        <span>Basic</span>
 
-                                    <span>2.000</span>
+                                        <span>2.000</span>
 
-                                    <span>20</span>
+                                        <span>20</span>
 
-                                    <span>250</span>
+                                        <span>250</span>
 
-                                    <span>4 Engines</span>
+                                        <span>4 Engines</span>
 
-                                    <span>30 Min</span>
+                                        <span>30 Min</span>
 
-                                    <span>∞</span>
+                                        <span>∞</span>
 
-                                    <span>∞</span>
+                                        <span>∞</span>
 
-                                    <span>Yes</span>
+                                        <span>Yes</span>
 
-                                    <span>
+                                        <span>
                                         Yes 
                                     </span>
 
-                                    <span>3</span>
+                                        <span>3</span>
 
-                                    <span>3 Month</span>
+                                        <span>3 Month</span>
 
-                                    <span>Subscription active</span>
-                                </div>
+                                        <span>Subscription active</span>
+                                    </div>
 
-                                <div class="row-item">
-                                    <span>Standard</span>
+                                    <div class="row-item">
+                                        <span>Standard</span>
 
-                                    <span>5.000</span>
+                                        <span>5.000</span>
 
-                                    <span>30</span>
+                                        <span>30</span>
 
-                                    <span>360</span>
+                                        <span>360</span>
 
-                                    <span>10 Engines</span>
+                                        <span>10 Engines</span>
 
-                                    <span>3 Hours</span>
+                                        <span>3 Hours</span>
 
-                                    <span>∞</span>
+                                        <span>∞</span>
 
-                                    <span>∞</span>
+                                        <span>∞</span>
 
-                                    <span>Yes</span>
+                                        <span>Yes</span>
 
-                                    <span>
+                                        <span>
                                         Yes 
                                     </span>
 
-                                    <span>5</span>
+                                        <span>5</span>
 
-                                    <span>6 Month</span>
+                                        <span>6 Month</span>
 
-                                    <span>Subscription active</span>
-                                </div>
+                                        <span>Subscription active</span>
+                                    </div>
 
-                                <div class="row-item">
-                                    <span>Enterprise</span>
+                                    <div class="row-item">
+                                        <span>Enterprise</span>
 
-                                    <span>Customizable</span>
+                                        <span>Customizable</span>
 
-                                    <span>Customizable</span>
+                                        <span>Customizable</span>
 
-                                    <span>Customizable</span>
+                                        <span>Customizable</span>
 
-                                    <span>Customizable</span>
+                                        <span>Customizable</span>
 
-                                    <span>Customizable</span>
+                                        <span>Customizable</span>
 
-                                    <span>∞</span>
+                                        <span>∞</span>
 
-                                    <span>∞</span>
+                                        <span>∞</span>
 
-                                    <span>Yes</span>
+                                        <span>Yes</span>
 
-                                    <span>
+                                        <span>
                                         Yes 
                                     </span>
 
-                                    <span>Customizable</span>
+                                        <span>Customizable</span>
 
-                                    <span>Customizable</span>
+                                        <span>Customizable</span>
 
-                                    <span>Subscription active</span>
+                                        <span>Subscription active</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="content-info">
-                <p>
+                <div class="content-info">
+                    <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe culpa molestiae ducimus mollitia ullam enim commodi nesciunt sint atque, earum voluptatem rem voluptatum assumenda inventore eaque temporibus, magnam vero tempora.
                 </p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    {% endblock %}
+
+    {% block footer %}
+        {% from "../layouts/footer.njk" import footer %}
+        {{ footer(false, "") }}
+    </main>
 {% endblock %}

@@ -129,6 +129,39 @@
         }
     }
 
+    @media (min-width: 1200px) {
+        .home-reviews-header {
+            .home-reviews-header-left {
+                .home-reviews-title {
+                    transform: translate(0px, 30px);
+                    opacity: 0;
+                }
+
+                p {
+                    transform: translate(0px, 30px);
+                    opacity: 0;
+                }
+            }
+
+            .home-reviews-header-right .home-reviews-slide-button {
+                &.slide-button-prev {
+                    transform: translate(-20px, 0px);
+                    opacity: 0;
+                }
+
+                &.slide-button-next {
+                    transform: translate(20px, 0px);
+                    opacity: 0;
+                }
+            }
+        }
+
+        .home-reviews-slider .home-reviews-slider-item {
+            transform: translate(0px, 50px);
+            opacity: 0;
+        }
+    }
+
     @media (max-width: 1199px) {
         .home-reviews-slider {
             .swiper-container {

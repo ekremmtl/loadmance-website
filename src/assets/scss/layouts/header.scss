@@ -4,7 +4,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
 
     .header-row {
         a img {
@@ -89,6 +89,27 @@ header {
                         color: #fff;
                     }
                 }
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .header-row {
+            .header-right {
+                >ul>li {
+                    transform: translate(0px, -30px);
+                    opacity: 0;
+                }
+
+                .header-button {
+                    transform: translate(0px, -40px);
+                    opacity: 0;
+                }
+            }
+
+            a img {
+                transform: translate(0px, -150%);
+                opacity: 0;
             }
         }
     }

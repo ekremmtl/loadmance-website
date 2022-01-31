@@ -60,6 +60,8 @@
         flex-wrap: wrap;
         max-width: 1260px;
         margin: 0 auto;
+        position: relative;
+        z-index: 1;
 
         .home-cards-list-row-item {
             flex: 0 0 calc(50% - 60px);
@@ -67,8 +69,18 @@
             position: relative;
             margin: 0 30px 90px;
 
-            &:nth-child(1){
+            &:nth-child(1) {
                 opacity: 0;
+                visibility: hidden;
+                transform: translate(0, 0);
+
+                img {
+                    opacity: 0;
+                }
+
+                .home-cards-list-row-item-bg {
+                    background: none;
+                }
             }
 
             .item-green-circle {
@@ -80,6 +92,7 @@
                 border-radius: 100%;
                 border: 31px solid #39d98a;
                 opacity: 0.14;
+                z-index: -1;
             }
 
             .item-red-ellipse {
@@ -112,11 +125,12 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
+                // backdrop-filter: blur(20px);
+                // -webkit-backdrop-filter: blur(20px);
                 background-color: rgba(255, 255, 255, 0.07);
                 border-radius: 45px;
                 padding: 60px;
+                z-index: 1;
             }
 
             .item-title {
@@ -157,6 +171,52 @@
                 width: 90%;
                 border-bottom-right-radius: 45px;
             }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .home-cards-list-row .home-cards-list-row-item {
+            transform: translate(0px, 100px);
+
+            .item-green-circle {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+
+            .item-blue-circle {
+                transform: translate(0, -50%) scale(0);
+            }
+        }
+
+        .list-line {
+            transform: translate(0, -100%);
+            overflow: hidden;
+
+            svg {
+                transform: translate(0px, 100%);
+            }
+        }
+
+        .list-orange-light {
+            transform: translate(-50%, 0px) scale(0.8);
+            opacity: 0;
+        }
+
+        .list-green-light {
+            transform: translate(50%, 0px) scale(0.6);
+            opacity: 0;
+        }
+
+        .list-blue-light {
+            transform: translate(50%, 0px) scale(0.6);
+            opacity: 0;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .home-cards-list-row .home-cards-list-row-item:nth-child(1) {
+            opacity: 1 !important;
+            visibility: visible;
         }
     }
 

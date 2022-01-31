@@ -23,6 +23,7 @@ module.exports = {
             }),
             new CopyWebpackPlugin({
                 patterns: [
+                    { from: "./src/assets/favicon", to: "assets/favicon" },
                     { from: "./src/assets/img", to: "assets/img" },
                     { from: "./src/assets/js/lib/swiper.js", to: "assets/js/[name].js" },
                     { from: "./src/assets/js/lib/barba.js", to: "assets/js/[name].js" },

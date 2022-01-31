@@ -1,7 +1,7 @@
 .home-pricing {
     background: #07071C;
     padding: 120px 0 200px;
-    z-index: 1;
+    position: relative;
     overflow: hidden;
 
     .s-container {
@@ -240,15 +240,13 @@
             .home-pricing-table-item {
                 span {
                     font-size: 16px;
-                    color: #fff;
-                    opacity: 0.6;
+                    color: rgba(255, 255, 255, 0.6);
                     display: block;
 
                     &:first-child {
                         font-weight: bold;
                         font-size: 30px;
                         color: #fff;
-                        opacity: 1;
                         margin-bottom: 60px;
                     }
 
@@ -292,6 +290,35 @@
                 background: linear-gradient(to top, #07071c, #07071c00);
                 z-index: 1;
             }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .home-pricing-header {
+            .home-pricing-title {
+                transform: translate(0px, 30px);
+                opacity: 0;
+            }
+
+            p {
+                transform: translate(0px, 30px);
+                opacity: 0;
+            }
+
+            .switch-plan {
+                transform: translate(0px, 30px);
+                opacity: 0;
+            }
+        }
+
+        .home-pricing-container {
+            transform: translate(0px, 30px);
+            opacity: 0;
+        }
+
+        .home-pricing-table .home-pricing-table-row .home-pricing-table-item span {
+            transform: translate(0px, 40px);
+            opacity: 0;
         }
     }
 

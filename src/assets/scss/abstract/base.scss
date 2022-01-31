@@ -30,11 +30,25 @@ body {
     font-family: 'Pangram';
     line-height: 1;
     background: #fff;
-    // overflow: hidden;
+    overflow: hidden;
+
     // height: 10000px;
+
+    &.point-none {
+        pointer-events: none;
+    }
+
+    &.overflow-hidden {
+        overflow: hidden;
+    }
+
+    &.overflow-initial {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 }
 
-.annual-item{
+.annual-item {
     display: none;
 }
 
@@ -43,7 +57,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    
+
     >span {
         color: #fff;
         font-size: 17px;
@@ -90,120 +104,6 @@ body {
     }
 }
 
-.page-banner {
-    position: relative;
-    padding-top: calc(110px + 90px);
-    padding-bottom: 120px;
-    overflow: hidden;
-    background: #07071c;
-
-    .banner-circle.circle-1 {
-        position: absolute;
-        left: 60%;
-        transform: translate(-50%, 0px);
-        bottom: -90px;
-        height: 900px;
-        width: 900px;
-        border-radius: 100%;
-        background: #100C5D;
-        filter: blur(190px);
-        opacity: 0.8;
-    }
-
-    .s-container {
-        position: relative;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .banner-breadcrumb span {
-            font-size: 13px;
-            letter-spacing: 0.05em;
-            color: #e7a1ee;
-            position: relative;
-
-            +span {
-                margin-left: 10px;
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    top: 4px;
-                    left: -9px;
-                    height: 9px;
-                    width: 1px;
-                    background: #e7a1ee;
-                }
-            }
-        }
-
-        .banner-title {
-            h1 {
-                font-size: 65px;
-                letter-spacing: 0.02em;
-                color: #fff;
-                margin-bottom: 45px;
-            }
-
-            p {
-                font-size: 26px;
-                letter-spacing: 0.01em;
-                line-height: 38px;
-                color: #fff;
-            }
-        }
-
-        .banner-breadcrumb {
-            margin-bottom: 60px;
-        }
-
-        .banner-title {
-            max-width: 700px;
-        }
-    }
-
-    @media (max-width: 991px) {
-        .s-container .banner-title {
-            max-width: 70%;
-
-            h1 {
-                font-size: 44px;
-            }
-
-            p {
-                font-size: 18px;
-                line-height: 1.5;
-            }
-        }
-    }
-
-    @media (max-width: 767px) {
-        padding-bottom: 50px;
-
-        .s-container {
-            .banner-breadcrumb {
-                margin-bottom: 32px;
-            }
-
-            .banner-title {
-                max-width: 100%;
-
-                h1 {
-                    font-size: 32px;
-                    line-height: normal;
-                    margin-bottom: 24px;
-                }
-
-                p {
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-}
-
-
 div#container:after {
     content: "";
     position: absolute;
@@ -238,4 +138,8 @@ div#earth-container {
     right: 0;
     left: 0;
     bottom: 0;
+
+    &.pointer-none{
+        pointer-events: none;
+    }
 }
