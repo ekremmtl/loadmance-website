@@ -12,6 +12,8 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -177,21 +179,24 @@ $(function () {
                     headerAni(preLoaderTimer)
 
                     if (data.next.namespace === "home-section") {
-                        $("body").removeClass("overflow-initial")
+                        const loader = new GLTFLoader()
+                        loader.load('./earth.glb', function () {
+                            $("body").removeClass("overflow-initial")
 
-                        gsap.to(".pre-loader", {
-                            autoAlpha: 1,
-                            ease: "none",
-                            duration: 0.1,
-                        })
+                            gsap.to(".pre-loader", {
+                                autoAlpha: 1,
+                                ease: "none",
+                                duration: 0.1,
+                            })
 
-                        setTimeout(() => {
-                            topInfo()
-                            homeHeroAni(preLoaderTimer)
-                            homeModelAni(preLoaderTimer)
-                            homeReviewsAni()
-                            footerAni();
-                        }, 2500);
+                            setTimeout(() => {
+                                topInfo()
+                                homeHeroAni(preLoaderTimer)
+                                homeModelAni(preLoaderTimer)
+                                homeReviewsAni()
+                                footerAni();
+                            }, 2500);
+                        });
                     }
 
                     if (data.next.namespace === "pricing-section") {
@@ -211,10 +216,13 @@ $(function () {
 
                     useCaseAni(false)
 
-                    setTimeout(() => {
-                        homeHeroAni(preLoaderTimer)
-                        homeReviewsAni()
-                    }, 2500);
+                    const loader = new GLTFLoader()
+                    loader.load('./earth.glb', function () {
+                        setTimeout(() => {
+                            homeHeroAni(preLoaderTimer)
+                            homeReviewsAni()
+                        }, 2500);
+                    });
 
                     topInfo()
                     headerAni(preLoaderTimer)
