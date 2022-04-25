@@ -1,5 +1,7 @@
 import gsap from 'gsap'
 
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
 function headerAni(preLoaderTimer) {
     const easeValue = "Expo.easeOut";
 
@@ -55,9 +57,12 @@ function headerAni(preLoaderTimer) {
 
     if ($(window).width() > 1200) {
         if ($(".home-hero").length) {
-            setTimeout(() => {
-                ani()
-            }, 3000);
+            const loader = new GLTFLoader()
+            loader.load('./earth.glb', function () {
+                setTimeout(() => {
+                    ani()
+                }, 3000);
+            });
         } else {
             setTimeout(() => {
                 ani()
