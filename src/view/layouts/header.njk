@@ -1,74 +1,129 @@
 {% macro header() -%}
     <header>
-        <div class="s-container">
-            <div class="header-row">
+        <div class="header-row">
+            <div class="header-logo">
                 <a href="/">
                     <img src="./assets/img/logo-text.svg" alt="Loadmance">
                 </a>
 
-                <div class="header-right">
-                    <ul>
-                        <li>
-                            <a href="javascript:;">Documentitaion</a>
-                        </li>
+                <a href="mailto:info@loadmance.com">
+                    <span>
+                        <span>Join our team! ✶</span>
+                    </span>
+                </a>
+            </div>
 
-                        <li>
-                            <a href="pricing.html">Pricing</a>
-                        </li>
+            <div class="header-menu">
+                <ul>
+                    <li>
+                        <a href="javascript:;">Documentitaion</a>
+                    </li>
 
-                        <li>
-                            <a href="javascript:;" class="active">
-                                Use Cases
-                                
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.96004 4.47498L6.70004 7.73498C6.31504 8.11998 5.68504 8.11998 5.30004 7.73498L2.04004 4.47498" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
+                    <li>
+                        <a href="pricing.html">Pricing 💎</a>
+                    </li>
 
-                            <ul>
-                                <li>
-                                    <a href="use-cases.html">Online Banking</a>
-                                </li>
+                    <li>
+                        <a href="javascript:;">
+                            Use Cases
+                            <span>▾</span>
+                        </a>
 
-                                <li>
-                                    <a href="use-cases.html">Ecommerce</a>
-                                </li>
+                        <ul>
+                            <li>
+                                <a href="use-cases.html">Online Banking</a>
+                            </li>
 
-                                <li>
-                                    <a href="use-cases.html" class="active">Fintech</a>
-                                </li>
+                            <li>
+                                <a href="use-cases.html">Ecommerce</a>
+                            </li>
 
-                                <li>
-                                    <a href="use-cases.html">Health</a>
-                                </li>
-                                <li>
+                            <li>
+                                <a href="use-cases.html">Fintech</a>
+                            </li>
 
-                                    <a href="use-cases.html">Automotive</a>
-                                </li>
+                            <li>
+                                <a href="use-cases.html">Health</a>
+                            </li>
+                            <li>
 
-                                <li>
-                                    <a href="use-cases.html">Online Delivery</a>
-                                </li>
-                            </ul>
-                        </li>
+                                <a href="use-cases.html">Automotive</a>
+                            </li>
 
-                        <li>
-                            <a href="javascript:;">Sign in</a>
-                        </li>
-                    </ul>
+                            <li>
+                                <a href="use-cases.html">Online Delivery</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-                    <div class="header-button">
-                        <a href="javascript:;">Get started</a>
-                    </div>
+            <div class="header-right">
+                <div class="header-button">
+                    <a href="javascript:;">
+                        <span>Sign in</span>
+                    </a>
+
+                    <a href="javascript:;">
+                        <span>Get started</span>
+                    </a>
                 </div>
+            </div>
 
-                {# <div class="header-mobile-menu">
-                    <div class="mobile-menu-button">
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div> #}
+            <div class="mobile-menu-button">
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
+
+    <div class="mobile-menu">
+        <ul>
+            <li>
+                <a href="javascript:;">Documentitaion</a>
+            </li>
+
+            <li>
+                <a href="pricing.html">Pricing 💎</a>
+            </li>
+
+            <li>
+                <a href="javascript:;">
+                    Use Cases
+                    <span>▾</span>
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="use-cases.html">Online Banking</a>
+                    </li>
+                    <li>
+                        <a href="use-cases.html">Ecommerce</a>
+                    </li>
+                    <li>
+                        <a href="use-cases.html">Fintech</a>
+                    </li>
+                    <li>
+                        <a href="use-cases.html">Health</a>
+                    </li>
+                    <li>
+                        <a href="use-cases.html">Automotive</a>
+                    </li>
+                    <li>
+                        <a href="use-cases.html">Online Delivery</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="javascript:;">Sign in</a>
+            </li>
+
+            <li>
+                <a href="javascript:;">Get started</a>
+            </li>
+        </ul>
+    </div>
 {%- endmacro %}

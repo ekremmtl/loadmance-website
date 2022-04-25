@@ -46,6 +46,18 @@ body {
         overflow-y: auto;
         overflow-x: hidden;
     }
+
+    &.mobile-menu-active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+}
+
+.pin-spacer {
+    pointer-events: none;
 }
 
 .annual-item {
@@ -139,7 +151,7 @@ div#earth-container {
     left: 0;
     bottom: 0;
 
-    &.pointer-none{
+    &.pointer-none {
         pointer-events: none;
     }
 }

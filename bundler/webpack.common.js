@@ -17,16 +17,17 @@ module.exports = {
     devtool: 'source-map',
     plugins:
         [
-            new webpack.ProvidePlugin({
-                $: 'jquery',
-                jQuery: 'jquery'
-            }),
+            // new webpack.ProvidePlugin({
+            //     $: 'jquery',
+            //     jQuery: 'jquery'
+            // }),
             new CopyWebpackPlugin({
                 patterns: [
                     { from: "./src/assets/favicon", to: "assets/favicon" },
                     { from: "./src/assets/img", to: "assets/img" },
                     { from: "./src/assets/js/lib/swiper.js", to: "assets/js/[name].js" },
                     { from: "./src/assets/js/lib/barba.js", to: "assets/js/[name].js" },
+                    { from: "./src/assets/js/lib/jquery.blast.min.js", to: "assets/js/[name].js" },
                     { from: path.resolve(__dirname, '../static') }
                 ],
             }),

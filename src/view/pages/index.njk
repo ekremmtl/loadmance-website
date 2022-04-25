@@ -7,43 +7,59 @@
 {% block header %}
     {% from "../layouts/header.njk" import header %}
     <main data-barba="container" data-barba-namespace="home-section">
+        <div class="top-info">
+            <div class="top-info-wrapper">
+                <div class="top-info-boxes">
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
+                </div>
+            </div>
+        </div>
+
         {{ header() }}
     {% endblock %}
 
     {% block content %}
         <div class="world-info-container">
-            <span class="color-check-1" style="display: none;"></span>
-            <span class="color-check-2" style="display: none;"></span>
-            <span class="color-check-3" style="display: none;"></span>
-            <span class="color-check-4" style="display: none;"></span>
-            <span class="color-check-5" style="display: none;"></span>
+            <span class="title">How it works?</span>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus, sed facilisi in id pellentesque.</p>
+            <p>Get your dedicated IPs from all over the world to simulate user load for your load tests when you work with security regulations.</p>
 
-            <div class="info-progress">
-                <span>Select Countries</span>
+            <span class="line"></span>
 
-                <span>
-                    <span></span>
-                </span>
+            <div class="country-row">
+                <div class="country-item">
+                    <img src="./assets/img/turkey.svg" alt="Turkey">
 
-                <span>
-                    <span>
-                        <span>0</span>
-                        <span>1</span>
-                        <span>2</span>
-                    </span>
-                    /3
-                </span>
-            </div>
+                    <div class="item-text">
+                        <span>Turkey</span>
+                        <span>Europe</span>
+                    </div>
+                </div>
 
-            <div class="info-country info-country-only">
                 <div class="country-item">
                     <img src="./assets/img/germany.png" alt="Germany">
 
                     <div class="item-text">
-                        <span>Country</span>
                         <span>Germany</span>
+                        <span>Europe</span>
                     </div>
                 </div>
 
@@ -51,70 +67,14 @@
                     <img src="./assets/img/spain.png" alt="Spain">
 
                     <div class="item-text">
-                        <span>Country</span>
                         <span>Spain</span>
-                    </div>
-                </div>
-
-                <div class="country-item">
-                    <img src="./assets/img/turkey.png" alt="Turkey">
-
-                    <div class="item-text">
-                        <span>Country</span>
-                        <span>Turkey</span>
+                        <span>Europe</span>
                     </div>
                 </div>
             </div>
-
-            <div class="info-country info-country-user">
-                <div class="user-item">
-                    <div class="country-item">
-                        <img src="./assets/img/germany.png" alt="Germany">
-
-                        <div class="item-text">
-                            <span>Country</span>
-                            <span>Germany</span>
-                        </div>
-                    </div>
-
-                    <div class="user-number">
-                        <span>Number of Users</span>
-
-                        <span>
-                            340
-                            <span></span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="user-item">
-                    <div class="country-item">
-                        <img src="./assets/img/turkey.png" alt="Turkey">
-
-                        <div class="item-text">
-                            <span>Country</span>
-                            <span>Turkey</span>
-                        </div>
-                    </div>
-
-                    <div class="user-number">
-                        <span>Number of Users</span>
-
-                        <span>
-                            500
-                            <span></span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <ul>
-                <li class="active">Countries</li>
-                <li>User</li>
-            </ul>
         </div>
 
-        <div class="sticky-container">
+        <div class="sticky-container" style="display: none;">
             <div class="logo-container logo-container-bar">
                 <div class="logo-container-bar-light-2"></div>
 
@@ -880,202 +840,276 @@
 
         <section class="home-hero">
             <div class="home-hero-container">
-                <div class="home-hero-light"></div>
+                <div class="home-hero-content">
+                    <div class="content-title">
+                        <div class="title-row">
+                            <span class="line"></span>
+                            <span class="line"></span>
 
-                <div class="s-container">
-                    <div class="home-hero-content">
-                        <h1>
-                            Simple 
-                            <span>Fast</span>
-                            Innovative
-                        </h1>
+                            <span class="title">
+                                <span class="title-text">
+                                    <span>Performance</span></span>
+                                <span class="title-text">
+                                    <span>and</span></span>
+                                <span>
+                                    <span class="title-text">
+                                        <span>Load</span></span>
+                                    <svg width="348" height="144" viewBox="0 0 348 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M346.058 17.4451C347.979 23.5037 345.21 30.8685 338.241 39.0795C331.293 47.2674 320.269 56.1714 305.99 65.2488C277.439 83.3995 235.971 102.181 188.356 117.279C140.741 132.376 96.0272 140.92 62.2336 142.537C45.333 143.346 31.1929 142.421 20.7956 139.733C10.3689 137.038 3.86238 132.614 1.94135 126.555C0.0203199 120.496 2.78906 113.132 9.75754 104.921C16.7064 96.7328 27.7299 87.8288 42.0087 78.7514C70.56 60.6008 112.028 41.8192 159.643 26.7217C207.258 11.6242 251.972 3.07998 285.765 1.46276C302.666 0.653964 316.806 1.57932 327.203 4.26722C337.63 6.96272 344.137 11.3865 346.058 17.4451Z" stroke="white"/>
+                                    </svg>
+                                </span>
+                            </span>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus, sed facilisi in id pellentesque. Consectetur sed ornare placerat donec vitae molestie.</p>
+                            <div class="svg-star">
+                                <span></span>
 
-                        <div class="content-buttons">
-                            <a href="javascript:;">Get your free trial</a>
-                            <a href="javascript:;">Schedule a demo</a>
+                                <svg width="113" height="113" viewBox="0 0 113 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M53.298 112.132C52.3247 105.805 49.502 98.992 44.83 91.692C40.2553 84.392 33.734 77.53 25.266 71.106C16.7007 64.5847 8.42733 60.5453 0.446 58.988V52.856C8.52467 51.0067 16.36 47.4053 23.952 42.052C31.544 36.6987 37.968 30.3233 43.224 22.926C48.48 15.4313 51.838 7.79066 53.298 0.0039984H59.43C60.306 4.968 62.058 9.98066 64.686 15.042C67.4113 20.1033 70.8667 24.97 75.052 29.642C79.2373 34.2167 83.8607 38.3533 88.922 42.052C96.6113 47.5027 104.495 51.104 112.574 52.856V58.988C107.123 60.0587 101.527 62.2487 95.784 65.558C90.1387 68.8673 84.8827 72.7607 80.016 77.238C75.1493 81.7153 71.1587 86.436 68.044 91.4C63.2747 98.992 60.4033 105.903 59.43 112.132H53.298ZM55.342 108.628H57.386C57.8727 103.567 58.6513 98.5053 59.722 93.444C60.89 88.2853 62.204 83.516 63.664 79.136C65.2213 74.756 66.8273 71.1547 68.482 68.332C71.7913 66.4827 75.7333 64.7793 80.308 63.222C84.98 61.6647 89.798 60.3507 94.762 59.28C99.8233 58.2093 104.495 57.528 108.778 57.236V55.192C104.495 54.8027 99.7747 54.0727 94.616 53.002C89.5547 51.834 84.688 50.4713 80.016 48.914C75.344 47.2593 71.4993 45.556 68.482 43.804C66.8273 40.884 65.2213 37.2827 63.664 33C62.204 28.62 60.89 23.948 59.722 18.984C58.6513 13.9227 57.8727 8.86133 57.386 3.79999H55.342C54.9527 8.37466 54.2227 13.144 53.152 18.108C52.1787 22.9747 50.9133 27.6467 49.356 32.124C47.7987 36.6013 46.0953 40.4947 44.246 43.804C41.1313 45.556 37.2867 47.2593 32.712 48.914C28.1373 50.4713 23.3193 51.834 18.258 53.002C13.1967 54.0727 8.42733 54.8027 3.95 55.192V57.236C8.42733 57.528 13.148 58.2093 18.112 59.28C23.076 60.3507 27.8453 61.6647 32.42 63.222C36.9947 64.7793 40.9367 66.4827 44.246 68.332C46.0953 71.4467 47.75 75.2913 49.21 79.866C50.7673 84.3433 52.0813 89.1127 53.152 94.174C54.2227 99.138 54.9527 103.956 55.342 108.628Z" fill="white"/>
+                                </svg>
+                            </div>
                         </div>
 
-                        <span>Trial includes 50 free tests. You can also schedule a demo with our experts.</span>
+                        <div class="title-row">
+                            <span class="line"></span>
 
-                        <div class="scroll-down">
-                            <span>SCROLL</span>
+                            <span class="title">
+                                <span class="title-text">
+                                    <span>Testing</span></span>
+                                <span class="title-text">
+                                    <span>Tool</span></span>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16.564" height="8.782" viewBox="0 0 16.564 8.782">
-                                <path d="M19.075,23.649,11.5,16.075,19.075,8.5" transform="translate(-7.793 19.782) rotate(-90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
-                            </svg>
+                                <span class="support-img">
+                                    <div class="img-item">
+                                        <div class="img">
+                                            <div>
+                                                <img src="./assets/img/astronaut.svg" alt="Astronaut">
+                                            </div>
+                                        </div>
+
+                                        <svg width="245" height="46" viewBox="0 0 245 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M145 45.5L0 17L4 9.5L5 0L125.5 14.5L245 28.5V45.5H145Z" fill="url(#paint0_linear_371_1961)"/>
+                                            <defs>
+                                                <linearGradient id="paint0_linear_371_1961" x1="3.5" y1="8.50001" x2="245" y2="47.5" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#E79DFA"/>
+                                                    <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+
+                                    <span>supported</span>
+                                </span>
+                            </span>
+
+                            <div class="supported">
+                                <span class="line"></span>
+
+                                <div class="support-item">
+                                    <img src="./assets/img/jmeter-logo.svg" alt="JMeter">
+                                </div>
+
+                                <span></span>
+
+                                <div class="support-item">
+                                    <img src="./assets/img/jenkins.svg" alt="Jenkins">
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Trial includes 50 free tests. You can also schedule a demo with our experts.</p>
+                    </div>
+
+                    <div class="content-desc">
+                        <p class="text">The leading platform that takes you beyond high <span class="text-item-bg">performance <span class="text-bg"></span></span></p>
+                    </div>
+                </div>
+
+                <div class="home-hero-marquee">
+                    <div class="home-hero-marquee-line"></div>
+                    <div class="home-hero-marquee-line"></div>
+
+                    <div class="home-hero-marquee-row">
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 6 Continents</span>
+                        </div>
+
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 48 Countries</span>
+                        </div>
+
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 100+ Customers</span>
+                        </div>
+
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 6 Continents</span>
+                        </div>
+
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 48 Countries</span>
+                        </div>
+
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 100+ Customers</span>
+                        </div>
+
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 6 Continents</span>
+                        </div>
+
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 48 Countries</span>
+                        </div>
+
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 100+ Customers</span>
+                        </div>
+
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 6 Continents</span>
+                        </div>
+
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 48 Countries</span>
+                        </div>
+
+                        <div class="home-hero-marquee-item">
+                            <span>
+                                <span>✶</span> 100+ Customers</span>
                         </div>
                     </div>
                 </div>
 
-                <div id="earth-container"></div>
+                <div id="earth-container" style="display: none;"></div>
             </div>
         </section>
 
-        <section class="home-cards-list">
-            <div style="display: none;" class="list-green-light"></div>
-            <div style="display: none;" class="list-orange-light"></div>
-            <div style="display: none;" class="list-blue-light"></div>
+        <div class="home-dashboard-svg">
+            <div class="dashboard-container">
+                <div class="dashboard-img">
+                    <div class="img" style="background-image: url(./assets/img/home-dashboard-img-2.svg);"></div>
+                </div>
 
-            <div style="display: none;" class="list-line">
-                <svg xmlns="http://www.w3.org/2000/svg" width="2015.856" height="1616.343" viewBox="0 0 2015.856 1616.343">
-                    <path d="M5900,2433.63s-77.167,282.061-607.313,441.525-1340.758,428.8-1355.891,711.422,1932.532,67.818,2014.78,463.163" transform="translate(-3936.209 -2433.499)" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="7" opacity="0.3"/>
-                </svg>
+                <div class="img-line">
+                    <div class="line" style="background-image: url(./assets/img/home-dashboard-line.svg);"></div>
+                </div>
             </div>
+        </div>
+
+        <section class="home-cards-list">
+            <div class="home-cards-list-gradient"></div>
 
             <div class="home-cards-list-row">
+                <svg width="1239" height="982" viewBox="0 0 1239 982" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_371_1972)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M617.011 255.834C683.222 262.501 756.972 230.736 812.944 266.744C868.876 302.726 876.377 379.974 904.026 440.477C929.077 495.293 953.127 547.873 968.099 606.256C987.16 680.581 1051.35 769.446 1003.84 829.688C953.258 893.833 840.673 831.709 765.373 863.337C703.947 889.139 680.683 972.562 617.011 992.171C547.902 1013.45 471.724 1001.15 404.514 974.47C331.877 945.632 241.658 910.378 221.043 834.966C199.292 755.398 301.183 688.702 303.855 606.256C306.388 528.083 217.06 461.936 235.596 385.952C253.922 310.831 323.743 249.805 396.9 224.849C468.243 200.51 542.012 248.281 617.011 255.834Z" fill="url(#paint0_linear_371_1972)" fill-opacity="0.29"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_f_371_1972" x="0" y="0" width="1239" height="1221" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="109" result="effect1_foregroundBlur_371_1972"/>
+                        </filter>
+                        <linearGradient id="paint0_linear_371_1972" x1="-141.348" y1="614.527" x2="606.28" y2="1379.3" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#E25544"/>
+                            <stop offset="1" stop-color="#620C90"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+
                 <div class="home-cards-list-row-item">
-                    <div class="item-red-ellipse"></div>
+                    <div class="item-bg-line line-1"></div>
+                    <div class="item-bg-line line-2"></div>
+                    <div class="item-bg-line line-3"></div>
+                    <div class="item-bg-line line-4"></div>
 
-                    <div class="home-cards-list-row-item-bg">
-                        <div class="item-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="74.589" height="74.577" viewBox="0 0 74.589 74.577">
-                                <g id="Group_159" data-name="Group 159" transform="translate(-432.001 -2514.41)">
-                                    <rect id="Rectangle_21" data-name="Rectangle 21" width="4.37" height="4.371" transform="translate(458.296 2553.879)" fill="#ff5c5c"/>
-                                    <path id="Path_16" data-name="Path 16" d="M32.85,21.841a4.325,4.325,0,0,1-1.423,3.226l-5.133,4.7V35.1h4.37V31.69l3.713-3.4a8.741,8.741,0,1,0-14.639-6.45h4.37a4.37,4.37,0,1,1,8.741,0Z" transform="translate(432.001 2514.41)" fill="#ff5c5c"/>
-                                    <path id="Path_17" data-name="Path 17" d="M25.748,56.813a63.278,63.278,0,0,0,7.1-.227,28.515,28.515,0,0,0,23.9-24.72,43.993,43.993,0,0,0,.128-5.387A28.475,28.475,0,1,0,3.948,42.947L.1,56.846,14,53a28.391,28.391,0,0,0,11.452,3.787c.054.006.117.011.182.016.038,0,.077,0,.115.008M6.368,50.576l2.3-8.321-.525-.821A24.1,24.1,0,1,1,15.507,48.8l-.818-.522Z" transform="translate(432.001 2514.41)" fill="#ff5c5c"/>
-                                    <path id="Path_18" data-name="Path 18" d="M25.452,56.789l.182.016c-.066-.005-.128-.01-.182-.016" transform="translate(432.001 2514.41)" fill="#ff5c5c"/>
-                                    <path id="Path_19" data-name="Path 19" d="M56.771,31.753A19.747,19.747,0,0,1,67.044,61.207l-.537.825,1.7,6.174L62.038,66.5l-.825.537A19.747,19.747,0,0,1,33.9,61.194a20.817,20.817,0,0,1-2.211-4.542c.367-.044-4.985.154-4.486.175a24.124,24.124,0,0,0,35.533,14.4l11.737,3.247-3.24-11.738A24.11,24.11,0,0,0,56.9,27.234c-.011-.254-.136,4.557-.131,4.519" transform="translate(432.001 2514.41)" fill="#ff5c5c" opacity="0.5"/>
-                                    <rect id="Rectangle_22" data-name="Rectangle 22" width="74.589" height="74.577" transform="translate(432.001 2514.41)" fill="none"/>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="item-title">
-                            <span>Continuous Support From Our Expert Team</span>
-                        </div>
-
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-                        <a href="javascript:;">
-                            <span>Get your free trial</span>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="6.491" height="11.981" viewBox="0 0 6.491 11.981">
-                                <path id="arrow" d="M16.784,19.067,11.5,13.784,16.784,8.5" transform="translate(17.491 19.774) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
-                            </svg>
-                        </a>
-
-                        <img src="./assets/img/home-card-img-1.png" alt="">
+                    <div class="item-icon">
+                        <svg width="73" height="119" viewBox="0 0 73 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7988 57.0282L2.88985 59.5L17.1383 61.8624C2.37758 90.2103 -4.07891 114.527 2.68307 118.457C8.3566 121.754 21.7258 109.763 35.9297 89.8457L36.5 93.3308L37.4152 87.738C37.7632 87.2384 38.1116 86.7343 38.4602 86.2258C44.402 90.7676 50.1188 92.4442 54.0769 90.1439C60.0813 86.6546 60.2355 75.0615 55.2012 61.9719L70.1102 59.5L55.8617 57.1377C70.6224 28.7897 77.0789 4.47258 70.3169 0.542922C64.6434 -2.75419 51.2742 9.23657 37.0703 29.1543L36.5 25.6693L35.5848 31.262C35.2368 31.7615 34.8885 32.2656 34.5398 32.7742C28.598 28.2324 22.8812 26.5558 18.9231 28.856C12.9187 32.3454 12.7645 43.9385 17.7988 57.0282ZM21.3909 105.981C25.8529 101.194 30.7033 95.1382 35.6481 88.1252L34.8286 83.1168C30.5893 79.0986 26.3935 73.7495 22.7901 67.4674C21.8119 65.7618 20.9146 64.0527 20.0997 62.3534L18.4088 62.073C11.8463 74.6314 6.92436 86.3886 4.06333 95.9113C2.25827 101.919 1.29412 106.971 1.22605 110.745C1.19201 112.632 1.38387 114.135 1.76381 115.256C2.14035 116.367 2.67446 117.032 3.29416 117.392C3.91387 117.752 4.75251 117.885 5.89655 117.658C7.05093 117.429 8.44004 116.844 10.0469 115.871C13.2598 113.925 17.1243 110.558 21.3909 105.981ZM21.5801 62.5988C22.2781 64.0123 23.0344 65.4329 23.8486 66.8522C27.0681 72.4652 30.7548 77.2993 34.4943 81.0742L31.7468 64.2844L21.5801 62.5988ZM38.1898 84.4478C38.1205 84.3911 38.0511 84.334 37.9816 84.2766L41.2532 64.2844L51.5571 62.576C50.7745 63.9948 49.9724 65.4209 49.1514 66.8522C45.5523 73.127 41.859 79.034 38.1898 84.4478ZM39.1526 85.2103C39.4186 85.4142 39.684 85.6122 39.9486 85.804C45.5419 89.858 50.3555 90.8861 53.4658 89.0785C56.5762 87.271 58.0984 82.561 57.4071 75.6582C57.0026 71.6194 55.8486 67.0091 53.9687 62.1762L53.0937 62.3213C52.1602 64.0271 51.1986 65.7436 50.2099 67.4674C46.5824 73.7915 42.8568 79.7486 39.1526 85.2103ZM52.9003 56.6467L54.5912 56.927C61.1537 44.3686 66.0756 32.6114 68.9367 23.0887C70.7417 17.0807 71.7059 12.0288 71.7739 8.25499C71.808 6.36762 71.6161 4.86457 71.2362 3.74366C70.8596 2.63279 70.3255 1.96845 69.7058 1.60831C69.0861 1.24818 68.2475 1.11476 67.1034 1.34196C65.9491 1.57122 64.56 2.1555 62.9531 3.12886C59.7402 5.07512 55.8757 8.44153 51.6091 13.019C47.1471 17.8061 42.2967 23.8618 37.3518 30.8748L38.1714 35.8832C42.4107 39.9013 46.6065 45.2505 50.2099 51.5326C51.1881 53.2382 52.0854 54.9474 52.9003 56.6467ZM38.5057 37.9258C42.2452 41.7007 45.9319 46.5347 49.1514 52.1477C49.9656 53.5671 50.7219 54.9877 51.42 56.4012L41.2532 54.7156L38.5057 37.9258ZM34.8102 34.5522C34.8795 34.6089 34.9489 34.6659 35.0184 34.7234L31.7468 54.7156L21.4429 56.424C22.2255 55.0052 23.0276 53.5791 23.8486 52.1477C27.4477 45.873 31.141 39.966 34.8102 34.5522ZM33.8474 33.7897C30.1432 39.2514 26.4176 45.2085 22.7901 51.5326C21.8014 53.2564 20.8398 54.9729 19.9063 56.6787L19.0313 56.8238C17.1514 51.9909 15.9974 47.3806 15.5929 43.3418C14.9016 36.439 16.4238 31.729 19.5342 29.9214C22.6445 28.1139 27.4581 29.142 33.0514 33.196C33.316 33.3878 33.5814 33.5858 33.8474 33.7897Z" fill="white"/>
+                        </svg>
                     </div>
+
+                    <div class="item-title">
+                        <span>Continuous Support From Our Expert Team</span>
+                    </div>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    <img src="./assets/img/Test/Dashboard-2.png" alt="">
                 </div>
 
                 <div class="home-cards-list-row-item">
-                    <div class="item-green-circle"></div>
+                    <div class="item-bg-line line-1"></div>
+                    <div class="item-bg-line line-2"></div>
+                    <div class="item-bg-line line-3"></div>
+                    <div class="item-bg-line line-4"></div>
 
-                    <div class="home-cards-list-row-item-bg">
-                        <div class="item-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="71.5" height="74" viewBox="0 0 71.5 74">
-                                <g id="Group_166" data-name="Group 166" transform="translate(-513.5 -2528)">
-                                    <g id="Group_162" data-name="Group 162" transform="translate(525.448 2561.482)">
-                                        <line id="Line_35" data-name="Line 35" y2="39" transform="translate(19.552 -0.482)" fill="none" stroke="#57eba1" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
-                                        <line id="Line_36" data-name="Line 36" x2="39" transform="translate(-0.448 19.518)" fill="none" stroke="#57eba1" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
-                                    </g>
-                                    <g id="Group_163" data-name="Group 163" transform="translate(561.699 2549.08)">
-                                        <line id="Line_35-2" data-name="Line 35" y2="20" transform="translate(10.301 -0.08)" fill="none" stroke="#57eba1" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
-                                        <line id="Line_36-2" data-name="Line 36" x2="21" transform="translate(0.301 10.92)" fill="none" stroke="#57eba1" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
-                                    </g>
-                                    <g id="Group_164" data-name="Group 164" transform="translate(514 2561.482)">
-                                        <line id="Line_35-3" data-name="Line 35" y2="8" transform="translate(4 -0.482)" fill="none" stroke="#57eba1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                                        <line id="Line_36-3" data-name="Line 36" x2="8" transform="translate(0 3.518)" fill="none" stroke="#57eba1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                                    </g>
-                                    <g id="Group_165" data-name="Group 165" transform="translate(525.448 2530)" opacity="0.5">
-                                        <line id="Line_35-4" data-name="Line 35" y2="23" transform="translate(11.552)" fill="none" stroke="#57eba1" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
-                                        <line id="Line_36-4" data-name="Line 36" x2="23" transform="translate(-0.448 11)" fill="none" stroke="#57eba1" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
-                                    </g>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="item-title">
-                            <span>Other Awesome Feature of Our App</span>
-                        </div>
-
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-                        <a href="javascript:;">
-                            <span>Get your free trial</span>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="6.491" height="11.981" viewBox="0 0 6.491 11.981">
-                                <path id="arrow" d="M16.784,19.067,11.5,13.784,16.784,8.5" transform="translate(17.491 19.774) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
-                            </svg>
-                        </a>
-
-                        <img src="./assets/img/home-card-img-1.png" alt="">
+                    <div class="item-icon">
+                        <svg width="73" height="119" viewBox="0 0 73 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7988 57.0282L2.88985 59.5L17.1383 61.8624C2.37758 90.2103 -4.07891 114.527 2.68307 118.457C8.3566 121.754 21.7258 109.763 35.9297 89.8457L36.5 93.3308L37.4152 87.738C37.7632 87.2384 38.1116 86.7343 38.4602 86.2258C44.402 90.7676 50.1188 92.4442 54.0769 90.1439C60.0813 86.6546 60.2355 75.0615 55.2012 61.9719L70.1102 59.5L55.8617 57.1377C70.6224 28.7897 77.0789 4.47258 70.3169 0.542922C64.6434 -2.75419 51.2742 9.23657 37.0703 29.1543L36.5 25.6693L35.5848 31.262C35.2368 31.7615 34.8885 32.2656 34.5398 32.7742C28.598 28.2324 22.8812 26.5558 18.9231 28.856C12.9187 32.3454 12.7645 43.9385 17.7988 57.0282ZM21.3909 105.981C25.8529 101.194 30.7033 95.1382 35.6481 88.1252L34.8286 83.1168C30.5893 79.0986 26.3935 73.7495 22.7901 67.4674C21.8119 65.7618 20.9146 64.0527 20.0997 62.3534L18.4088 62.073C11.8463 74.6314 6.92436 86.3886 4.06333 95.9113C2.25827 101.919 1.29412 106.971 1.22605 110.745C1.19201 112.632 1.38387 114.135 1.76381 115.256C2.14035 116.367 2.67446 117.032 3.29416 117.392C3.91387 117.752 4.75251 117.885 5.89655 117.658C7.05093 117.429 8.44004 116.844 10.0469 115.871C13.2598 113.925 17.1243 110.558 21.3909 105.981ZM21.5801 62.5988C22.2781 64.0123 23.0344 65.4329 23.8486 66.8522C27.0681 72.4652 30.7548 77.2993 34.4943 81.0742L31.7468 64.2844L21.5801 62.5988ZM38.1898 84.4478C38.1205 84.3911 38.0511 84.334 37.9816 84.2766L41.2532 64.2844L51.5571 62.576C50.7745 63.9948 49.9724 65.4209 49.1514 66.8522C45.5523 73.127 41.859 79.034 38.1898 84.4478ZM39.1526 85.2103C39.4186 85.4142 39.684 85.6122 39.9486 85.804C45.5419 89.858 50.3555 90.8861 53.4658 89.0785C56.5762 87.271 58.0984 82.561 57.4071 75.6582C57.0026 71.6194 55.8486 67.0091 53.9687 62.1762L53.0937 62.3213C52.1602 64.0271 51.1986 65.7436 50.2099 67.4674C46.5824 73.7915 42.8568 79.7486 39.1526 85.2103ZM52.9003 56.6467L54.5912 56.927C61.1537 44.3686 66.0756 32.6114 68.9367 23.0887C70.7417 17.0807 71.7059 12.0288 71.7739 8.25499C71.808 6.36762 71.6161 4.86457 71.2362 3.74366C70.8596 2.63279 70.3255 1.96845 69.7058 1.60831C69.0861 1.24818 68.2475 1.11476 67.1034 1.34196C65.9491 1.57122 64.56 2.1555 62.9531 3.12886C59.7402 5.07512 55.8757 8.44153 51.6091 13.019C47.1471 17.8061 42.2967 23.8618 37.3518 30.8748L38.1714 35.8832C42.4107 39.9013 46.6065 45.2505 50.2099 51.5326C51.1881 53.2382 52.0854 54.9474 52.9003 56.6467ZM38.5057 37.9258C42.2452 41.7007 45.9319 46.5347 49.1514 52.1477C49.9656 53.5671 50.7219 54.9877 51.42 56.4012L41.2532 54.7156L38.5057 37.9258ZM34.8102 34.5522C34.8795 34.6089 34.9489 34.6659 35.0184 34.7234L31.7468 54.7156L21.4429 56.424C22.2255 55.0052 23.0276 53.5791 23.8486 52.1477C27.4477 45.873 31.141 39.966 34.8102 34.5522ZM33.8474 33.7897C30.1432 39.2514 26.4176 45.2085 22.7901 51.5326C21.8014 53.2564 20.8398 54.9729 19.9063 56.6787L19.0313 56.8238C17.1514 51.9909 15.9974 47.3806 15.5929 43.3418C14.9016 36.439 16.4238 31.729 19.5342 29.9214C22.6445 28.1139 27.4581 29.142 33.0514 33.196C33.316 33.3878 33.5814 33.5858 33.8474 33.7897Z" fill="white"/>
+                        </svg>
                     </div>
+
+                    <div class="item-title">
+                        <span>Continuous Support From Our Expert Team</span>
+                    </div>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    <img src="./assets/img/Test/Dashboard-2.png" alt="">
                 </div>
 
                 <div class="home-cards-list-row-item">
-                    <div class="item-blue-circle"></div>
+                    <div class="item-bg-line line-1"></div>
+                    <div class="item-bg-line line-2"></div>
+                    <div class="item-bg-line line-3"></div>
+                    <div class="item-bg-line line-4"></div>
 
-                    <div class="home-cards-list-row-item-bg">
-                        <div class="item-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="79.352" height="63.086" viewBox="0 0 79.352 63.086">
-                                <g id="coding" transform="translate(-0.001 -52.478)">
-                                    <g id="Group_154" data-name="Group 154" transform="translate(55.051 61.604)" opacity="0.5">
-                                        <g id="Group_153" data-name="Group 153" transform="translate(0 0)">
-                                            <path id="Path_13" data-name="Path 13" d="M378.689,131.737,360.338,112.3a2.975,2.975,0,1,0-4.328,4.085l16.423,17.4-16.423,17.4a2.976,2.976,0,0,0,4.328,4.087l18.35-19.442A2.977,2.977,0,0,0,378.689,131.737Z" transform="translate(-355.199 -111.361)" fill="#00cfde"/>
-                                        </g>
-                                    </g>
-                                    <g id="Group_156" data-name="Group 156" transform="translate(0.001 61.604)" opacity="0.5">
-                                        <g id="Group_155" data-name="Group 155" transform="translate(0 0)">
-                                            <path id="Path_14" data-name="Path 14" d="M23.491,151.176l-16.422-17.4,16.422-17.4a2.976,2.976,0,1,0-4.329-4.085L.812,131.734a2.977,2.977,0,0,0,0,4.086l18.351,19.442a2.976,2.976,0,0,0,4.328-4.087Z" transform="translate(-0.001 -111.36)" fill="#00cfde"/>
-                                        </g>
-                                    </g>
-                                    <g id="Group_158" data-name="Group 158" transform="translate(32.336 52.478)">
-                                        <g id="Group_157" data-name="Group 157" transform="translate(0 0)">
-                                            <path id="Path_15" data-name="Path 15" d="M220.791,52.512A2.979,2.979,0,0,0,217.4,55l-8.729,57.134a2.976,2.976,0,0,0,2.493,3.391,3.066,3.066,0,0,0,.453.034,2.977,2.977,0,0,0,2.938-2.526L223.284,55.9A2.976,2.976,0,0,0,220.791,52.512Z" transform="translate(-208.636 -52.478)" fill="#00cfde"/>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="item-title">
-                            <span>Open Source & <br> Easy to Use</span>
-                        </div>
-
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-                        <a href="javascript:;">
-                            <span>Get your free trial</span>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="6.491" height="11.981" viewBox="0 0 6.491 11.981">
-                                <path id="arrow" d="M16.784,19.067,11.5,13.784,16.784,8.5" transform="translate(17.491 19.774) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
-                            </svg>
-                        </a>
-
-                        <img src="./assets/img/home-card-img-1.png" alt="">
+                    <div class="item-icon">
+                        <svg width="73" height="119" viewBox="0 0 73 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7988 57.0282L2.88985 59.5L17.1383 61.8624C2.37758 90.2103 -4.07891 114.527 2.68307 118.457C8.3566 121.754 21.7258 109.763 35.9297 89.8457L36.5 93.3308L37.4152 87.738C37.7632 87.2384 38.1116 86.7343 38.4602 86.2258C44.402 90.7676 50.1188 92.4442 54.0769 90.1439C60.0813 86.6546 60.2355 75.0615 55.2012 61.9719L70.1102 59.5L55.8617 57.1377C70.6224 28.7897 77.0789 4.47258 70.3169 0.542922C64.6434 -2.75419 51.2742 9.23657 37.0703 29.1543L36.5 25.6693L35.5848 31.262C35.2368 31.7615 34.8885 32.2656 34.5398 32.7742C28.598 28.2324 22.8812 26.5558 18.9231 28.856C12.9187 32.3454 12.7645 43.9385 17.7988 57.0282ZM21.3909 105.981C25.8529 101.194 30.7033 95.1382 35.6481 88.1252L34.8286 83.1168C30.5893 79.0986 26.3935 73.7495 22.7901 67.4674C21.8119 65.7618 20.9146 64.0527 20.0997 62.3534L18.4088 62.073C11.8463 74.6314 6.92436 86.3886 4.06333 95.9113C2.25827 101.919 1.29412 106.971 1.22605 110.745C1.19201 112.632 1.38387 114.135 1.76381 115.256C2.14035 116.367 2.67446 117.032 3.29416 117.392C3.91387 117.752 4.75251 117.885 5.89655 117.658C7.05093 117.429 8.44004 116.844 10.0469 115.871C13.2598 113.925 17.1243 110.558 21.3909 105.981ZM21.5801 62.5988C22.2781 64.0123 23.0344 65.4329 23.8486 66.8522C27.0681 72.4652 30.7548 77.2993 34.4943 81.0742L31.7468 64.2844L21.5801 62.5988ZM38.1898 84.4478C38.1205 84.3911 38.0511 84.334 37.9816 84.2766L41.2532 64.2844L51.5571 62.576C50.7745 63.9948 49.9724 65.4209 49.1514 66.8522C45.5523 73.127 41.859 79.034 38.1898 84.4478ZM39.1526 85.2103C39.4186 85.4142 39.684 85.6122 39.9486 85.804C45.5419 89.858 50.3555 90.8861 53.4658 89.0785C56.5762 87.271 58.0984 82.561 57.4071 75.6582C57.0026 71.6194 55.8486 67.0091 53.9687 62.1762L53.0937 62.3213C52.1602 64.0271 51.1986 65.7436 50.2099 67.4674C46.5824 73.7915 42.8568 79.7486 39.1526 85.2103ZM52.9003 56.6467L54.5912 56.927C61.1537 44.3686 66.0756 32.6114 68.9367 23.0887C70.7417 17.0807 71.7059 12.0288 71.7739 8.25499C71.808 6.36762 71.6161 4.86457 71.2362 3.74366C70.8596 2.63279 70.3255 1.96845 69.7058 1.60831C69.0861 1.24818 68.2475 1.11476 67.1034 1.34196C65.9491 1.57122 64.56 2.1555 62.9531 3.12886C59.7402 5.07512 55.8757 8.44153 51.6091 13.019C47.1471 17.8061 42.2967 23.8618 37.3518 30.8748L38.1714 35.8832C42.4107 39.9013 46.6065 45.2505 50.2099 51.5326C51.1881 53.2382 52.0854 54.9474 52.9003 56.6467ZM38.5057 37.9258C42.2452 41.7007 45.9319 46.5347 49.1514 52.1477C49.9656 53.5671 50.7219 54.9877 51.42 56.4012L41.2532 54.7156L38.5057 37.9258ZM34.8102 34.5522C34.8795 34.6089 34.9489 34.6659 35.0184 34.7234L31.7468 54.7156L21.4429 56.424C22.2255 55.0052 23.0276 53.5791 23.8486 52.1477C27.4477 45.873 31.141 39.966 34.8102 34.5522ZM33.8474 33.7897C30.1432 39.2514 26.4176 45.2085 22.7901 51.5326C21.8014 53.2564 20.8398 54.9729 19.9063 56.6787L19.0313 56.8238C17.1514 51.9909 15.9974 47.3806 15.5929 43.3418C14.9016 36.439 16.4238 31.729 19.5342 29.9214C22.6445 28.1139 27.4581 29.142 33.0514 33.196C33.316 33.3878 33.5814 33.5858 33.8474 33.7897Z" fill="white"/>
+                        </svg>
                     </div>
+
+                    <div class="item-title">
+                        <span>Continuous Support From Our Expert Team</span>
+                    </div>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    <img src="./assets/img/Test/Dashboard-2.png" alt="">
                 </div>
 
                 <div class="home-cards-list-row-item">
-                    <div class="home-cards-list-row-item-bg">
-                        <div class="item-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="58.697" height="58.39" viewBox="0 0 58.697 58.39">
-                                <g id="smiling-emoticon-square-face" transform="translate(0.001 -0.121)">
-                                    <path id="Path_20" data-name="Path 20" d="M4.352,7.953a7.832,7.832,0,1,1,7.832,7.835A7.834,7.834,0,0,1,4.352,7.953Zm35.515,0A7.834,7.834,0,1,1,47.7,15.788,7.837,7.837,0,0,1,39.866,7.953Z" transform="translate(0 0)" fill="#fddd48" opacity="0.5"/>
-                                    <path id="Path_21" data-name="Path 21" d="M58.384,40.034A31.271,31.271,0,0,1,29.423,58.511C16.412,58.511,4.977,51.222.291,39.94a3.789,3.789,0,1,1,7-2.905c3.508,8.444,12.2,13.9,22.133,13.9a23.7,23.7,0,0,0,22-13.909,3.79,3.79,0,0,1,6.957,3.009Z" transform="translate(0 0)" fill="#fddd48"/>
-                                </g>
-                            </svg>
-                        </div>
+                    <div class="item-bg-line line-1"></div>
+                    <div class="item-bg-line line-2"></div>
+                    <div class="item-bg-line line-3"></div>
+                    <div class="item-bg-line line-4"></div>
 
-                        <div class="item-title">
-                            <span>Don’t Make Wrong Decisions, Let Al Do</span>
-                        </div>
-
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-                        <a href="javascript:;">
-                            <span>Get your free trial</span>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="6.491" height="11.981" viewBox="0 0 6.491 11.981">
-                                <path id="arrow" d="M16.784,19.067,11.5,13.784,16.784,8.5" transform="translate(17.491 19.774) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
-                            </svg>
-                        </a>
-
-                        <img src="./assets/img/home-card-img-1.png" alt="">
+                    <div class="item-icon">
+                        <svg width="73" height="119" viewBox="0 0 73 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7988 57.0282L2.88985 59.5L17.1383 61.8624C2.37758 90.2103 -4.07891 114.527 2.68307 118.457C8.3566 121.754 21.7258 109.763 35.9297 89.8457L36.5 93.3308L37.4152 87.738C37.7632 87.2384 38.1116 86.7343 38.4602 86.2258C44.402 90.7676 50.1188 92.4442 54.0769 90.1439C60.0813 86.6546 60.2355 75.0615 55.2012 61.9719L70.1102 59.5L55.8617 57.1377C70.6224 28.7897 77.0789 4.47258 70.3169 0.542922C64.6434 -2.75419 51.2742 9.23657 37.0703 29.1543L36.5 25.6693L35.5848 31.262C35.2368 31.7615 34.8885 32.2656 34.5398 32.7742C28.598 28.2324 22.8812 26.5558 18.9231 28.856C12.9187 32.3454 12.7645 43.9385 17.7988 57.0282ZM21.3909 105.981C25.8529 101.194 30.7033 95.1382 35.6481 88.1252L34.8286 83.1168C30.5893 79.0986 26.3935 73.7495 22.7901 67.4674C21.8119 65.7618 20.9146 64.0527 20.0997 62.3534L18.4088 62.073C11.8463 74.6314 6.92436 86.3886 4.06333 95.9113C2.25827 101.919 1.29412 106.971 1.22605 110.745C1.19201 112.632 1.38387 114.135 1.76381 115.256C2.14035 116.367 2.67446 117.032 3.29416 117.392C3.91387 117.752 4.75251 117.885 5.89655 117.658C7.05093 117.429 8.44004 116.844 10.0469 115.871C13.2598 113.925 17.1243 110.558 21.3909 105.981ZM21.5801 62.5988C22.2781 64.0123 23.0344 65.4329 23.8486 66.8522C27.0681 72.4652 30.7548 77.2993 34.4943 81.0742L31.7468 64.2844L21.5801 62.5988ZM38.1898 84.4478C38.1205 84.3911 38.0511 84.334 37.9816 84.2766L41.2532 64.2844L51.5571 62.576C50.7745 63.9948 49.9724 65.4209 49.1514 66.8522C45.5523 73.127 41.859 79.034 38.1898 84.4478ZM39.1526 85.2103C39.4186 85.4142 39.684 85.6122 39.9486 85.804C45.5419 89.858 50.3555 90.8861 53.4658 89.0785C56.5762 87.271 58.0984 82.561 57.4071 75.6582C57.0026 71.6194 55.8486 67.0091 53.9687 62.1762L53.0937 62.3213C52.1602 64.0271 51.1986 65.7436 50.2099 67.4674C46.5824 73.7915 42.8568 79.7486 39.1526 85.2103ZM52.9003 56.6467L54.5912 56.927C61.1537 44.3686 66.0756 32.6114 68.9367 23.0887C70.7417 17.0807 71.7059 12.0288 71.7739 8.25499C71.808 6.36762 71.6161 4.86457 71.2362 3.74366C70.8596 2.63279 70.3255 1.96845 69.7058 1.60831C69.0861 1.24818 68.2475 1.11476 67.1034 1.34196C65.9491 1.57122 64.56 2.1555 62.9531 3.12886C59.7402 5.07512 55.8757 8.44153 51.6091 13.019C47.1471 17.8061 42.2967 23.8618 37.3518 30.8748L38.1714 35.8832C42.4107 39.9013 46.6065 45.2505 50.2099 51.5326C51.1881 53.2382 52.0854 54.9474 52.9003 56.6467ZM38.5057 37.9258C42.2452 41.7007 45.9319 46.5347 49.1514 52.1477C49.9656 53.5671 50.7219 54.9877 51.42 56.4012L41.2532 54.7156L38.5057 37.9258ZM34.8102 34.5522C34.8795 34.6089 34.9489 34.6659 35.0184 34.7234L31.7468 54.7156L21.4429 56.424C22.2255 55.0052 23.0276 53.5791 23.8486 52.1477C27.4477 45.873 31.141 39.966 34.8102 34.5522ZM33.8474 33.7897C30.1432 39.2514 26.4176 45.2085 22.7901 51.5326C21.8014 53.2564 20.8398 54.9729 19.9063 56.6787L19.0313 56.8238C17.1514 51.9909 15.9974 47.3806 15.5929 43.3418C14.9016 36.439 16.4238 31.729 19.5342 29.9214C22.6445 28.1139 27.4581 29.142 33.0514 33.196C33.316 33.3878 33.5814 33.5858 33.8474 33.7897Z" fill="white"/>
+                        </svg>
                     </div>
+
+                    <div class="item-title">
+                        <span>Continuous Support From Our Expert Team</span>
+                    </div>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    <img src="./assets/img/Test/Dashboard-2.png" alt="">
                 </div>
             </div>
         </section>
@@ -1581,7 +1615,7 @@
 
                 <div class="s-container">
                     <h1 class="home-get-started-title">
-                    Run Your First <span>Test Now</span>
+                        Run Your First <span>Test Now</span>
                     </h1>
 
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>

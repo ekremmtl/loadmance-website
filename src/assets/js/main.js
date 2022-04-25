@@ -20,6 +20,53 @@ gsap.registerPlugin(ScrollToPlugin);
 $(function () {
     let preLoaderTimer = 1;
 
+    function topInfo() {
+        // Top Info
+        gsap.set('.top-info-wrapper', { xPercent: -50 })
+
+        var boxWidth = parseInt($(".top-info-wrapper .top-info-boxes > span").innerWidth()),
+            topInfo = document.querySelectorAll(".top-info-wrapper .top-info-boxes > span"),
+            totalWidth = boxWidth * topInfo.length,
+            dirFromRight = "-=" + totalWidth;
+
+        var mod = gsap.utils.wrap(0, totalWidth);
+
+        function marquee(which, time, direction) {
+            gsap.set(which, {
+                x: function (i) {
+                    return i * boxWidth;
+                }
+            });
+            var action = gsap.timeline()
+                .to(which, {
+                    x: direction,
+                    modifiers: {
+                        x: x => mod(parseFloat(x)) + "px"
+                    },
+                    duration: time, ease: 'none',
+                    repeat: -1,
+                });
+            return action
+        }
+
+        var topInfoTl = gsap.timeline().add(marquee(topInfo, 40, dirFromRight), 1)
+        topInfoTl.pause()
+
+        $(window).scroll(function () {
+            let scrollTop = $(window).scrollTop();
+
+            if (scrollTop > 100) {
+                topInfoTl.pause()
+            } else {
+                topInfoTl.play()
+            }
+
+            if (scrollTop == 0) {
+                topInfoTl.play()
+            }
+        });
+    }
+
     function switchPlan() {
         $(".switch-plan .switch-item > input").change(function () {
             if ($(this).is(":checked")) {
@@ -139,11 +186,12 @@ $(function () {
                         })
 
                         setTimeout(() => {
+                            topInfo()
                             homeHeroAni(preLoaderTimer)
                             homeModelAni(preLoaderTimer)
                             homeReviewsAni()
                             footerAni();
-                        }, 1000);
+                        }, 2500);
                     }
 
                     if (data.next.namespace === "pricing-section") {
@@ -162,10 +210,13 @@ $(function () {
                     pricingAni(false)
 
                     useCaseAni(false)
-                    homeReviewsAni()
 
-                    homeHeroAni(preLoaderTimer)
+                    setTimeout(() => {
+                        homeHeroAni(preLoaderTimer)
+                        homeReviewsAni()
+                    }, 2500);
 
+                    topInfo()
                     headerAni(preLoaderTimer)
                     footerAni();
 
