@@ -1,3 +1,10 @@
+model ve yıldızlar için group yapıp mousemove ver
+
+sadece modele bloom ver
+yıldız ekle
+
+hover ver mobilede olmasın
+
 import { footerAni } from './layout/footer'
 import { headerAni } from './layout/header'
 
