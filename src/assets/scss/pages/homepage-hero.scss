@@ -58,6 +58,11 @@
             margin: 0 8px;
             flex: 0 0 calc(30% - 16px);
             padding: 40px 0 50px;
+            transition: 0.4s;
+
+            &.in-active {
+                opacity: 0.5;
+            }
 
             .item-text>span {
                 &:nth-child(1) {
@@ -75,11 +80,26 @@
             }
         }
     }
+
+    @media (max-height: 900px) {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    @media (max-height: 740px) {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    @media (max-height: 620px) {
+        transform: translate(-50%, -50%) scale(0.6);
+    }
+
+    @media (max-width: 1199px) {
+        display: none;
+    }
 }
 
 .home-hero {
     background: #000;
-    overflow: hidden;
     position: relative;
     padding-bottom: 220px;
 
@@ -92,6 +112,10 @@
 
         &.pointer-none {
             pointer-events: none;
+        }
+
+        @media only screen and (min-width: 1200px) {
+            height: 10000px;
         }
     }
 
@@ -127,14 +151,19 @@
     }
 
     .home-hero-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
         padding: 0 90px;
 
         .content-title {
-            margin-top: 350px;
+            padding-top: 350px;
         }
 
         .content-desc {
-            margin-top: 250px;
+            padding-top: 350px;
 
             .text {
                 font-size: 94px;
@@ -292,12 +321,15 @@
     }
 
     .home-hero-marquee {
-        position: relative;
+        position: absolute;
+        top: 1900px;
+        left: 0;
+        right: 0;
         padding: 50px 0;
-        margin: 400px 0 100px;
         height: 65px;
         display: flex;
         align-items: center;
+        z-index: 1;
 
         .home-hero-marquee-line {
             position: absolute;
@@ -510,20 +542,31 @@
     }
 
     @media only screen and (max-width: 1199px) {
+        overflow: hidden;
+        padding-bottom: 0;
+
         .home-hero-content {
             padding: 0 50px;
+            position: relative;
+            top: 0;
         }
 
         .home-hero-marquee {
-            height: 17vw;
+            height: 13vw;
             padding: 0;
+            position: relative;
+            top: 0;
             margin: 150px 0;
 
             .home-hero-marquee-row {
                 .home-hero-marquee-item {
                     >span {
-                        font-size: 4.2vw;
+                        font-size: 3.3vw;
                         line-height: normal;
+
+                        span:nth-child(1) {
+                            margin: 0 3vw;
+                        }
                     }
                 }
             }
@@ -532,7 +575,7 @@
 
     @media only screen and (max-width: 991px) {
         .home-hero-content .content-title {
-            margin-top: 190px;
+            padding-top: 190px;
 
             .title-row {
                 .title {
@@ -582,7 +625,7 @@
         }
 
         .home-hero-content .content-desc {
-            margin-top: 90px;
+            padding-top: 90px;
         }
     }
 
@@ -647,11 +690,11 @@
         }
 
         .home-hero-content .content-title {
-            margin-top: 150px;
+            padding-top: 150px;
         }
 
         .home-hero-content .content-desc {
-            margin-top: 70px;
+            padding-top: 70px;
         }
 
         .home-hero-marquee {

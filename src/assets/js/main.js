@@ -52,7 +52,6 @@ $(function () {
         }
 
         var topInfoTl = gsap.timeline().add(marquee(topInfo, 40, dirFromRight), 1)
-        topInfoTl.pause()
 
         $(window).scroll(function () {
             let scrollTop = $(window).scrollTop();
@@ -176,36 +175,49 @@ $(function () {
                 },
 
                 async enter(data) {
-                    headerAni(preLoaderTimer)
+                    gsap.to(".pre-loader", {
+                        autoAlpha: 0,
+                        ease: "none",
+                        duration: 0.1,
+                    })
 
                     if (data.next.namespace === "home-section") {
+                        headerAni(preLoaderTimer, true)
+
+                        gsap.to(".pre-loader", {
+                            autoAlpha: 1,
+                            ease: "none",
+                            duration: 0.1,
+                        })
+
+                        setTimeout(() => {
+                            homeModelAni(preLoaderTimer)
+                        }, 500);
+
                         const loader = new GLTFLoader()
                         loader.load('./earth.glb', function () {
-                            $("body").removeClass("overflow-initial")
-
-                            gsap.to(".pre-loader", {
-                                autoAlpha: 1,
-                                ease: "none",
-                                duration: 0.1,
-                            })
-
                             setTimeout(() => {
                                 topInfo()
                                 homeHeroAni(preLoaderTimer)
-                                homeModelAni(preLoaderTimer)
                                 homeReviewsAni()
                                 footerAni();
-                            }, 2500);
+                            }, 3000);
                         });
                     }
 
                     if (data.next.namespace === "pricing-section") {
+                        headerAni(preLoaderTimer, false)
+                        topInfo()
+
                         pricingSticky()
                         pricingAni(true)
                         switchPlan()
                     }
 
                     if (data.next.namespace === "use-cases-section") {
+                        headerAni(preLoaderTimer, false)
+                        topInfo()
+
                         useCaseAni(true)
                     }
                 },
@@ -225,12 +237,17 @@ $(function () {
                     });
 
                     topInfo()
-                    headerAni(preLoaderTimer)
                     footerAni();
 
                     switchPlan()
 
+                    if (data.next.namespace === "home-section") {
+                        headerAni(preLoaderTimer, true)
+                    }
+
                     if (data.next.namespace === "pricing-section") {
+                        headerAni(preLoaderTimer, false)
+
                         gsap.to(".pre-loader", {
                             autoAlpha: 0,
                             ease: "none",
@@ -241,6 +258,8 @@ $(function () {
                     }
 
                     if (data.next.namespace === "use-cases-section") {
+                        headerAni(preLoaderTimer, false)
+
                         gsap.to(".pre-loader", {
                             autoAlpha: 0,
                             ease: "none",

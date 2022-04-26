@@ -66,7 +66,7 @@
     right: 0;
     left: 0;
     height: 100vh;
-    z-index: 999;
+    z-index: 6;
     background: black;
     display: flex;
     align-items: center;
@@ -144,6 +144,7 @@
 .home-dashboard-svg {
     height: 5000px;
     background: #000;
+    display: none;
 
     .dashboard-container {
         position: sticky;
@@ -193,6 +194,8 @@
     }
 
     @media (min-width: 1200px) {
+        display: block;
+
         .img-line {
             transform: translate(0px, 100%);
             overflow: hidden;

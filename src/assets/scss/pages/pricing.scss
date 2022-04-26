@@ -1,6 +1,6 @@
 .pricing-banner {
     position: relative;
-    height: 500px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,6 +69,8 @@
     }
 
     @media (max-width: 767px) {
+        height: 500px;
+
         .s-container h1 {
             font-size: 32px;
             max-width: 260px;

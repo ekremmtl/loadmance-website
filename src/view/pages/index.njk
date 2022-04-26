@@ -7,37 +7,17 @@
 {% block header %}
     {% from "../layouts/header.njk" import header %}
     <main data-barba="container" data-barba-namespace="home-section">
-        <div class="top-info">
-            <div class="top-info-wrapper">
-                <div class="top-info-boxes">
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                    <span>&nbsp; ✧ &nbsp; Loadmance is now part of Grafana Labs</span>
-                </div>
-            </div>
-        </div>
-
         {{ header() }}
     {% endblock %}
 
     {% block content %}
         <div class="world-info-container">
+            <span class="color-check-1" style="display: none;"></span>
+            <span class="color-check-2" style="display: none;"></span>
+            <span class="color-check-3" style="display: none;"></span>
+            <span class="color-check-4" style="display: none;"></span>
+            <span class="color-check-5" style="display: none;"></span>
+
             <span class="title">How it works?</span>
 
             <p>Get your dedicated IPs from all over the world to simulate user load for your load tests when you work with security regulations.</p>
@@ -991,7 +971,7 @@
                     </div>
                 </div>
 
-                <div id="earth-container" style="display: none;"></div>
+                <div id="earth-container"></div>
             </div>
         </section>
 
@@ -1041,10 +1021,10 @@
                     </div>
 
                     <div class="item-title">
-                        <span>Continuous Support From Our Expert Team</span>
+                        <span>Technical support from our expert team</span>
                     </div>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Easily get in contact with our team and make a journey to the depths of the Loadmance. Our expertise is yours!</p>
 
                     <img src="./assets/img/Test/Dashboard-2.png" alt="">
                 </div>
@@ -1062,10 +1042,20 @@
                     </div>
 
                     <div class="item-title">
-                        <span>Continuous Support From Our Expert Team</span>
+                        <span>Other Awesome Features</span>
                     </div>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>
+                        Dashboard Customization
+                        <br>
+                        Schedule Test Run
+                        <br>
+                        Dark ModeReal Time Monitoring
+                        <br>
+                        Access to Historical Test Data
+                        <br>
+                        Trend Analysis
+                    </p>
 
                     <img src="./assets/img/Test/Dashboard-2.png" alt="">
                 </div>
@@ -1083,10 +1073,10 @@
                     </div>
 
                     <div class="item-title">
-                        <span>Continuous Support From Our Expert Team</span>
+                        <span>Quick Setup & Easy Configuration</span>
                     </div>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Set-up your test design and start to use many servers in different locations with in seconds. You don’t have to be an expert, just follow Loadmance instructions and run your tests with few clicks.</p>
 
                     <img src="./assets/img/Test/Dashboard-2.png" alt="">
                 </div>
@@ -1104,10 +1094,12 @@
                     </div>
 
                     <div class="item-title">
-                        <span>Continuous Support From Our Expert Team</span>
+                        <span>If you need help, we are here!</span>
                     </div>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>
+                        Just let us know you need help to design your test, you will get test design recommendations spesific to your enviroment requirements.
+                    </p>
 
                     <img src="./assets/img/Test/Dashboard-2.png" alt="">
                 </div>
@@ -1618,7 +1610,7 @@
                         Run Your First <span>Test Now</span>
                     </h1>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                    <p>Start improving your software quality by measuring performance.</p>
 
                     <div class="home-get-started-link">
                         <a href="javascript:;">Get Started</a>

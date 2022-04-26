@@ -47,7 +47,7 @@ body {
         overflow-x: hidden;
     }
 
-    &.mobile-menu-active{
+    &.mobile-menu-active {
         position: fixed;
         top: 0;
         left: 0;
@@ -145,13 +145,14 @@ div#container {
 }
 
 div#earth-container {
-    position: absolute;
+    position: sticky;
     top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
 
     &.pointer-none {
         pointer-events: none;
+    }
+
+    @media (max-width: 1199px) {
+        display: none;
     }
 }
