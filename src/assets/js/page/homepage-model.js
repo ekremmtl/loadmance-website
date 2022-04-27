@@ -189,7 +189,7 @@ function homeModelAni(preLoaderTimer) {
                         setTimeout(() => {
                             $("body").removeClass("overflow-hidden")
                             $("body").addClass("overflow-initial")
-                        }, 3000);
+                        }, 5000);
 
                         gsap.to(window, { duration: 0, scrollTo: 0 });
 

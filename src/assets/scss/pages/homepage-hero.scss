@@ -383,10 +383,10 @@
                         overflow: hidden;
                         display: block;
                         padding-bottom: 20px;
-                        margin-bottom: -20px;
+                        margin-bottom: -40px;
 
                         >span {
-                            transform: translate(0px, 110%);
+                            transform: translate(0px, 120%);
                             display: block;
                         }
                     }
@@ -642,8 +642,8 @@
         .home-hero-content .content-title {
             .title-row {
                 &:nth-child(1) .title>span>svg {
-                    left: -26px;
-                    top: -12px;
+                    left: -36px;
+                    top: -24px;
                     width: 26vw;
                     height: 13vw;
                 }

@@ -75,6 +75,13 @@
             background: #0061FF;
             display: inline-block;
             margin-top: 75px;
+            transition: 0.3s;
+
+            @media (hover:hover) {
+                &:hover {
+                    background: #3d87ff;
+                }
+            }
         }
 
         text-align: center;

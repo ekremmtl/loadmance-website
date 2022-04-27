@@ -77,9 +77,22 @@ footer {
                     display: flex;
                     align-items: center;
                     cursor: pointer;
+                    transition: 0.3s;
 
                     svg {
                         margin-right: 14px;
+                        transition: 0.3s;
+                    }
+
+                    @media (hover:hover) {
+                        &:hover {
+                            color: #fff;
+
+                            svg line,
+                            svg path {
+                                stroke: #fff !important;
+                            }
+                        }
                     }
                 }
 
@@ -108,6 +121,7 @@ footer {
                 height: 125px;
                 padding: 40px;
                 flex: 1;
+                transition: 0.3s;
 
                 >span {
                     font-weight: bold;
@@ -119,6 +133,12 @@ footer {
                     svg {
                         margin-left: 18px;
                         margin-bottom: 2px;
+                    }
+                }
+
+                @media (hover:hover) {
+                    &:hover {
+                        background: #070c1f;
                     }
                 }
             }
@@ -301,8 +321,17 @@ footer {
                         font-size: 15px;
                         border-radius: 10px;
                         background: #fff;
+                        border: 1px solid #fff;
                         color: #000;
                         padding: 15px 24px;
+                        transition: 0.3s;
+
+                        @media (hover:hover) {
+                            &:hover {
+                                background: #fff0;
+                                color: #fff;
+                            }
+                        }
                     }
 
                     p {
@@ -317,6 +346,13 @@ footer {
                             color: rgba(214, 211, 255, 0.7);
                             display: inline-block;
                             padding: 6px 0;
+                            transition: 0.3s;
+
+                            @media (hover:hover) {
+                                &:hover {
+                                    color: #fff;
+                                }
+                            }
                         }
 
                         +li {
@@ -340,9 +376,16 @@ footer {
                         font-size: 15px;
                         padding: 3px 0;
                         color: rgba(214, 211, 255, 0.7);
+                        transition: 0.3s;
 
                         +a {
                             margin-top: 8px;
+                        }
+
+                        @media (hover:hover) {
+                            &:hover {
+                                color: #fff;
+                            }
                         }
                     }
                 }
@@ -487,7 +530,7 @@ footer {
         .footer-container .footer-row>.footer-col {
             flex: 0 0 100%;
 
-            &:nth-child(2){
+            &:nth-child(2) {
                 margin: 32px 0;
             }
         }

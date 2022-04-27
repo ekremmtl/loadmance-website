@@ -254,6 +254,12 @@
                     text-align: center;
                     margin-top: 25px;
                     transition: 0.4s;
+
+                    @media (hover:hover) {
+                        &:hover {
+                            background: #3d87ff;
+                        }
+                    }
                 }
             }
 

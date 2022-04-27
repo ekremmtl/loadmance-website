@@ -175,103 +175,229 @@ $(function () {
                 },
 
                 async enter(data) {
-                    gsap.to(".pre-loader", {
-                        autoAlpha: 0,
-                        ease: "none",
-                        duration: 0.1,
-                    })
-
-                    if (data.next.namespace === "home-section") {
-                        headerAni(preLoaderTimer, true)
-
+                    window.addEventListener('focus', function () {
                         gsap.to(".pre-loader", {
-                            autoAlpha: 1,
+                            autoAlpha: 0,
                             ease: "none",
                             duration: 0.1,
                         })
 
-                        setTimeout(() => {
-                            homeModelAni(preLoaderTimer)
-                        }, 500);
-
-                        const loader = new GLTFLoader()
-                        loader.load('./earth.glb', function () {
+                        if (data.next.namespace === "home-section") {
                             setTimeout(() => {
-                                topInfo()
-                                homeHeroAni(preLoaderTimer)
-                                homeReviewsAni()
-                                footerAni();
-                            }, 3000);
-                        });
-                    }
+                                $("body").addClass("overflow-hidden")
+                                $("body").removeClass("overflow-initial")
+                            }, 100);
 
-                    if (data.next.namespace === "pricing-section") {
-                        headerAni(preLoaderTimer, false)
-                        topInfo()
+                            setTimeout(() => {
+                                $("body").removeClass("overflow-hidden")
+                                $("body").addClass("overflow-initial")
+                            }, 5000);
 
-                        pricingSticky()
-                        pricingAni(true)
-                        switchPlan()
-                    }
+                            headerAni(preLoaderTimer, true)
 
-                    if (data.next.namespace === "use-cases-section") {
-                        headerAni(preLoaderTimer, false)
-                        topInfo()
+                            gsap.to(".pre-loader", {
+                                autoAlpha: 1,
+                                ease: "none",
+                                duration: 0.1,
+                            })
 
-                        useCaseAni(true)
+                            setTimeout(() => {
+                                homeModelAni(preLoaderTimer)
+                            }, 500);
+
+                            const loader = new GLTFLoader()
+                            loader.load('./earth.glb', function () {
+                                setTimeout(() => {
+                                    topInfo()
+                                    homeHeroAni(preLoaderTimer)
+                                    homeReviewsAni()
+                                    footerAni();
+                                }, 3000);
+                            });
+                        }
+
+                        if (data.next.namespace === "pricing-section") {
+                            headerAni(preLoaderTimer, false)
+                            topInfo()
+
+                            pricingSticky()
+                            pricingAni(true)
+                            switchPlan()
+                        }
+
+                        if (data.next.namespace === "use-cases-section") {
+                            headerAni(preLoaderTimer, false)
+                            topInfo()
+
+                            useCaseAni(true)
+                        }
+                    });
+
+                    if (document.hasFocus()) {
+                        gsap.to(".pre-loader", {
+                            autoAlpha: 0,
+                            ease: "none",
+                            duration: 0.1,
+                        })
+
+                        if (data.next.namespace === "home-section") {
+                            setTimeout(() => {
+                                $("body").addClass("overflow-hidden")
+                                $("body").removeClass("overflow-initial")
+                            }, 100);
+
+                            setTimeout(() => {
+                                $("body").removeClass("overflow-hidden")
+                                $("body").addClass("overflow-initial")
+                            }, 5000);
+
+                            headerAni(preLoaderTimer, true)
+
+                            gsap.to(".pre-loader", {
+                                autoAlpha: 1,
+                                ease: "none",
+                                duration: 0.1,
+                            })
+
+                            setTimeout(() => {
+                                homeModelAni(preLoaderTimer)
+                            }, 500);
+
+                            const loader = new GLTFLoader()
+                            loader.load('./earth.glb', function () {
+                                setTimeout(() => {
+                                    topInfo()
+                                    homeHeroAni(preLoaderTimer)
+                                    homeReviewsAni()
+                                    footerAni();
+                                }, 3000);
+                            });
+                        }
+
+                        if (data.next.namespace === "pricing-section") {
+                            headerAni(preLoaderTimer, false)
+                            topInfo()
+
+                            pricingSticky()
+                            pricingAni(true)
+                            switchPlan()
+                        }
+
+                        if (data.next.namespace === "use-cases-section") {
+                            headerAni(preLoaderTimer, false)
+                            topInfo()
+
+                            useCaseAni(true)
+                        }
                     }
                 },
 
                 async once(data) {
-                    pricingSticky()
-                    pricingAni(false)
+                    window.addEventListener('focus', function () {
+                        pricingSticky()
+                        pricingAni(false)
 
-                    useCaseAni(false)
+                        useCaseAni(false)
 
-                    const loader = new GLTFLoader()
-                    loader.load('./earth.glb', function () {
-                        setTimeout(() => {
-                            homeHeroAni(preLoaderTimer)
-                            homeReviewsAni()
-                        }, 2500);
+                        const loader = new GLTFLoader()
+                        loader.load('./earth.glb', function () {
+                            setTimeout(() => {
+                                homeHeroAni(preLoaderTimer)
+                                homeReviewsAni()
+                            }, 2500);
+                        });
+
+                        topInfo()
+                        footerAni();
+
+                        switchPlan()
+
+                        if (data.next.namespace === "home-section") {
+                            headerAni(preLoaderTimer, true)
+                        }
+
+                        if (data.next.namespace === "pricing-section") {
+                            headerAni(preLoaderTimer, false)
+
+                            gsap.to(".pre-loader", {
+                                autoAlpha: 0,
+                                ease: "none",
+                                duration: 0.1,
+                            })
+
+                            $("body").addClass("overflow-initial")
+                        }
+
+                        if (data.next.namespace === "use-cases-section") {
+                            headerAni(preLoaderTimer, false)
+
+                            gsap.to(".pre-loader", {
+                                autoAlpha: 0,
+                                ease: "none",
+                                duration: 0.1,
+                            })
+
+                            $("body").addClass("overflow-initial")
+                        }
                     });
 
-                    topInfo()
-                    footerAni();
+                    if (document.hasFocus()) {
+                        pricingSticky()
+                        pricingAni(false)
 
-                    switchPlan()
+                        useCaseAni(false)
 
-                    if (data.next.namespace === "home-section") {
-                        headerAni(preLoaderTimer, true)
-                    }
+                        const loader = new GLTFLoader()
+                        loader.load('./earth.glb', function () {
+                            setTimeout(() => {
+                                homeHeroAni(preLoaderTimer)
+                                homeReviewsAni()
+                            }, 2500);
+                        });
 
-                    if (data.next.namespace === "pricing-section") {
-                        headerAni(preLoaderTimer, false)
+                        topInfo()
+                        footerAni();
 
-                        gsap.to(".pre-loader", {
-                            autoAlpha: 0,
-                            ease: "none",
-                            duration: 0.1,
-                        })
+                        switchPlan()
 
-                        $("body").addClass("overflow-initial")
-                    }
+                        if (data.next.namespace === "home-section") {
+                            headerAni(preLoaderTimer, true)
+                        }
 
-                    if (data.next.namespace === "use-cases-section") {
-                        headerAni(preLoaderTimer, false)
+                        if (data.next.namespace === "pricing-section") {
+                            headerAni(preLoaderTimer, false)
 
-                        gsap.to(".pre-loader", {
-                            autoAlpha: 0,
-                            ease: "none",
-                            duration: 0.1,
-                        })
+                            gsap.to(".pre-loader", {
+                                autoAlpha: 0,
+                                ease: "none",
+                                duration: 0.1,
+                            })
 
-                        $("body").addClass("overflow-initial")
+                            $("body").addClass("overflow-initial")
+                        }
+
+                        if (data.next.namespace === "use-cases-section") {
+                            headerAni(preLoaderTimer, false)
+
+                            gsap.to(".pre-loader", {
+                                autoAlpha: 0,
+                                ease: "none",
+                                duration: 0.1,
+                            })
+
+                            $("body").addClass("overflow-initial")
+                        }
                     }
                 },
             },
         ],
     });
 
-    homeModelAni(preLoaderTimer)
+    window.addEventListener('focus', function () {
+        homeModelAni(preLoaderTimer)
+    });
+
+    if (document.hasFocus()) {
+        homeModelAni(preLoaderTimer)
+    }
 });

@@ -119,6 +119,15 @@
                     padding: 17px 37px;
                     text-align: center;
                     margin-top: 50px;
+                    transition: 0.3s;
+
+                    @media (hover:hover) {
+                        &:hover {
+                            color: #000;
+                            border-color: #fff;
+                            background: #fff;
+                        }
+                    }
                 }
 
                 &+.home-pricing-item {
@@ -226,6 +235,15 @@
         border-radius: 10px;
         border: 1px solid #8f90a6;
         z-index: 1;
+        transition: 0.3s;
+
+        @media (hover:hover) {
+            &:hover {
+                color: #000;
+                border-color: #fff;
+                background: #fff;
+            }
+        }
     }
 
     .home-pricing-table {
