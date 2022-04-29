@@ -135,17 +135,15 @@ function homeModelAni(preLoaderTimer) {
                 let model;
                 let modelLoader = 0;
 
-                setTimeout(() => {
-                    setTimeout(() => {
-                        gsap.to(".world-info-container", {
-                            xPercent: -50,
-                            opacity: 0,
-                            display: "block",
-                            ease: "none",
-                            duration: 0.1,
-                        })
-                    }, 500);
+                gsap.to(".world-info-container", {
+                    xPercent: -50,
+                    autoAlpha: 0,
+                    display: "block",
+                    ease: "none",
+                    duration: 0.1,
+                })
 
+                setTimeout(() => {
                     gsap.to(".pre-loader .logo-sprites-circle", {
                         opacity: 1,
                         scale: 1,
@@ -347,11 +345,11 @@ function homeModelAni(preLoaderTimer) {
 
                         gsap.fromTo(".world-info-container", {
                             xPercent: -50,
-                            opacity: 0,
+                            autoAlpha: 0,
                         }, {
                             xPercent: 0,
                             x: 0,
-                            opacity: 1,
+                            autoAlpha: 1,
                             ease: "none",
 
                             scrollTrigger: {
@@ -629,9 +627,9 @@ function homeModelAni(preLoaderTimer) {
                         })
 
                         gsap.fromTo(".world-info-container", {
-                            opacity: 1,
+                            autoAlpha: 1,
                         }, {
-                            opacity: 0,
+                            autoAlpha: 0,
 
                             scrollTrigger: {
                                 trigger: "body",
