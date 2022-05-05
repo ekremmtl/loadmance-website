@@ -212,6 +212,54 @@
         }
     }
 
+    @media only screen and (min-width: 1200px) {
+        .s-container {
+            .home-pricing-header {
+                .home-pricing-title {
+                    .img {
+                        transform: scale(0);
+                    }
+
+                    >span {
+                        &:nth-child(2) {
+                            transform: translate(-40px, 0px);
+                            opacity: 0;
+                        }
+
+                        &:nth-child(3) {
+                            transform: translate(40px, 0px);
+                            opacity: 0;
+                        }
+
+                        >span svg ellipse {
+                            stroke-dasharray: 1000;
+                            stroke-dashoffset: 1000;
+                        }
+                    }
+                }
+
+                .home-pricing-title>span>span svg circle {
+                    opacity: 0;
+                }
+
+                p {
+                    transform: translate(0, 30px);
+                    opacity: 0;
+                }
+
+                .switch-plan {
+                    transform: translate(0px, 30px);
+                    opacity: 0;
+                }
+            }
+
+            .home-pricing-table-row .home-pricing-table-item {
+                transform: translate(0px, 50px);
+                opacity: 0;
+            }
+        }
+    }
+
     @media only screen and (max-width: 991px) {
         padding: 100px 0;
 

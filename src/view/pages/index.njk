@@ -7,11 +7,11 @@
 {% block header %}
     {% from "../layouts/header.njk" import header %}
     <main data-barba="container" data-barba-namespace="home-section">
-        {# {{ header() }} #}
+        {{ header() }}
     {% endblock %}
 
     {% block content %}
-        {# <div class="world-info-container" style="display: none;">
+        <div class="world-info-container">
             <span class="color-check-1" style="display: none;"></span>
             <span class="color-check-2" style="display: none;"></span>
             <span class="color-check-3" style="display: none;"></span>
@@ -26,7 +26,7 @@
 
             <div class="country-row">
                 <div class="country-item">
-                    <img src="./assets/img/turkey.svg" alt="Turkey">
+                    <img src="./assets/img/turkey.png" alt="Turkey">
 
                     <div class="item-text">
                         <span>Turkey</span>
@@ -52,8 +52,9 @@
                     </div>
                 </div>
             </div>
-        </div> #}
+        </div>
 
+        {# 
         <div class="sticky-container" style="display: none;">
             <div class="logo-container logo-container-bar">
                 <div class="logo-container-bar-light-2"></div>
@@ -88,9 +89,9 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="card-container">
-                {# <div class="item-icon">
+                <div class="item-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="74.589" height="74.577" viewBox="0 0 74.589 74.577">
                     <g id="Group_159" data-name="Group 159" transform="translate(-432.001 -2514.41)">
                         <rect id="Rectangle_21" data-name="Rectangle 21" width="4.37" height="4.371" transform="translate(458.296 2553.879)" fill="#ff5c5c"/>
@@ -115,7 +116,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="6.491" height="11.981" viewBox="0 0 6.491 11.981">
                     <path id="arrow" d="M16.784,19.067,11.5,13.784,16.784,8.5" transform="translate(17.491 19.774) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
                 </svg>
-            </a> #}
+            </a> 
 
                 <div class="image-container">
                     <div class="image-bg">
@@ -817,8 +818,9 @@
                 </div>
             </div>
         </div>
+        #}
 
-        <section class="home-hero" style="display: none;">
+        <section class="home-hero">
             <div class="home-hero-container">
                 <div class="home-hero-content">
                     <div class="content-title">
@@ -975,7 +977,7 @@
             </div>
         </section>
 
-        <div class="home-dashboard-svg" style="display: none;">
+        <div class="home-dashboard-svg">
             <div class="dashboard-container">
                 <div class="dashboard-img">
                     <div class="img" style="background-image: url(./assets/img/home-dashboard-img-2.svg);"></div>
@@ -987,7 +989,7 @@
             </div>
         </div>
 
-        <section class="home-cards-list" style="display: none;">
+        <section class="home-cards-list">
             <div class="home-cards-list-gradient"></div>
 
             <div class="home-cards-list-row">
@@ -1209,7 +1211,7 @@
                             <a href="javascript:;">REQUEST A QUOTE</a>
                         </div>
                     </div>
-                    
+
                     <div class="home-pricing-table-item">
                         <div class="item-title">
                             <span>Standard</span>
@@ -1265,7 +1267,7 @@
                             <a href="javascript:;">REQUEST A QUOTE</a>
                         </div>
                     </div>
-                    
+
                     <div class="home-pricing-table-item">
                         <div class="item-title">
                             <span>Enterprise</span>

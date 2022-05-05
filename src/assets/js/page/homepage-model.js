@@ -116,7 +116,7 @@ function homeModelAni(preLoaderTimer) {
 
                 for (var i = 0; i < sphereTab.length; i++) {
                     sphereTab[i].position.set(Math.random() * 600 - 300, Math.random() * 600 - 300, Math.random() * 4 - 300);
-                    // scene.add(sphereTab[i]);
+                    scene.add(sphereTab[i]);
                 }
 
                 // Lights
@@ -134,14 +134,6 @@ function homeModelAni(preLoaderTimer) {
 
                 let model;
                 let modelLoader = 0;
-
-                gsap.to(".world-info-container", {
-                    xPercent: -50,
-                    autoAlpha: 0,
-                    display: "block",
-                    ease: "none",
-                    duration: 0.1,
-                })
 
                 setTimeout(() => {
                     gsap.to(".pre-loader .logo-sprites-circle", {
@@ -626,10 +618,41 @@ function homeModelAni(preLoaderTimer) {
                             }
                         })
 
-                        gsap.fromTo(".world-info-container", {
-                            autoAlpha: 1,
-                        }, {
-                            autoAlpha: 0,
+                        gsap.to(".world-info-container .title", {
+                            opacity: 0,
+
+                            scrollTrigger: {
+                                trigger: "body",
+                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
+                                end: "8000px top",
+                                scrub: 1,
+                            }
+                        })
+
+                        gsap.to(".world-info-container p", {
+                            opacity: 0,
+
+                            scrollTrigger: {
+                                trigger: "body",
+                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
+                                end: "8000px top",
+                                scrub: 1,
+                            }
+                        })
+
+                        gsap.to(".world-info-container .line", {
+                            opacity: 0,
+
+                            scrollTrigger: {
+                                trigger: "body",
+                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
+                                end: "8000px top",
+                                scrub: 1,
+                            }
+                        })
+
+                        gsap.to(".world-info-container .country-row", {
+                            opacity: 0,
 
                             scrollTrigger: {
                                 trigger: "body",
@@ -696,7 +719,7 @@ function homeModelAni(preLoaderTimer) {
                         mixer.setTime(0)
                     }
 
-                    // scene.add(model);
+                    scene.add(model);
                 }
 
                 // camera.lookAt(100, 100, 0)

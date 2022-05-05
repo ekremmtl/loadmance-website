@@ -60,6 +60,10 @@
             padding: 40px 0 50px;
             transition: 0.4s;
 
+            img{
+                filter: grayscale(1);
+            }
+
             &.in-active {
                 opacity: 0.5;
             }

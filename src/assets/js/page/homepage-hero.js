@@ -103,6 +103,39 @@ function homeHeroAni(preLoaderTimer) {
                 ease: easeValue,
             })
 
+            setTimeout(() => {
+                let supportImgTl = gsap.timeline({ yoyo: true, repeat: -1 })
+                supportImgTl.fromTo(".home-hero .home-hero-content .content-title .title-row .title > span.support-img > .img-item svg", {
+                    opacity: 1,
+                }, {
+                    opacity: 0,
+                    duration: 1,
+                    delay: 0.5,
+                    ease: easeValue,
+                })
+                
+                gsap.timeline().fromTo(".home-hero .home-hero-content .content-title .title-row .title > span.support-img > .img-item svg", {
+                    scaleX: 1,
+                }, {
+                    scaleX: 0.8,
+                    duration: 1,
+                    delay: 0.5,
+                    yoyo: true,
+                    repeat: -1,
+                    ease: easeValue,
+                })
+
+                let supportImgTl2 = gsap.timeline({ yoyo: true, repeat: -1 })
+                supportImgTl2.fromTo(".home-hero .home-hero-content .content-title .title-row .title > span.support-img > span", {
+                    opacity: 1,
+                }, {
+                    opacity: 0,
+                    duration: 1,
+                    delay: 0.5,
+                    ease: easeValue,
+                })
+            }, 5000);
+
             gsap.to(".home-hero .home-hero-content .content-title .title-row .title > .support-img > span", {
                 opacity: 1,
                 delay: preLoaderTimer + 2.7,
@@ -209,7 +242,7 @@ function homeHeroAni(preLoaderTimer) {
                 duration: 1,
                 delay: 0.5,
                 ease: easeValue,
-                
+
                 scrollTrigger: {
                     trigger: ".home-cards-list .home-cards-list-row",
                     start: "top center",
@@ -222,7 +255,7 @@ function homeHeroAni(preLoaderTimer) {
                 duration: 1,
                 stagger: 0.1,
                 ease: easeValue,
-                
+
                 scrollTrigger: {
                     trigger: ".home-cards-list .home-cards-list-row",
                     start: "top center",

@@ -1063,320 +1063,192 @@ function homeReviewsAni() {
             //-- Home Card List
 
             //-- Home Pricing
-
-            let sendIcon = gsap.timeline({ yoyo: true, repeat: -1, paused: true });
-            let sendWing1 = gsap.timeline({ yoyo: true, repeat: -1, repeatDelay: 0.5, paused: true });
-            let sendWing2 = gsap.timeline({ yoyo: true, repeat: -1, repeatDelay: 0.5, paused: true });
-
-            sendIcon.fromTo(".home-pricing .home-pricing-icon-1", {
-                y: -30,
-            }, {
-                y: 20,
-                duration: 3,
-                ease: "sine.inOut"
-            })
-
-            sendWing1.fromTo(".home-pricing .home-pricing-icon-1 img:nth-child(1)", {
-                rotation: -70,
-            }, {
-                rotation: 10,
-                duration: 1.5,
-                ease: "sine.inOut"
-            })
-
-            sendWing2.fromTo(".home-pricing .home-pricing-icon-1 img:nth-child(3)", {
-                rotation: 60,
-            }, {
-                rotation: -5,
-                duration: 1.5,
-                ease: "sine.inOut"
-            })
-
-            if ($(".home-pricing").length) {
-                let homePricingOffset = $(".home-pricing").offset();
-                $(window).scroll(function () {
-                    let scrollTop = $(this).scrollTop()
-
-                    if (scrollTop > homePricingOffset.top - 100 && scrollTop < homePricingOffset.top + $(".home-pricing").height()) {
-                        sendIcon.play();
-                        sendWing1.play();
-                        sendWing2.play();
-                    } else {
-                        sendIcon.pause();
-                        sendWing1.pause();
-                        sendWing2.pause();
-                    }
-                });
-            }
-
-            gsap.to(".home-pricing .home-pricing-header .home-pricing-title", {
-                y: 0,
-                opacity: 1,
-                ease: easeValue,
-
-                scrollTrigger: {
-                    trigger: ".home-pricing",
-                    start: "top bottom-=300",
-                    end: "top+=500 bottom-=100",
-                    scrub: 1,
-                    markers: false,
-                }
-            })
-
-            gsap.to(".home-pricing .home-pricing-header p", {
-                y: 0,
-                opacity: 1,
-                ease: easeValue,
-
-                scrollTrigger: {
-                    trigger: ".home-pricing",
-                    start: "top bottom-=350",
-                    end: "top+=500 bottom-=100",
-                    scrub: 1,
-                    markers: false,
-                }
-            })
-
-            gsap.to(".home-pricing .home-pricing-header .switch-plan", {
-                y: 0,
-                opacity: 1,
-                ease: easeValue,
-
-                scrollTrigger: {
-                    trigger: ".home-pricing",
-                    start: "top bottom-=400",
-                    end: "top+=500 bottom-=100",
-                    scrub: 1,
-                    markers: false,
-                }
-            })
-
-            gsap.to(".home-pricing .home-pricing-container", {
-                y: 0,
-                opacity: 1,
-                ease: easeValue,
-
-                scrollTrigger: {
-                    trigger: ".home-pricing-container",
-                    start: "top bottom-=300",
-                    end: "top+=500 bottom-=100",
-                    scrub: 1,
-                }
-            })
-
-            gsap.to(".home-pricing .home-pricing-table .home-pricing-table-row .home-pricing-table-item span", {
+            gsap.to(".home-pricing .s-container .home-pricing-table-row .home-pricing-table-item", {
                 y: 0,
                 opacity: 1,
                 stagger: 0.1,
+                duration: 1,
                 ease: easeValue,
+                delay: 0.5,
 
                 scrollTrigger: {
-                    trigger: ".home-pricing-table",
-                    start: "top bottom-=200",
-                    end: "top+=500 bottom-=150",
-                    scrub: 1.5,
+                    trigger: ".home-pricing",
+                    start: "top center",
                 }
             })
 
-            //-- Home Pricing
+            gsap.to(".home-pricing .s-container .home-pricing-header .switch-plan", {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                ease: easeValue,
+                delay: 0.45,
+
+                scrollTrigger: {
+                    trigger: ".home-pricing",
+                    start: "top center",
+                }
+            })
+
+            gsap.to(".home-pricing .s-container .home-pricing-header p", {
+                y: 0,
+                opacity: 0.5,
+                duration: 1,
+                ease: easeValue,
+                delay: 0.4,
+
+                scrollTrigger: {
+                    trigger: ".home-pricing",
+                    start: "top center",
+                }
+            })
+
+            gsap.to(".home-pricing .s-container .home-pricing-header .home-pricing-title > span > span svg circle", {
+                opacity: 1,
+                duration: 1,
+                ease: easeValue,
+                delay: 0.3,
+
+                scrollTrigger: {
+                    trigger: ".home-pricing",
+                    start: "top center",
+                }
+            })
+
+            gsap.to(".home-pricing .s-container .home-pricing-header .home-pricing-title > span > span svg ellipse", {
+                strokeDashoffset: 0,
+                duration: 2,
+                ease: easeValue,
+                delay: 0.1,
+
+                scrollTrigger: {
+                    trigger: ".home-pricing",
+                    start: "top center",
+                }
+            })
+
+            gsap.to(".home-pricing .s-container .home-pricing-header .home-pricing-title > span", {
+                opacity: 1,
+                x: 0,
+                stagger: 0.1,
+                duration: 1,
+                ease: easeValue,
+
+                scrollTrigger: {
+                    trigger: ".home-pricing",
+                    start: "top center",
+                }
+            })
+
+            gsap.to(".home-pricing .s-container .home-pricing-header .home-pricing-title .img", {
+                scale: 1,
+                duration: 1,
+                delay: 0.1,
+                ease: easeValue,
+
+                scrollTrigger: {
+                    trigger: ".home-pricing",
+                    start: "top center",
+                }
+            })
 
             //-- Home Reviews
-
-            gsap.to(".home-bottom-bg", {
-                scale: 1,
-                opacity: 1,
-                ease: easeValue,
-
-                scrollTrigger: {
-                    trigger: ".home-bottom",
-                    start: "top bottom-=200",
-                    end: "top+=500 bottom-=150",
-                    scrub: 1,
-                }
-            })
-
-            gsap.to(".home-reviews-title", {
-                y: 0,
-                opacity: 1,
-                ease: easeValue,
-
-                scrollTrigger: {
-                    trigger: ".home-reviews-header",
-                    start: "top bottom-=200",
-                    end: "top+=500 bottom-=150",
-                    scrub: 1,
-                }
-            })
-
-            gsap.to(".home-reviews .home-reviews-header-left p", {
-                y: 0,
-                opacity: 1,
-                ease: easeValue,
-
-                scrollTrigger: {
-                    trigger: ".home-reviews-header",
-                    start: "top bottom-=250",
-                    end: "top+=500 bottom-=150",
-                    scrub: 1,
-                }
-            })
-
-            gsap.to(".home-reviews .home-reviews-slide-button", {
+            gsap.to(".home-reviews .home-reviews-content .home-reviews-title", {
                 x: 0,
                 opacity: 1,
+                duration: 1,
                 ease: easeValue,
 
                 scrollTrigger: {
-                    trigger: ".home-reviews-header",
-                    start: "top bottom-=270",
-                    end: "top+=500 bottom-=150",
-                    scrub: 1,
+                    trigger: ".home-pricing",
+                    start: "bottom bottom-=500",
+                }
+            })
+
+            gsap.to(".home-reviews .home-reviews-content p", {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                delay: 0.1,
+                ease: easeValue,
+
+                scrollTrigger: {
+                    trigger: ".home-pricing",
+                    start: "bottom bottom-=500",
+                }
+            })
+
+            gsap.to(".home-reviews .home-reviews-content .slide-btn", {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                delay: 0.2,
+                ease: easeValue,
+
+                scrollTrigger: {
+                    trigger: ".home-pricing",
+                    start: "bottom bottom-=500",
                 }
             })
 
             gsap.to(".home-reviews .home-reviews-slider .home-reviews-slider-item", {
-                y: 0,
+                x: 0,
                 opacity: 1,
                 stagger: 0.1,
                 ease: easeValue,
+                duration: 1,
 
                 scrollTrigger: {
-                    trigger: ".home-reviews-slider",
-                    start: "top bottom-=270",
-                    end: "top+=500 bottom-=150",
-                    scrub: 1.5,
+                    trigger: ".home-pricing",
+                    start: "bottom bottom-=500",
                 }
             })
 
-            //-- Home Reviews
-
-            //-- Home Get Started
-
-
-
-            gsap.to(".home-get-started-line div", {
-                x: 0,
-                ease: easeValue,
+            //-- Home FAQ
+            gsap.fromTo(".home-faq .faq-title:nth-child(1)", {
+                xPercent: -50,
+            }, {
+                xPercent: 0,
 
                 scrollTrigger: {
-                    trigger: ".home-get-started",
-                    start: "top bottom-=200",
-                    end: "top+=300 bottom-=100",
+                    trigger: ".home-faq",
+                    start: "top bottom",
+                    end: "bottom top",
                     scrub: 1,
-                    markers: false,
                 }
             })
-
-            gsap.to(".home-get-started-line svg", {
-                x: 0,
-                ease: easeValue,
+            
+            gsap.to(".home-faq .faq-title:nth-child(2)", {
+                xPercent: -50,
 
                 scrollTrigger: {
-                    trigger: ".home-get-started",
-                    start: "top bottom-=200",
-                    end: "top+=300 bottom-=100",
+                    trigger: ".home-faq",
+                    start: "top bottom",
+                    end: "bottom top",
                     scrub: 1,
-                    markers: false,
                 }
             })
 
-            gsap.to(".home-get-started-title", {
+            gsap.to(".home-faq .faq-container .faq-content", {
                 y: 0,
                 opacity: 1,
-                ease: easeValue,
 
                 scrollTrigger: {
-                    trigger: ".home-get-started",
-                    start: "top bottom-=400",
-                    end: "top+=500 bottom-=100",
-                    scrub: 1,
-                    markers: false,
+                    trigger: ".home-faq .faq-container",
+                    start: "top center",
                 }
             })
 
-            gsap.to(".home-get-started .s-container p", {
+            gsap.to(".home-faq .faq-container .faq-item", {
                 y: 0,
                 opacity: 1,
-                ease: easeValue,
+                stagger: 0.1,
 
                 scrollTrigger: {
-                    trigger: ".home-get-started",
-                    start: "top bottom-=450",
-                    end: "top+=500 bottom-=100",
-                    scrub: 1,
-                    markers: false,
+                    trigger: ".home-faq .faq-container",
+                    start: "top center",
                 }
             })
-
-            gsap.to(".home-get-started-link", {
-                y: 0,
-                opacity: 1,
-                ease: easeValue,
-
-                scrollTrigger: {
-                    trigger: ".home-get-started",
-                    start: "top bottom-=500",
-                    end: "top+=500 bottom-=100",
-                    scrub: 1,
-                    markers: false,
-                }
-            })
-
-            gsap.to(".home-get-started-images-img:nth-child(1)", {
-                y: 0,
-                ease: easeValue,
-
-                scrollTrigger: {
-                    trigger: ".home-get-started",
-                    start: "center center+=200",
-                    end: "bottom-=100 bottom-=100",
-                    scrub: 1,
-                    markers: false,
-                }
-            })
-
-            gsap.to(".home-get-started-images-img:nth-child(2)", {
-                scale: 1.2,
-                y: 0,
-                ease: easeValue,
-
-                scrollTrigger: {
-                    trigger: ".home-get-started",
-                    start: "center-=100 center+=200",
-                    end: "bottom-=100 bottom-=100",
-                    scrub: 1,
-                    markers: false,
-                }
-            })
-
-            gsap.to(".home-get-started-images-img:nth-child(3)", {
-                y: 0,
-                ease: easeValue,
-
-                scrollTrigger: {
-                    trigger: ".home-get-started",
-                    start: "center center+=200",
-                    end: "bottom-=100 bottom-=100",
-                    scrub: 1,
-                    markers: false,
-                }
-            })
-
-            // gsap.to(".home-get-started .home-get-started-circle-container svg > g > g circle", {
-            //     scale: 1,
-            //     stagger: 0.1,
-            //     ease: easeValue,
-
-            //     scrollTrigger: {
-            //         trigger: ".home-get-started",
-            //         start: "center center+=200",
-            //         end: "bottom-=100 bottom-=100",
-            //         scrub: 1,
-            //         markers: false,
-            //     }
-            // })
-
-            // //-- Home Get Started
         }, 3000);
     }
 }

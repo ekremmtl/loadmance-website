@@ -27,7 +27,7 @@ function pricingAni(enterCheck) {
     function allAnimation() {
         // Banner                
         gsap.to(".pricing-banner-bg", {
-            x: 0,
+            y: 0,
             duration: 1.5,
             ease: easeValue,
         })

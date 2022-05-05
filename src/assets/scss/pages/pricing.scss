@@ -11,17 +11,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-
-        >span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url(../img/pricing-banner-mask.jpg);
-            background-size: cover;
-            background-position: bottom center;
-        }
+        background: #07071c;
     }
 
     .s-container {
@@ -47,12 +37,8 @@
 
     @media (min-width: 1200px) {
         .pricing-banner-bg {
-            transform: translate(-100%, 0px);
+            transform: translate(0%, -100%);
             overflow: hidden;
-
-            >span {
-                transform: translate(100%, 0px);
-            }
         }
 
         .s-container h1,

@@ -149,6 +149,20 @@
         }
     }
 
+    @media only screen and (min-width: 1200px) {
+        .faq-container {
+            .faq-content {
+                transform: translate(0px, 30px);
+                opacity: 0;
+            }
+
+            .faq-item-container .faq-item {
+                transform: translate(0px, 40px);
+                opacity: 0;
+            }
+        }
+    }
+
     @media only screen and (max-width: 1600px) {
         .faq-container {
             .faq-content {

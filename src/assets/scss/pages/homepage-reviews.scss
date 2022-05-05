@@ -119,6 +119,30 @@
         }
     }
 
+    @media only screen and (min-width: 1200px) {
+        .home-reviews-slider .home-reviews-slider-item {
+            transform: translate(40px, 0px);
+            opacity: 0;
+        }
+
+        .home-reviews-content {
+            .home-reviews-title {
+                transform: translate(-10px, 0px);
+                opacity: 0;
+            }
+
+            p {
+                transform: translate(-20px, 0px);
+                opacity: 0;
+            }
+
+            .slide-btn {
+                transform: translate(-30px, 0px);
+                opacity: 0;
+            }
+        }
+    }
+
     @media only screen and (max-width: 1440px) {
         .home-reviews-slider {
             .swiper-container {
