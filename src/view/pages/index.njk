@@ -7,11 +7,11 @@
 {% block header %}
     {% from "../layouts/header.njk" import header %}
     <main data-barba="container" data-barba-namespace="home-section">
-        {{ header() }}
+        {# {{ header() }} #}
     {% endblock %}
 
     {% block content %}
-        <div class="world-info-container">
+        {# <div class="world-info-container" style="display: none;">
             <span class="color-check-1" style="display: none;"></span>
             <span class="color-check-2" style="display: none;"></span>
             <span class="color-check-3" style="display: none;"></span>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> #}
 
         <div class="sticky-container" style="display: none;">
             <div class="logo-container logo-container-bar">
@@ -818,7 +818,7 @@
             </div>
         </div>
 
-        <section class="home-hero">
+        <section class="home-hero" style="display: none;">
             <div class="home-hero-container">
                 <div class="home-hero-content">
                     <div class="content-title">
@@ -975,7 +975,7 @@
             </div>
         </section>
 
-        <div class="home-dashboard-svg">
+        <div class="home-dashboard-svg" style="display: none;">
             <div class="dashboard-container">
                 <div class="dashboard-img">
                     <div class="img" style="background-image: url(./assets/img/home-dashboard-img-2.svg);"></div>
@@ -987,7 +987,7 @@
             </div>
         </div>
 
-        <section class="home-cards-list">
+        <section class="home-cards-list" style="display: none;">
             <div class="home-cards-list-gradient"></div>
 
             <div class="home-cards-list-row">
@@ -1107,13 +1107,33 @@
         </section>
 
         <section class="home-pricing">
-            <div class="s-container">
-                <div class="home-pricing-bg"></div>
+            <div class="line"></div>
+            <div class="gradient-bg"></div>
 
+            <div class="s-container">
                 <div class="home-pricing-header">
-                    <h1 class="home-pricing-title">
-                    Simple <span>Pricing</span> For <br> Everyone
-                </h1>
+                    <div class="home-pricing-title">
+                        <div class="img"></div>
+
+                        <span>Simple 
+                            <span>Pricing
+                                <svg xmlns="http://www.w3.org/2000/svg" width="381.019" height="184.244" viewBox="0 0 381.019 184.244">
+                                    <g transform="translate(-694.491 -5666.378)">
+                                        <g transform="translate(694.491 5768.915) rotate(-16)" fill="none" stroke="#707070" stroke-width="1">
+                                            <ellipse cx="186" cy="42.5" rx="186" ry="42.5" stroke="none"/>
+                                            <ellipse cx="186" cy="42.5" rx="185.5" ry="42" fill="none"/>
+                                        </g>
+
+                                        <g transform="translate(1023 5683)" fill="#fff" stroke="#707070" stroke-width="1">
+                                            <circle cx="14" cy="14" r="14" stroke="none"/>
+                                            <circle cx="14" cy="14" r="13.5" fill="none"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                        </span>
+                        <span>For Everyone</span>
+                    </div>
 
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
 
@@ -1133,501 +1153,370 @@
                     </div>
                 </div>
 
-                <div class="home-pricing-container">
-                    <div class="home-pricing-icon-1">
-                        <img src="./assets/img/pricing-mail-wing-2-icon.png" alt="Pricing">
-                        <img src="./assets/img/pricing-mail-icon.png" alt="Pricing">
-                        <img src="./assets/img/pricing-mail-wing-icon.png" alt="Pricing">
+                <div class="home-pricing-table-row">
+                    <div class="home-pricing-table-item">
+                        <div class="item-title">
+                            <span>Basic</span>
+
+                            <div class="price">
+                                <span class="monthly-item">$126</span>
+                                <span class="annual-item">$99</span>
+                            </div>
+                        </div>
+
+                        <div class="item-summary">
+                            <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                        </div>
+
+                        <div class="item-features">
+                            <div class="item">
+                                <span>Package Features</span>
+                                <span>2.000</span>
+                            </div>
+
+                            <div class="item">
+                                <span>Concurrent User</span>
+                                <span>20</span>
+                            </div>
+
+                            <div class="item">
+                                <span>Test Count (Monthly)</span>
+                                <span>250</span>
+                            </div>
+
+                            <div class="item">
+                                <span>Test Count (Annually)</span>
+                                <span>250</span>
+                            </div>
+
+                            <div class="item">
+                                <span>Load Generator</span>
+                                <span>4 Engines</span>
+                            </div>
+
+                            <div class="item">
+                                <span>Max. Test Duration</span>
+                                <span>30 Min</span>
+                            </div>
+
+                            <div class="item">
+                                <span>API Calls Limitation</span>
+                                <span>∞</span>
+                            </div>
+                        </div>
+
+                        <div class="item-btn">
+                            <a href="javascript:;">REQUEST A QUOTE</a>
+                        </div>
                     </div>
+                    
+                    <div class="home-pricing-table-item">
+                        <div class="item-title">
+                            <span>Standard</span>
 
-                    <div class="home-pricing-icon-2">
-                        <img src="./assets/img/send-message-icon.svg" alt="Pricing">
+                            <div class="price">
+                                <span class="monthly-item">$399</span>
+                                <span class="annual-item">$299</span>
+                            </div>
+                        </div>
+
+                        <div class="item-summary">
+                            <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                        </div>
+
+                        <div class="item-features">
+                            <div class="item">
+                                <span>Package Features</span>
+                                <span>5.000</span>
+                            </div>
+
+                            <div class="item">
+                                <span>Concurrent User</span>
+                                <span>30</span>
+                            </div>
+
+                            <div class="item">
+                                <span>Test Count (Monthly)</span>
+                                <span>360</span>
+                            </div>
+
+                            <div class="item">
+                                <span>Test Count (Annually)</span>
+                                <span>360</span>
+                            </div>
+
+                            <div class="item">
+                                <span>Load Generator</span>
+                                <span>10 Engines</span>
+                            </div>
+
+                            <div class="item">
+                                <span>Max. Test Duration</span>
+                                <span>3 Hours</span>
+                            </div>
+
+                            <div class="item">
+                                <span>API Calls Limitation</span>
+                                <span>∞</span>
+                            </div>
+                        </div>
+
+                        <div class="item-btn">
+                            <a href="javascript:;">REQUEST A QUOTE</a>
+                        </div>
                     </div>
+                    
+                    <div class="home-pricing-table-item">
+                        <div class="item-title">
+                            <span>Enterprise</span>
 
-                    <div class="home-pricing-row">
-                        <div class="home-pricing-item">
-                            <span>PLANCE</span>
-
-                            <span>PRICING</span>
-                        </div>
-
-                        <div class="home-pricing-item">
-                            <div class="home-pricing-item-header">
-                                <span class="home-pricing-item-title">Basic</span>
-
-                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
-                            </div>
-
-                            <div class="home-pricing-item-footer">
-                                <div class="home-pricing-item-price">
-                                    <span>Starting</span>
-
-                                    <div class="price-title">
-                                        <span class="monthly-item">$126</span>
-                                        <span class="annual-item">$99</span>
-                                    </div>
-
-                                    <div class="plan-title">
-                                        <span class="monthly-item">/Monthly</span>
-                                        <span class="annual-item">/Annual</span>
-                                    </div>
-                                </div>
-
-                                <a href="javascript:;">Request A Quote</a>
+                            <div class="price">
+                                <span class="monthly-item">$599</span>
+                                <span class="annual-item">$499</span>
                             </div>
                         </div>
 
-                        <div class="home-pricing-item">
-                            <div class="home-pricing-item-most-tag">Most Preferred</div>
+                        <div class="item-summary">
+                            <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
+                        </div>
 
-                            <div class="home-pricing-item-header">
-                                <span class="home-pricing-item-title">Standard</span>
-
-                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
-
-                                <span class="home-pricing-item-saving">15% Saving</span>
+                        <div class="item-features">
+                            <div class="item">
+                                <span>Package Features</span>
+                                <span>Customizable</span>
                             </div>
 
-                            <div class="home-pricing-item-footer">
-                                <div class="home-pricing-item-price">
-                                    <span>Starting</span>
+                            <div class="item">
+                                <span>Concurrent User</span>
+                                <span>Customizable</span>
+                            </div>
 
-                                    <div class="price-title">
-                                        <span class="monthly-item">$449</span>
-                                        <span class="annual-item">$349</span>
-                                    </div>
+                            <div class="item">
+                                <span>Test Count (Monthly)</span>
+                                <span>Customizable</span>
+                            </div>
 
-                                    <div class="plan-title">
-                                        <span class="monthly-item">/Monthly</span>
-                                        <span class="annual-item">/Annual</span>
-                                    </div>
-                                </div>
+                            <div class="item">
+                                <span>Test Count (Annually)</span>
+                                <span>Customizable</span>
+                            </div>
 
-                                <a href="javascript:;">Request A Quote</a>
+                            <div class="item">
+                                <span>Load Generator</span>
+                                <span>Customizable</span>
+                            </div>
+
+                            <div class="item">
+                                <span>Max. Test Duration</span>
+                                <span>Customizable</span>
+                            </div>
+
+                            <div class="item">
+                                <span>API Calls Limitation</span>
+                                <span>∞</span>
                             </div>
                         </div>
 
-                        <div class="home-pricing-item">
-                            <div class="home-pricing-item-header">
-                                <span class="home-pricing-item-title">Enterprise</span>
-
-                                <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.</p>
-                            </div>
-
-                            <div class="home-pricing-item-footer">
-                                <a href="javascript:;">Request A Quote</a>
-                            </div>
+                        <div class="item-btn">
+                            <a href="javascript:;">REQUEST A QUOTE</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="home-pricing-table">
-                    <div class="home-pricing-table-row">
-                        <div class="home-pricing-table-item">
-                            <span>Package Features</span>
-
-                            <span>Concurrent User</span>
-
-                            <span>Test Count (Monthly)</span>
-
-                            <span>Test Count (Annually)</span>
-
-                            <span>Load Generator</span>
-
-                            <span>Max. Test Duration</span>
-
-                            <span>API Calls Limitation</span>
-                        </div>
-
-                        <div class="home-pricing-table-item">
-                            <span>Basic Features</span>
-
-                            <span>2.000</span>
-
-                            <span>20</span>
-
-                            <span>250</span>
-
-                            <span>4 Engines</span>
-
-                            <span>30 Min</span>
-
-                            <span>∞</span>
-                        </div>
-
-                        <div class="home-pricing-table-item">
-                            <span>Standard Features</span>
-
-                            <span>5.000</span>
-
-                            <span>30</span>
-
-                            <span>360</span>
-
-                            <span>10 Engines</span>
-
-                            <span>3 Hours</span>
-
-                            <span>∞</span>
-                        </div>
-
-                        <div class="home-pricing-table-item">
-                            <span>Enterprise Features</span>
-
-                            <span>Customizable</span>
-
-                            <span>Customizable</span>
-
-                            <span>Customizable</span>
-
-                            <span>Customizable</span>
-
-                            <span>Customizable</span>
-
-                            <span>∞</span>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="pricing.html" class="home-pricing-button">Pricing Page View</a>
             </div>
         </section>
 
-        <section class="home-bottom">
-            <div class="home-bottom-bg" style="background-image: url(./assets/img/home-purple-bg.png);"></div>
+        <section class="home-reviews">
+            <div class="blur-item"></div>
 
-            <div class="home-reviews">
-                <div class="s-container">
-                    <div class="home-reviews-header">
-                        <div class="home-reviews-header-left">
-                            <h1 class="home-reviews-title">
-                            Client <span>Reviews</span>
-                            </h1>
+            <div class="home-reviews-content">
+                <span class="home-reviews-title">
+                    Client Reviews
+                </span>
 
-                            <p>We Asked our Customers What Has Improved Since Using Loadmance.</p>
-                        </div>
+                <p>We Asked our Customers What Has Improved Since Using Loadmance.</p>
 
-                        <div class="home-reviews-header-right">
-                            <div class="home-reviews-slide-button slide-button-prev">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="37.485" height="18.939" viewBox="0 0 37.485 18.939">
-                                    <g transform="translate(0.996 1.414)">
-                                        <line x1="35" transform="translate(0.489 7.686)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                                        <path d="M20.055,5,12,13.055l8.055,8.055" transform="translate(-11.996 -5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                                    </g>
-                                </svg>
-                            </div>
-
-                            <div class="home-reviews-slide-button slide-button-next">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="18.939" viewBox="0 0 37 18.939">
-                                    <g transform="translate(0.511 1.414)">
-                                        <line x2="35" transform="translate(0.489 7.854)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                                        <path d="M12,5l8.055,8.055L12,21.111" transform="translate(15.43 -5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
+                <div class="slide-btn">
+                    <div class="btn btn-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="37.405" height="37.405" viewBox="0 0 37.405 37.405">
+                            <g transform="translate(18.702 35.405) rotate(-135)">
+                                <path d="M0,.76A13.077,13.077,0,0,0,8.284,3.707C11.837,3.707,17.418,0,17.418,0h0s-3.707,5.581-3.707,9.134a13.068,13.068,0,0,0,2.948,8.284" transform="translate(6.203 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                <line y1="23.621" x2="23.621" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            </g>
+                        </svg>
                     </div>
-                </div>
 
-                <div class="home-reviews-slider">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="home-reviews-slider-item">
-                                    <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy...
-                                </p>
-
-                                    <div class="home-reviews-slider-item-rate">
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate in-active">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-
-                                    <div class="home-reviews-slider-item-profile">
-                                        <div class="home-reviews-slider-item-profile-avatar">
-                                            <img src="./assets/img/home-reviews-img-1.png" alt="Janis Joplin">
-                                        </div>
-
-                                        <div class="home-reviews-slider-item-profile-text">
-                                            <h2>Janis Joplin</h2>
-                                            <span>Comp</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="home-reviews-slider-item">
-                                    <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy...
-                                </p>
-
-                                    <div class="home-reviews-slider-item-rate">
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate in-active">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-
-                                    <div class="home-reviews-slider-item-profile">
-                                        <div class="home-reviews-slider-item-profile-avatar">
-                                            <img src="./assets/img/home-reviews-img-2.png" alt="Janis Joplin">
-                                        </div>
-
-                                        <div class="home-reviews-slider-item-profile-text">
-                                            <h2>Janis Joplin</h2>
-                                            <span>Comp</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="home-reviews-slider-item">
-                                    <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </p>
-
-                                    <div class="home-reviews-slider-item-rate">
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-
-                                        <div class="rate in-active">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
-                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-
-                                    <div class="home-reviews-slider-item-profile">
-                                        <div class="home-reviews-slider-item-profile-avatar">
-                                            <img src="./assets/img/home-reviews-img-3.png" alt="Janis Joplin">
-                                        </div>
-
-                                        <div class="home-reviews-slider-item-profile-text">
-                                            <h2>Janis Joplin</h2>
-                                            <span>Comp</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="btn btn-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="37.405" height="37.404" viewBox="0 0 37.405 37.404">
+                            <g transform="translate(2 18.702) rotate(-45)">
+                                <path d="M0,16.658a13.077,13.077,0,0,1,8.284-2.947c3.553,0,9.134,3.707,9.134,3.707h0s-3.707-5.581-3.707-9.134A13.067,13.067,0,0,1,16.66,0" transform="translate(6.203 6.203)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                <line x2="23.621" y2="23.621" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            </g>
+                        </svg>
                     </div>
                 </div>
             </div>
 
-            <div class="home-get-started">
-                <div class="home-get-started-line">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="56.844" height="9.227" viewBox="0 0 56.844 9.227">
-                            <path d="M.29.614l11.249,8,11.253-8,11.249,8L45.3.614l11.257,8" transform="translate(0 0)" fill="none" stroke="#a9eff2" stroke-miterlimit="10" stroke-width="1"/>
+            <div class="home-reviews-slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        {% for i in range(0, 4) -%}
+                            <div class="swiper-slide">
+                                <div class="home-reviews-slider-item">
+                                    <div class="home-reviews-slider-item-profile">
+                                        <div class="home-reviews-slider-item-profile-avatar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64">
+                                                <text id="_" data-name="✧" transform="translate(0 53)" fill="#fff" font-size="65" font-family="ZapfDingbatsITC, Zapf Dingbats">
+                                                    <tspan x="0" y="0">✧</tspan>
+                                                </text>
+                                            </svg>
+                                        </div>
+
+                                        <div class="home-reviews-slider-item-profile-text">
+                                            <h2>Janis Joplin</h2>
+                                            <span>Comp</span>
+                                        </div>
+                                    </div>
+
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                                    <div class="home-reviews-slider-item-rate">
+                                        <div class="rate">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
+                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
+                                            </svg>
+                                        </div>
+
+                                        <div class="rate">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
+                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
+                                            </svg>
+                                        </div>
+
+                                        <div class="rate">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
+                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
+                                            </svg>
+                                        </div>
+
+                                        <div class="rate">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
+                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
+                                            </svg>
+                                        </div>
+
+                                        <div class="rate in-active">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19.333" viewBox="0 0 20 19.333">
+                                                <path d="M9.055,2.716a1,1,0,0,1,1.889,0l1.328,3.82a1,1,0,0,0,.919.671l4.017.1A1,1,0,0,1,17.8,9.1l-3.216,2.505a1,1,0,0,0-.345,1.069L15.383,16.6a1,1,0,0,1-1.533,1.1l-3.277-2.292a1,1,0,0,0-1.146,0L6.15,17.7a1,1,0,0,1-1.533-1.1l1.147-3.928a1,1,0,0,0-.345-1.069L2.2,9.1a1,1,0,0,1,.589-1.789l4.017-.1a1,1,0,0,0,.919-.671Z" fill="#fff"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-faq">
+            <div class="faq-title">
+                {% for i in range(0, 12) -%}
+                    <div class="title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38.589" height="38.588" viewBox="0 0 38.589 38.588">
+                            <path d="M3.868,19.864A20.376,20.376,0,0,1,20.025,36.021,20.377,20.377,0,0,1,36.182,19.864,20.377,20.377,0,0,1,20.025,3.707,20.377,20.377,0,0,1,3.868,19.864ZM.73,19.514A19.662,19.662,0,0,0,19.674.57h.7A19.662,19.662,0,0,0,39.319,19.514v.7A19.662,19.662,0,0,0,20.375,39.158h-.7A19.662,19.662,0,0,0,.73,20.214Z" transform="translate(-0.73 -0.57)" fill="#fff" fill-rule="evenodd"/>
                         </svg>
+
+                        <span>FAQ</span>
                     </div>
+                {% endfor %}
+            </div>
+
+            <div class="faq-title">
+                {% for i in range(0, 12) -%}
+                    <div class="title">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38.589" height="38.588" viewBox="0 0 38.589 38.588">
+                            <path d="M3.868,19.864A20.376,20.376,0,0,1,20.025,36.021,20.377,20.377,0,0,1,36.182,19.864,20.377,20.377,0,0,1,20.025,3.707,20.377,20.377,0,0,1,3.868,19.864ZM.73,19.514A19.662,19.662,0,0,0,19.674.57h.7A19.662,19.662,0,0,0,39.319,19.514v.7A19.662,19.662,0,0,0,20.375,39.158h-.7A19.662,19.662,0,0,0,.73,20.214Z" transform="translate(-0.73 -0.57)" fill="#fff" fill-rule="evenodd"/>
+                        </svg>
+
+                        <span>FAQ</span>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="faq-container">
+                <div class="gradient-bg"></div>
+
+                <div class="faq-content">
+                    <p>We Asked our Customers What Has Improved Since Using Loadmance.</p>
                 </div>
 
-                <div class="home-get-started-circle-1"></div>
+                <div class="faq-item-container">
+                    <div class="faq-item">
+                        <div class="item-header">
+                            <span>01</span>
 
-                <div class="home-get-started-circle-2"></div>
+                            <span>What technologies do you use in coding?</span>
 
-                <div class="home-get-started-circle-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2047.593" height="2047.593" viewBox="0 0 2047.593 2047.593">
-                        <g id="Group_6563" data-name="Group 6563" clip-path="url(#clip-path-2)">
-                            <g id="Group_6469" data-name="Group 6469" opacity="0.1">
-                                <circle id="Ellipse_9" data-name="Ellipse 9" cx="1023.141" cy="1023.141" r="1023.141" transform="translate(0.655 0.657)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6472" data-name="Group 6472" transform="translate(32.191 32.188)" opacity="0.129">
-                                <circle id="Ellipse_10" data-name="Ellipse 10" cx="990.949" cy="990.949" r="990.949" transform="translate(0.656 0.66)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6475" data-name="Group 6475" transform="translate(64.382 64.389)" opacity="0.158">
-                                <circle id="Ellipse_11" data-name="Ellipse 11" cx="958.759" cy="958.759" r="958.759" transform="translate(0.655 0.649)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6478" data-name="Group 6478" transform="translate(96.574 96.577)" opacity="0.187">
-                                <circle id="Ellipse_12" data-name="Ellipse 12" cx="926.567" cy="926.567" r="926.567" transform="translate(0.656 0.653)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6481" data-name="Group 6481" transform="translate(128.765 128.765)" opacity="0.216">
-                                <circle id="Ellipse_13" data-name="Ellipse 13" cx="894.376" cy="894.376" r="894.376" transform="translate(0.656 0.656)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6484" data-name="Group 6484" transform="translate(160.956 160.953)" opacity="0.245">
-                                <circle id="Ellipse_14" data-name="Ellipse 14" cx="862.185" cy="862.185" r="862.185" transform="translate(0.655 0.659)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6487" data-name="Group 6487" transform="translate(193.147 193.155)" opacity="0.274">
-                                <circle id="Ellipse_15" data-name="Ellipse 15" cx="829.994" cy="829.994" r="829.994" transform="translate(0.656 0.649)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6490" data-name="Group 6490" transform="translate(225.339 225.343)" opacity="0.303">
-                                <circle id="Ellipse_16" data-name="Ellipse 16" cx="797.803" cy="797.803" r="797.803" transform="translate(0.655 0.652)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6493" data-name="Group 6493" transform="translate(257.529 257.531)" opacity="0.332">
-                                <circle id="Ellipse_17" data-name="Ellipse 17" cx="765.612" cy="765.612" r="765.612" transform="translate(-316.471 766.267) rotate(-45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6496" data-name="Group 6496" transform="translate(289.72 289.719)" opacity="0.361">
-                                <circle id="Ellipse_18" data-name="Ellipse 18" cx="733.42" cy="733.42" r="733.42" transform="translate(0.656 0.659)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6499" data-name="Group 6499" transform="translate(321.912 321.907)" opacity="0.39">
-                                <circle id="Ellipse_19" data-name="Ellipse 19" cx="701.229" cy="701.229" r="701.229" transform="translate(0.655 0.662)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6502" data-name="Group 6502" transform="translate(354.103 354.108)" opacity="0.419">
-                                <circle id="Ellipse_20" data-name="Ellipse 20" cx="669.038" cy="669.038" r="669.038" transform="translate(0.656 0.652)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6505" data-name="Group 6505" transform="translate(386.295 386.296)" opacity="0.448">
-                                <circle id="Ellipse_21" data-name="Ellipse 21" cx="636.846" cy="636.846" r="636.846" transform="translate(0.655 0.655)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6508" data-name="Group 6508" transform="translate(418.486 418.484)" opacity="0.477">
-                                <circle id="Ellipse_22" data-name="Ellipse 22" cx="604.655" cy="604.655" r="604.655" transform="translate(0.655 0.658)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6511" data-name="Group 6511" transform="translate(450.676 450.672)" opacity="0.506">
-                                <circle id="Ellipse_23" data-name="Ellipse 23" cx="572.464" cy="572.464" r="572.464" transform="translate(0.656 0.661)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6514" data-name="Group 6514" transform="translate(482.868 482.873)" opacity="0.535">
-                                <circle id="Ellipse_24" data-name="Ellipse 24" cx="540.273" cy="540.273" r="540.273" transform="translate(0.655 0.651)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6517" data-name="Group 6517" transform="translate(515.059 515.061)" opacity="0.565">
-                                <circle id="Ellipse_25" data-name="Ellipse 25" cx="508.082" cy="508.082" r="508.082" transform="translate(0.655 0.654)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6520" data-name="Group 6520" transform="translate(547.25 547.25)" opacity="0.594">
-                                <circle id="Ellipse_26" data-name="Ellipse 26" cx="475.89" cy="475.89" r="475.89" transform="translate(0.657 0.657)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6523" data-name="Group 6523" transform="translate(579.442 579.438)" opacity="0.623">
-                                <circle id="Ellipse_27" data-name="Ellipse 27" cx="443.7" cy="443.7" r="443.7" transform="translate(0.655 0.66)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6526" data-name="Group 6526" transform="translate(611.632 611.639)" opacity="0.652">
-                                <circle id="Ellipse_28" data-name="Ellipse 28" cx="411.508" cy="411.508" r="411.508" transform="translate(0.656 0.65)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6529" data-name="Group 6529" transform="translate(643.824 643.827)" opacity="0.681">
-                                <circle id="Ellipse_29" data-name="Ellipse 29" cx="379.317" cy="379.317" r="379.317" transform="translate(0.655 0.653)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6532" data-name="Group 6532" transform="translate(676.015 676.015)" opacity="0.71">
-                                <circle id="Ellipse_30" data-name="Ellipse 30" cx="347.126" cy="347.126" r="347.126" transform="translate(0.655 0.657)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6535" data-name="Group 6535" transform="translate(708.206 708.203)" opacity="0.739">
-                                <circle id="Ellipse_31" data-name="Ellipse 31" cx="314.935" cy="314.935" r="314.935" transform="translate(0.656 0.659)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6538" data-name="Group 6538" transform="translate(740.398 740.399)" opacity="0.768">
-                                <circle id="Ellipse_32" data-name="Ellipse 32" cx="282.744" cy="282.744" r="282.744" transform="translate(0.655 0.655)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6541" data-name="Group 6541" transform="translate(772.588 772.59)" opacity="0.797">
-                                <circle id="Ellipse_33" data-name="Ellipse 33" cx="250.552" cy="250.552" r="250.552" transform="translate(0.655 0.655)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6544" data-name="Group 6544" transform="translate(804.779 804.78)" opacity="0.826">
-                                <circle id="Ellipse_34" data-name="Ellipse 34" cx="218.361" cy="218.361" r="218.361" transform="translate(0.656 0.656)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6547" data-name="Group 6547" transform="translate(836.971 836.972)" opacity="0.855">
-                                <circle id="Ellipse_35" data-name="Ellipse 35" cx="186.17" cy="186.17" r="186.17" transform="translate(-76.459 186.825) rotate(-45)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6550" data-name="Group 6550" transform="translate(869.162 869.163)" opacity="0.884">
-                                <circle id="Ellipse_36" data-name="Ellipse 36" cx="153.979" cy="153.979" r="153.979" transform="translate(0.656 0.656)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6553" data-name="Group 6553" transform="translate(901.354 901.354)" opacity="0.913">
-                                <circle id="Ellipse_37" data-name="Ellipse 37" cx="121.788" cy="121.788" r="121.788" transform="translate(0.655 0.656)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6556" data-name="Group 6556" transform="translate(933.544 933.546)" opacity="0.942">
-                                <circle id="Ellipse_38" data-name="Ellipse 38" cx="89.596" cy="89.596" r="89.596" transform="translate(0.655 0.655)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6559" data-name="Group 6559" transform="translate(965.735 965.736)" opacity="0.971">
-                                <path id="Path_3022" data-name="Path 3022" d="M851.882,794.477a57.406,57.406,0,1,1-57.4-57.4A57.4,57.4,0,0,1,851.882,794.477Z" transform="translate(-736.415 -736.416)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                            <g id="Group_6562" data-name="Group 6562" transform="translate(997.927 997.928)">
-                                <circle id="Ellipse_39" data-name="Ellipse 39" cx="25.214" cy="25.214" r="25.214" transform="translate(-7.075 12.223) rotate(-22.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
+                            <div class="item-close">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
 
-                <div class="s-container">
-                    <h1 class="home-get-started-title">
-                        Run Your First <span>Test Now</span>
-                    </h1>
-
-                    <p>Start improving your software quality by measuring performance.</p>
-
-                    <div class="home-get-started-link">
-                        <a href="javascript:;">Get Started</a>
-                    </div>
-                </div>
-
-                <div class="home-get-started-images">
-                    <div class="home-get-started-images-img">
-                        <div class="home-get-started-images-img-item" style="background-image: url(./assets/img/home-get-started-img-1.png);"></div>
+                        <div class="item-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
+                        </div>
                     </div>
 
-                    <div class="home-get-started-images-img">
-                        <div class="home-get-started-images-img-item" style="background-image: url(./assets/img/home-get-started-img-2.png);"></div>
+                    <div class="faq-item">
+                        <div class="item-header">
+                            <span>02</span>
+
+                            <span>What are the factors affecting the project price?</span>
+
+                            <div class="item-close">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="item-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
+                        </div>
                     </div>
 
-                    <div class="home-get-started-images-img">
-                        <div class="home-get-started-images-img-item" style="background-image: url(./assets/img/home-get-started-img-3.png);"></div>
+                    <div class="faq-item">
+                        <div class="item-header">
+                            <span>03</span>
+
+                            <span>Do you only do project work?</span>
+
+                            <div class="item-close">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="item-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="item-header">
+                            <span>04</span>
+
+                            <span>Are your interface designs ready?</span>
+
+                            <div class="item-close">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="item-body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
+                        </div>
                     </div>
                 </div>
             </div>

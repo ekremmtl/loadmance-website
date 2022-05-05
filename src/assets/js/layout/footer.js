@@ -6,50 +6,46 @@ gsap.registerPlugin(ScrollToPlugin);
 function footerAni() {
     const easeValue = "Expo.easeOut";
 
-    if ($(window).width() > 1200) {
-        setTimeout(() => {
-            function marqueeItem(item, reverse, duration) {
-                const dur = duration;
-                let ticker = document.querySelector(item)
+    setTimeout(() => {
+        function marqueeItem(item, reverse, duration) {
+            const dur = duration;
+            let ticker = document.querySelector(item)
 
-                let totalDistance;
-                $(item).append($(item).find(".footer-marquee-item").clone());
-                let anim;
+            let totalDistance;
+            $(item).append($(item).find(".footer-marquee-item").clone());
 
-                function resize() {
-                    if (anim) anim.play(0);
-                    totalDistance = $(ticker).width() / 2;
+            let footerOffset = $("footer").offset()
 
-                    anim = gsap.to(ticker, {
-                        duration: dur,
-                        x: reverse ? totalDistance : -totalDistance,
-                        ease: "none",
-                        repeat: -1,
-                        overwrite: true
-                    });
-                }
+            function resize() {
+                totalDistance = $(ticker).width() / 2;
 
-                $(window).resize(resize);
-                resize();
+                let tl = gsap.timeline().to(ticker, {
+                    duration: dur,
+                    x: reverse ? totalDistance : -totalDistance,
+                    ease: "none",
+                    repeat: -1,
+                    overwrite: true
+                });
+                tl.pause()
+
+                $(window).scroll(function () {
+                    let scrollTop = $(window).scrollTop();
+
+                    if ((scrollTop + window.innerHeight) > footerOffset.top) {
+                        tl.play()
+                    } else {
+                        tl.pause()
+                    }
+                });
             }
 
-            marqueeItem(".marquee-1", false, 20)
-            marqueeItem(".marquee-2", true, 25)
+            $(window).resize(resize);
+            resize();
+        }
 
-            // Go Top
-            $(".home-footer .scroll-up").click(function () {
-                gsap.to(window, { duration: 0.8, scrollTo: 0, ease: easeValue });
-
-                setTimeout(() => {
-                    $("body").addClass("overflow-hidden")
-
-                    setTimeout(() => {
-                        $("body").removeClass("overflow-hidden")
-                    }, 1000);
-                }, 100);
-            });
-        }, 300);
-    }
+        marqueeItem(".marquee-1", false, 25)
+        marqueeItem(".marquee-2", false, 26)
+    }, 300);
 }
 
 export { footerAni }

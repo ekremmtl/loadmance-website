@@ -5,6 +5,7 @@ import { pricingSticky, pricingAni } from './page/pricing'
 import { useCaseAni } from './page/use-case'
 
 import { homeHeroAni } from './page/homepage-hero'
+import { homeFaq } from './page/homepage-faq'
 import { homeModelAni } from './page/homepage-model'
 import { homeReviewsAni } from './page/homepage-reviews' // All Animations
 
@@ -18,6 +19,8 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
 //--
+
+homeFaq()
 
 $(function () {
     let preLoaderTimer = 1;
@@ -175,229 +178,113 @@ $(function () {
                 },
 
                 async enter(data) {
-                    window.addEventListener('focus', function () {
+                    gsap.to(".pre-loader", {
+                        autoAlpha: 0,
+                        ease: "none",
+                        duration: 0.1,
+                    })
+
+                    if (data.next.namespace === "home-section") {
+                        setTimeout(() => {
+                            $("body").addClass("overflow-hidden")
+                            $("body").removeClass("overflow-initial")
+                        }, 100);
+
+                        setTimeout(() => {
+                            $("body").removeClass("overflow-hidden")
+                            $("body").addClass("overflow-initial")
+                        }, 5000);
+
+                        headerAni(preLoaderTimer, true)
+
                         gsap.to(".pre-loader", {
-                            autoAlpha: 0,
+                            autoAlpha: 1,
                             ease: "none",
                             duration: 0.1,
                         })
 
-                        if (data.next.namespace === "home-section") {
+                        setTimeout(() => {
+                            homeModelAni(preLoaderTimer)
+                        }, 500);
+
+                        const loader = new GLTFLoader()
+                        loader.load('./earth.glb', function () {
                             setTimeout(() => {
-                                $("body").addClass("overflow-hidden")
-                                $("body").removeClass("overflow-initial")
-                            }, 100);
+                                topInfo()
+                                homeHeroAni(preLoaderTimer)
+                                homeReviewsAni()
+                                footerAni();
+                            }, 3000);
+                        });
+                    }
 
-                            setTimeout(() => {
-                                $("body").removeClass("overflow-hidden")
-                                $("body").addClass("overflow-initial")
-                            }, 5000);
+                    if (data.next.namespace === "pricing-section") {
+                        headerAni(preLoaderTimer, false)
+                        topInfo()
 
-                            headerAni(preLoaderTimer, true)
+                        pricingSticky()
+                        pricingAni(true)
+                        switchPlan()
+                    }
 
-                            gsap.to(".pre-loader", {
-                                autoAlpha: 1,
-                                ease: "none",
-                                duration: 0.1,
-                            })
+                    if (data.next.namespace === "use-cases-section") {
+                        headerAni(preLoaderTimer, false)
+                        topInfo()
 
-                            setTimeout(() => {
-                                homeModelAni(preLoaderTimer)
-                            }, 500);
-
-                            const loader = new GLTFLoader()
-                            loader.load('./earth.glb', function () {
-                                setTimeout(() => {
-                                    topInfo()
-                                    homeHeroAni(preLoaderTimer)
-                                    homeReviewsAni()
-                                    footerAni();
-                                }, 3000);
-                            });
-                        }
-
-                        if (data.next.namespace === "pricing-section") {
-                            headerAni(preLoaderTimer, false)
-                            topInfo()
-
-                            pricingSticky()
-                            pricingAni(true)
-                            switchPlan()
-                        }
-
-                        if (data.next.namespace === "use-cases-section") {
-                            headerAni(preLoaderTimer, false)
-                            topInfo()
-
-                            useCaseAni(true)
-                        }
-                    });
-
-                    if (document.hasFocus()) {
-                        gsap.to(".pre-loader", {
-                            autoAlpha: 0,
-                            ease: "none",
-                            duration: 0.1,
-                        })
-
-                        if (data.next.namespace === "home-section") {
-                            setTimeout(() => {
-                                $("body").addClass("overflow-hidden")
-                                $("body").removeClass("overflow-initial")
-                            }, 100);
-
-                            setTimeout(() => {
-                                $("body").removeClass("overflow-hidden")
-                                $("body").addClass("overflow-initial")
-                            }, 5000);
-
-                            headerAni(preLoaderTimer, true)
-
-                            gsap.to(".pre-loader", {
-                                autoAlpha: 1,
-                                ease: "none",
-                                duration: 0.1,
-                            })
-
-                            setTimeout(() => {
-                                homeModelAni(preLoaderTimer)
-                            }, 500);
-
-                            const loader = new GLTFLoader()
-                            loader.load('./earth.glb', function () {
-                                setTimeout(() => {
-                                    topInfo()
-                                    homeHeroAni(preLoaderTimer)
-                                    homeReviewsAni()
-                                    footerAni();
-                                }, 3000);
-                            });
-                        }
-
-                        if (data.next.namespace === "pricing-section") {
-                            headerAni(preLoaderTimer, false)
-                            topInfo()
-
-                            pricingSticky()
-                            pricingAni(true)
-                            switchPlan()
-                        }
-
-                        if (data.next.namespace === "use-cases-section") {
-                            headerAni(preLoaderTimer, false)
-                            topInfo()
-
-                            useCaseAni(true)
-                        }
+                        useCaseAni(true)
                     }
                 },
 
                 async once(data) {
-                    window.addEventListener('focus', function () {
-                        pricingSticky()
-                        pricingAni(false)
+                    pricingSticky()
+                    pricingAni(false)
 
-                        useCaseAni(false)
+                    useCaseAni(false)
 
-                        const loader = new GLTFLoader()
-                        loader.load('./earth.glb', function () {
-                            setTimeout(() => {
-                                homeHeroAni(preLoaderTimer)
-                                homeReviewsAni()
-                            }, 2500);
-                        });
-
-                        topInfo()
-                        footerAni();
-
-                        switchPlan()
-
-                        if (data.next.namespace === "home-section") {
-                            headerAni(preLoaderTimer, true)
-                        }
-
-                        if (data.next.namespace === "pricing-section") {
-                            headerAni(preLoaderTimer, false)
-
-                            gsap.to(".pre-loader", {
-                                autoAlpha: 0,
-                                ease: "none",
-                                duration: 0.1,
-                            })
-
-                            $("body").addClass("overflow-initial")
-                        }
-
-                        if (data.next.namespace === "use-cases-section") {
-                            headerAni(preLoaderTimer, false)
-
-                            gsap.to(".pre-loader", {
-                                autoAlpha: 0,
-                                ease: "none",
-                                duration: 0.1,
-                            })
-
-                            $("body").addClass("overflow-initial")
-                        }
+                    const loader = new GLTFLoader()
+                    loader.load('./earth.glb', function () {
+                        setTimeout(() => {
+                            homeHeroAni(preLoaderTimer)
+                            homeReviewsAni()
+                        }, 2500);
                     });
 
-                    if (document.hasFocus()) {
-                        pricingSticky()
-                        pricingAni(false)
+                    topInfo()
+                    footerAni();
 
-                        useCaseAni(false)
+                    switchPlan()
 
-                        const loader = new GLTFLoader()
-                        loader.load('./earth.glb', function () {
-                            setTimeout(() => {
-                                homeHeroAni(preLoaderTimer)
-                                homeReviewsAni()
-                            }, 2500);
-                        });
+                    if (data.next.namespace === "home-section") {
+                        headerAni(preLoaderTimer, true)
+                    }
 
-                        topInfo()
-                        footerAni();
+                    if (data.next.namespace === "pricing-section") {
+                        headerAni(preLoaderTimer, false)
 
-                        switchPlan()
+                        gsap.to(".pre-loader", {
+                            autoAlpha: 0,
+                            ease: "none",
+                            duration: 0.1,
+                        })
 
-                        if (data.next.namespace === "home-section") {
-                            headerAni(preLoaderTimer, true)
-                        }
+                        $("body").addClass("overflow-initial")
+                    }
 
-                        if (data.next.namespace === "pricing-section") {
-                            headerAni(preLoaderTimer, false)
+                    if (data.next.namespace === "use-cases-section") {
+                        headerAni(preLoaderTimer, false)
 
-                            gsap.to(".pre-loader", {
-                                autoAlpha: 0,
-                                ease: "none",
-                                duration: 0.1,
-                            })
+                        gsap.to(".pre-loader", {
+                            autoAlpha: 0,
+                            ease: "none",
+                            duration: 0.1,
+                        })
 
-                            $("body").addClass("overflow-initial")
-                        }
-
-                        if (data.next.namespace === "use-cases-section") {
-                            headerAni(preLoaderTimer, false)
-
-                            gsap.to(".pre-loader", {
-                                autoAlpha: 0,
-                                ease: "none",
-                                duration: 0.1,
-                            })
-
-                            $("body").addClass("overflow-initial")
-                        }
+                        $("body").addClass("overflow-initial")
                     }
                 },
             },
         ],
     });
 
-    window.addEventListener('focus', function () {
-        homeModelAni(preLoaderTimer)
-    });
-
-    if (document.hasFocus()) {
-        homeModelAni(preLoaderTimer)
-    }
+    homeModelAni(preLoaderTimer)
 });

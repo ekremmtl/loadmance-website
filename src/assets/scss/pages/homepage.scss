@@ -1,44 +1,7 @@
-.home-bottom {
-    position: relative;
-    background: #07071C;
-    padding-bottom: 70px;
-    overflow: hidden;
-
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to top, black, transparent);
-        z-index: 2;
-    }
-
-    &-bg {
-        position: absolute;
-        top: -500px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-size: cover;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        z-index: 1;
-        pointer-events: none
-    }
-
-    @media (min-width: 1200px) {
-        .home-bottom-bg {
-            transform: scale(1.5);
-            opacity: 0.5;
-        }
-    }
-}
-
 @import "./homepage-hero.scss";
 @import "./homepage-dashboard-image.scss";
 @import "./homepage-cards.scss";
 @import "./homepage-pricing.scss";
 @import "./homepage-reviews.scss";
-@import "./homepage-getstarted.scss";
+@import "./homepage-faq.scss";
+// @import "./homepage-getstarted.scss";

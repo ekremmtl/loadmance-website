@@ -116,7 +116,7 @@ function homeModelAni(preLoaderTimer) {
 
                 for (var i = 0; i < sphereTab.length; i++) {
                     sphereTab[i].position.set(Math.random() * 600 - 300, Math.random() * 600 - 300, Math.random() * 4 - 300);
-                    scene.add(sphereTab[i]);
+                    // scene.add(sphereTab[i]);
                 }
 
                 // Lights
@@ -696,7 +696,7 @@ function homeModelAni(preLoaderTimer) {
                         mixer.setTime(0)
                     }
 
-                    scene.add(model);
+                    // scene.add(model);
                 }
 
                 // camera.lookAt(100, 100, 0)
