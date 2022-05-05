@@ -96,7 +96,7 @@ $(function () {
         gsap.to(window, { duration: 0, scrollTo: 0, delay: 1 });
 
         $("body").addClass("point-none")
-        $("body").addClass("overflow-hidden")
+        // $("body").addClass("overflow-hidden")
         setTimeout(() => {
             $("body").removeClass("point-none")
             $("body").removeClass("overflow-hidden")
@@ -186,7 +186,7 @@ $(function () {
 
                     if (data.next.namespace === "home-section") {
                         setTimeout(() => {
-                            $("body").addClass("overflow-hidden")
+                            // $("body").addClass("overflow-hidden")
                             $("body").removeClass("overflow-initial")
                         }, 100);
 
