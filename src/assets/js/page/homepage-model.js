@@ -139,18 +139,16 @@ function homeModelAni(preLoaderTimer) {
                     gsap.to(".pre-loader .logo-sprites-circle", {
                         opacity: 1,
                         scale: 1,
-                        duration: 1,
+                        duration: 0.3,
                         delay: 0.1,
                         ease: "Expo.easeOut",
                     })
 
                     gsap.to(".pre-loader .logo-sprites-bar", {
-                        x: "-52%",
-                        y: 0,
                         rotation: -80,
                         opacity: 1,
                         scale: 1,
-                        duration: 1,
+                        duration: 0.8,
                         delay: 0.2,
                         ease: "Expo.easeOut",
                     })
@@ -359,8 +357,16 @@ function homeModelAni(preLoaderTimer) {
                                 start: "top+=" + (window.innerHeight + 3000) + "px bottom",
                                 end: "3500px top",
                                 scrub: 1,
-                                onEnter: () => $(".world-info-container .country-row .country-item:nth-child(3)").addClass('in-active'),
-                                onLeaveBack: () => $(".world-info-container .country-row .country-item:nth-child(3)").removeClass('in-active'),
+                                onEnter: () => {
+                                    $(".world-info-container .country-row .country-item:nth-child(1)").addClass('active')
+                                    $(".world-info-container .country-row .country-item:nth-child(2)").addClass('active')
+                                    $(".world-info-container .country-row .country-item:nth-child(3)").addClass('in-active')
+                                },
+                                onLeaveBack: () => {
+                                    $(".world-info-container .country-row .country-item:nth-child(1)").removeClass('active')
+                                    $(".world-info-container .country-row .country-item:nth-child(2)").removeClass('active')
+                                    $(".world-info-container .country-row .country-item:nth-child(3)").removeClass('in-active')
+                                },
                             }
                         })
 

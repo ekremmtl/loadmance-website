@@ -104,15 +104,15 @@ function homeHeroAni(preLoaderTimer) {
             })
 
             setTimeout(() => {
-                let supportImgTl = gsap.timeline({ yoyo: true, repeat: -1 })
-                supportImgTl.fromTo(".home-hero .home-hero-content .content-title .title-row .title > span.support-img > .img-item svg", {
-                    opacity: 1,
-                }, {
-                    opacity: 0,
-                    duration: 1,
-                    delay: 0.5,
-                    ease: easeValue,
-                })
+                // let supportImgTl = gsap.timeline({ yoyo: true, repeat: -1 })
+                // supportImgTl.fromTo(".home-hero .home-hero-content .content-title .title-row .title > span.support-img > .img-item svg", {
+                //     opacity: 1,
+                // }, {
+                //     opacity: 0,
+                //     duration: 1,
+                //     delay: 0.5,
+                //     ease: easeValue,
+                // })
                 
                 gsap.timeline().fromTo(".home-hero .home-hero-content .content-title .title-row .title > span.support-img > .img-item svg", {
                     scaleX: 1,
@@ -125,15 +125,15 @@ function homeHeroAni(preLoaderTimer) {
                     ease: easeValue,
                 })
 
-                let supportImgTl2 = gsap.timeline({ yoyo: true, repeat: -1 })
-                supportImgTl2.fromTo(".home-hero .home-hero-content .content-title .title-row .title > span.support-img > span", {
-                    opacity: 1,
-                }, {
-                    opacity: 0,
-                    duration: 1,
-                    delay: 0.5,
-                    ease: easeValue,
-                })
+                // let supportImgTl2 = gsap.timeline({ yoyo: true, repeat: -1 })
+                // supportImgTl2.fromTo(".home-hero .home-hero-content .content-title .title-row .title > span.support-img > span", {
+                //     opacity: 1,
+                // }, {
+                //     opacity: 0,
+                //     duration: 1,
+                //     delay: 0.5,
+                //     ease: easeValue,
+                // })
             }, 5000);
 
             gsap.to(".home-hero .home-hero-content .content-title .title-row .title > .support-img > span", {
@@ -183,7 +183,7 @@ function homeHeroAni(preLoaderTimer) {
 
                 scrollTrigger: {
                     trigger: ".home-hero .home-hero-content .content-desc",
-                    start: "top center+=10%",
+                    start: "top top+=20%",
                 }
             })
 
@@ -195,7 +195,7 @@ function homeHeroAni(preLoaderTimer) {
 
                 scrollTrigger: {
                     trigger: ".home-hero .home-hero-content .content-desc",
-                    start: "top center+=10%",
+                    start: "top top+=20%",
                 }
             })
 
@@ -207,7 +207,7 @@ function homeHeroAni(preLoaderTimer) {
 
                 scrollTrigger: {
                     trigger: ".home-hero .home-hero-content .content-desc",
-                    start: "top center+=10%",
+                    start: "top top+=20%",
                 }
             })
 

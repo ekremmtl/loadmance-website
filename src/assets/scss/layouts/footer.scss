@@ -1,6 +1,7 @@
 footer {
     background: #07071C;
     overflow: hidden;
+    font-weight: 300;
 
     &.home-footer {
         background: black;
@@ -328,7 +329,6 @@ footer {
                     a {
                         margin-top: 51px;
                         display: inline-block;
-                        font-weight: bold;
                         font-size: 15px;
                         border-radius: 10px;
                         background: #fff;

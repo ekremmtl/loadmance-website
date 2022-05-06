@@ -59,17 +59,66 @@
             margin: 0 8px;
             flex: 0 0 calc(30% - 16px);
             padding: 40px 0 50px;
-            transition: 0.4s;
+            position: relative;
+            transition: 0.4s cubic-bezier(.74, .04, .23, .93);
+
+            &.in-active {
+                opacity: 0.3;
+            }
+
+            &.active {
+                img {
+                    filter: grayscale(0)
+                }
+
+                .item-text>span:nth-child(2) {
+                    transform: translate(0px, 20px);
+                    opacity: 0;
+                }
+
+                .item-text>span:nth-child(1) {
+                    transform: translate(0px, -20px);
+                }
+
+                .item-number {
+                    transform: translate(-50%, 0px);
+                    opacity: 1;
+                }
+            }
 
             img {
                 filter: grayscale(1);
+                transition: 0.4s cubic-bezier(.74, .04, .23, .93);
             }
 
-            &.in-active {
-                opacity: 0.5;
+            .item-number {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 20px);
+                width: 100%;
+                bottom: 30px;
+                opacity: 0;
+                transition: 0.4s cubic-bezier(.74, .04, .23, .93);
+
+                >span {
+                    &:nth-child(1) {
+                        font-size: 15px;
+                        color: white;
+                        display: block;
+                    }
+
+                    &:nth-child(2) {
+                        color: white;
+                        font-size: 30px;
+                        margin-top: 10px;
+                        display: block;
+                    }
+                }
             }
 
             .item-text>span {
+                transition: 0.4s cubic-bezier(.74, .04, .23, .93);
+
                 &:nth-child(1) {
                     font-size: 20px;
                     color: #FFFFFF;
@@ -107,6 +156,7 @@
     background: #000;
     position: relative;
     padding-bottom: 220px;
+    font-weight: 300;
 
     &-container {
         // position: fixed;
@@ -461,7 +511,7 @@
 
                     &:not(.text-item-bg)>span {
                         display: inline-block;
-                        transform: translate(0px, 100%);
+                        transform: translate(0px, 110%);
                     }
                 }
 
