@@ -44,7 +44,7 @@ function footerAni() {
         }
 
         marqueeItem(".marquee-1", false, 25)
-        marqueeItem(".marquee-2", false, 26)
+        marqueeItem(".marquee-2", true, 25)
     }, 300);
 }
 

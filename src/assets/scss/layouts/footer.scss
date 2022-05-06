@@ -22,11 +22,11 @@ footer {
                     font-size: 16px;
                     color: #fff;
                     line-height: 1.4;
-                    margin-top: 160px;
+                    margin-top: 130px;
                 }
 
                 img {
-                    max-width: 250px;
+                    max-width: 50px;
                 }
             }
 
@@ -79,10 +79,10 @@ footer {
                         white-space: nowrap;
                         will-change: transform;
 
-                        // &.marquee-2 {
-                        //     left: auto;
-                        //     right: 0;
-                        // }
+                        &.marquee-2 {
+                            left: auto;
+                            right: 0;
+                        }
 
                         .footer-marquee-item {
                             position: relative;

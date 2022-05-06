@@ -25,6 +25,7 @@
     padding-left: 60px;
     opacity: 0;
     pointer-events: none;
+    font-weight: 300;
 
     .title {
         font-size: 94px;
@@ -60,7 +61,7 @@
             padding: 40px 0 50px;
             transition: 0.4s;
 
-            img{
+            img {
                 filter: grayscale(1);
             }
 
@@ -172,7 +173,7 @@
             .text {
                 font-size: 94px;
                 color: #FFFFFF;
-                font-weight: 400;
+                font-weight: 300;
                 max-width: 1300px;
                 line-height: 1.1;
 
@@ -241,6 +242,7 @@
                     position: relative;
                     display: flex;
                     align-items: center;
+                    font-weight: 300;
 
                     >span+span {
                         margin-left: 2vw;
