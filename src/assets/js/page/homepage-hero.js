@@ -119,7 +119,6 @@ function homeHeroAni(preLoaderTimer) {
                 }, {
                     scaleX: 0.8,
                     duration: 1,
-                    delay: 0.5,
                     yoyo: true,
                     repeat: -1,
                     ease: easeValue,

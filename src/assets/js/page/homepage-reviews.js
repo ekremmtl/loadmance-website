@@ -36,9 +36,54 @@ function homeReviewsAni() {
         // })
 
         // Dashboard SVG
-        gsap.to(".home-dashboard-svg .dashboard-img", {
+        gsap.to(".home-dashboard-svg .dashboard-img .line.line-1", {
+            width: "103%",
+
+            scrollTrigger: {
+                trigger: ".home-dashboard-svg",
+                start: "top top",
+                end: "top+=10% top",
+                scrub: 1,
+            }
+        })
+
+        gsap.to(".home-dashboard-svg .dashboard-img .line.line-2", {
+            height: "103.2%",
+
+            scrollTrigger: {
+                trigger: ".home-dashboard-svg",
+                start: "top top",
+                end: "top+=10% top",
+                scrub: 1,
+            }
+        })
+
+        gsap.to(".home-dashboard-svg .dashboard-img .line.line-3", {
+            width: "103%",
+
+            scrollTrigger: {
+                trigger: ".home-dashboard-svg",
+                start: "top+=20% top",
+                end: "top+=10% top",
+                scrub: 1,
+            }
+        })
+
+        gsap.to(".home-dashboard-svg .dashboard-img .img-submenu", {
             x: 0,
+            opacity: 1,
+
+            scrollTrigger: {
+                trigger: ".home-dashboard-svg",
+                start: "top+=20% top",
+                end: "center top",
+                scrub: 1,
+            }
+        })
+
+        gsap.to(".home-dashboard-svg .dashboard-img .img-header", {
             y: 0,
+            opacity: 1,
 
             scrollTrigger: {
                 trigger: ".home-dashboard-svg",
@@ -48,13 +93,51 @@ function homeReviewsAni() {
             }
         })
 
-        gsap.to(".home-dashboard-svg .dashboard-img .img", {
-            x: "-50%",
-            y: "-50%",
+        gsap.to(".home-dashboard-svg .dashboard-img .img-title", {
+            y: 0,
+            opacity: 1,
 
             scrollTrigger: {
                 trigger: ".home-dashboard-svg",
-                start: "top top",
+                start: "top+=10% top",
+                end: "center top",
+                scrub: 1,
+            }
+        })
+
+        gsap.to(".home-dashboard-svg .dashboard-img .img-body .img-body-left .img-body-left-item", {
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+
+            scrollTrigger: {
+                trigger: ".home-dashboard-svg",
+                start: "top+=30% top",
+                end: "center top",
+                scrub: 1,
+            }
+        })
+
+        gsap.to(".home-dashboard-svg .dashboard-img .img-body .img-body-right .img-body-right-item", {
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+
+            scrollTrigger: {
+                trigger: ".home-dashboard-svg",
+                start: "top+=30% top",
+                end: "center top",
+                scrub: 1,
+            }
+        })
+
+        gsap.to(".home-dashboard-svg .dashboard-img .img-menu", {
+            y: 0,
+            opacity: 1,
+
+            scrollTrigger: {
+                trigger: ".home-dashboard-svg",
+                start: "top+=40% top",
                 end: "center top",
                 scrub: 1,
             }
@@ -1217,7 +1300,7 @@ function homeReviewsAni() {
                     scrub: 1,
                 }
             })
-            
+
             gsap.to(".home-faq .faq-title:nth-child(2)", {
                 xPercent: -50,
 
