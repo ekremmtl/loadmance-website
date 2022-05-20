@@ -5,7 +5,9 @@
             <div class="footer-home-container">
                 <div class="footer-row">
                     <div class="footer-logo">
-                        <img src="./assets/img/footer-img.svg" alt="Loadmance">
+                        <a href="/">
+                            <img src="./assets/img/footer-img.svg" alt="Loadmance">
+                        </a>
 
                         <p>Feel free to get in touch with us via phone or send us a message.</p>
                     </div>
@@ -81,11 +83,13 @@
                 <div class="footer-row">
                     <div class="footer-col">
                         <div class="footer-logo">
-                            {% if homeCheck %}
-                                <img src="./assets/img/logo-text.svg" alt="Loadmance">
-                            {% else %}
-                                <img src="./assets/img/footer-logo.svg" alt="Loadmance">
-                            {% endif %}
+                            <a href="/">
+                                {% if homeCheck %}
+                                    <img src="./assets/img/logo-text.svg" alt="Loadmance">
+                                {% else %}
+                                    <img src="./assets/img/footer-logo.svg" alt="Loadmance">
+                                {% endif %}
+                            </a>
                         </div>
 
                         <p>Feel free to get in touch with us via phone or send us a message.</p>
@@ -96,15 +100,15 @@
                     <div class="footer-col">
                         <ul>
                             <li>
-                                <a href="javascript:;">Documentation</a>
+                                <a href="https://loadmance.gitbook.io/loadmance/" target="_blank">Documentation</a>
                             </li>
-                            
+
                             <li>
                                 <a href="pricing.html">Pricing</a>
                             </li>
 
                             <li>
-                                <a href="javascript:;">Sign in</a>
+                                <a href="https://loadmance.gitbook.io/loadmance/" target="_blank">Sign in</a>
                             </li>
                         </ul>
                     </div>
