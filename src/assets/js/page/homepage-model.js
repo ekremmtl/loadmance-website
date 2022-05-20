@@ -358,11 +358,15 @@ function homeModelAni(preLoaderTimer) {
                                 end: "3500px top",
                                 scrub: 1,
                                 onEnter: () => {
+                                    $(".world-info-container .desc-item p:nth-child(1)").addClass('in-active')
+                                    $(".world-info-container .desc-item p:nth-child(2)").addClass('active')
                                     $(".world-info-container .country-row .country-item:nth-child(1)").addClass('active')
                                     $(".world-info-container .country-row .country-item:nth-child(2)").addClass('active')
                                     $(".world-info-container .country-row .country-item:nth-child(3)").addClass('in-active')
                                 },
                                 onLeaveBack: () => {
+                                    $(".world-info-container .desc-item p:nth-child(1)").removeClass('in-active')
+                                    $(".world-info-container .desc-item p:nth-child(2)").removeClass('active')
                                     $(".world-info-container .country-row .country-item:nth-child(1)").removeClass('active')
                                     $(".world-info-container .country-row .country-item:nth-child(2)").removeClass('active')
                                     $(".world-info-container .country-row .country-item:nth-child(3)").removeClass('in-active')
@@ -635,7 +639,7 @@ function homeModelAni(preLoaderTimer) {
                             }
                         })
 
-                        gsap.to(".world-info-container p", {
+                        gsap.to(".world-info-container .desc-item", {
                             opacity: 0,
 
                             scrollTrigger: {
