@@ -377,12 +377,13 @@
         position: absolute;
         top: 1900px;
         left: 0;
-        right: 0;
+        width: 100vw;
         padding: 50px 0;
         height: 65px;
         display: flex;
         align-items: center;
         z-index: 1;
+        overflow: hidden;
 
         .home-hero-marquee-line {
             position: absolute;
