@@ -327,6 +327,7 @@
                             letter-spacing: 0.03em;
                             color: #625f5f;
                             display: block;
+                            min-height: 42px;
 
                             +span {
                                 margin-top: 44px;
@@ -433,7 +434,7 @@
             }
 
             .item-title {
-                margin: 0 24px 30px;
+                margin: 0 8px 30px;
             }
         }
     }
