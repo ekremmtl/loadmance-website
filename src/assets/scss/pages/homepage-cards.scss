@@ -23,13 +23,13 @@
         position: relative;
         z-index: 1;
 
-        >svg {
+        > svg {
             position: absolute;
             top: 0;
             left: 50%;
             transform: translate(-50%, 0px);
 
-            >g {
+            > g {
                 transform: translate(0px, -100px);
             }
         }
@@ -97,14 +97,18 @@
                 position: absolute;
                 bottom: 0;
                 right: 0;
-                max-width: calc(100% - 50px);
+                width: calc(100% - 50px);
+                border: 1px solid #ffff;
+                height: 320px;
+                object-fit: cover;
+                object-position: top left;
             }
         }
     }
 
     @media (min-width: 1200px) {
         .home-cards-list-row {
-            >svg {
+            > svg {
                 transform: translate(-50%, 0px) scale(0.8);
                 opacity: 0;
             }
@@ -112,7 +116,7 @@
             .home-cards-list-row-item {
                 opacity: 0;
                 visibility: hidden;
-                transform: translate(0, 150px)
+                transform: translate(0, 150px);
             }
         }
     }
@@ -137,6 +141,10 @@
 
                 .item-title {
                     margin-top: 20px;
+                }
+
+                img {
+                    height: 210px;
                 }
             }
         }
@@ -164,7 +172,8 @@
             }
 
             img {
-                max-width: calc(100% - 30px);
+                width: calc(100% - 30px);
+                height: 140px;
             }
         }
     }
@@ -188,6 +197,10 @@
 
                 .item-title span {
                     font-size: 25px;
+                }
+
+                img {
+                    height: 180px;
                 }
             }
         }
