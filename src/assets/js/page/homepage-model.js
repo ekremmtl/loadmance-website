@@ -130,7 +130,7 @@ function homeModelAni(preLoaderTimer) {
 
                 // Model
                 const loader = new GLTFLoader()
-                loader.load('./earth.glb', modelLoad);
+                loader.load('./assets/model/earth.glb', modelLoad);
 
                 let model;
                 let modelLoader = 0;

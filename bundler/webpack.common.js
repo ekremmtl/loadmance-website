@@ -25,6 +25,7 @@ module.exports = {
                 patterns: [
                     { from: "./src/assets/favicon", to: "assets/favicon" },
                     { from: "./src/assets/img", to: "assets/img" },
+                    { from: "./src/assets/model", to: "assets/model" },
                     { from: "./src/assets/js/lib/swiper.js", to: "assets/js/[name].js" },
                     { from: "./src/assets/js/lib/barba.js", to: "assets/js/[name].js" },
                     { from: "./src/assets/js/lib/jquery.blast.min.js", to: "assets/js/[name].js" },
