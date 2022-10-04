@@ -13,9 +13,14 @@
 @import './layouts/footer.scss';
 @import './layouts/header.scss';
 
+@import './component/price.scss';
+@import './component/marquee.scss';
+@import './component/quick-link.scss';
+
 @import './pages/use-case.scss';
 @import './pages/pricing.scss';
 @import './pages/homepage.scss';
+@import './pages/faq.scss';
 
 // main[data-barba-namespace="home-section"] {
 //     overflow: hidden;

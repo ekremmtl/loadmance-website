@@ -9,6 +9,8 @@ import { homeFaq } from './page/homepage-faq'
 import { homeModelAni } from './page/homepage-model'
 import { homeReviewsAni } from './page/homepage-reviews' // All Animations
 
+import { faqPage } from './page/faq'
+
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
@@ -233,6 +235,13 @@ $(function () {
 
                         useCaseAni(true)
                     }
+
+                    if (data.next.namespace === "faq-section") {
+                        headerAni(preLoaderTimer, false)
+                        topInfo()
+
+                        faqPage()
+                    }
                 },
 
                 async once(data) {
@@ -280,6 +289,20 @@ $(function () {
                         })
 
                         $("body").addClass("overflow-initial")
+                    }
+
+                    if (data.next.namespace === "faq-section") {
+                        headerAni(preLoaderTimer, false)
+
+                        gsap.to(".pre-loader", {
+                            autoAlpha: 0,
+                            ease: "none",
+                            duration: 0.1,
+                        })
+
+                        $("body").addClass("overflow-initial")
+
+                        faqPage()
                     }
                 },
             },

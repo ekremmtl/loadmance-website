@@ -27,7 +27,7 @@ ul {
 }
 
 body {
-    font-family: 'ObjectSans';
+    font-family: "ObjectSans";
     line-height: 1;
     background: #fff;
 
@@ -53,6 +53,10 @@ body {
     }
 }
 
+.bg-black {
+    background-color: #000;
+}
+
 .pin-spacer {
     pointer-events: none;
 }
@@ -67,7 +71,7 @@ body {
     justify-content: center;
     width: 100%;
 
-    >span {
+    > span {
         color: #fff;
         font-size: 17px;
         opacity: 0.9;
@@ -76,7 +80,7 @@ body {
     .switch-item {
         position: relative;
 
-        >input {
+        > input {
             position: absolute;
             top: 0;
             left: 0;
@@ -93,7 +97,7 @@ body {
             margin: 0 10px;
             cursor: pointer;
 
-            >span {
+            > span {
                 display: block;
                 position: absolute;
                 top: 50%;
@@ -107,7 +111,7 @@ body {
             }
         }
 
-        input:checked~label .switch-bar>span {
+        input:checked ~ label .switch-bar > span {
             transform: translate(22px, -50%);
         }
     }

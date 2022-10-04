@@ -1,0 +1,324 @@
+.pricing-container {
+    position: relative;
+    z-index: 1;
+    padding: 260px 160px 570px;
+
+    .pricing-row {
+        max-width: 1114px;
+        margin: 0 auto;
+
+        > p {
+            font-size: 24px;
+            line-height: 35px;
+            color: #606277;
+            margin-top: 12px;
+        }
+    }
+
+    .price-title > span {
+        display: block;
+        font-size: 94px;
+        line-height: 1.2;
+        color: #ffffff;
+
+        > span {
+            position: relative;
+
+            > svg {
+                position: absolute;
+                top: -40px;
+                left: -30px;
+            }
+        }
+    }
+
+    .price-list {
+        margin-top: 95px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 32px;
+
+        .list-item {
+            position: relative;
+            border-radius: 32px;
+            padding: 48px;
+            overflow: hidden;
+
+            &:last-child {
+                grid-area: 2 / 1 / 3 / 3;
+            }
+
+            &-special {
+                .item-btn {
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-image: url(../img/price-button-bg.svg);
+
+                    &:before,
+                    &:after,
+                    > span:before {
+                        display: none;
+                    }
+                }
+            }
+
+            .item-bg {
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                right: 2px;
+                bottom: 2px;
+                background: linear-gradient(0deg, rgba(6, 31, 255, 0.2), rgba(6, 31, 255, 0.2));
+                background-blend-mode: normal, overlay;
+                backdrop-filter: blur(50px);
+                z-index: 1;
+                border-radius: 32px;
+                pointer-events: none;
+            }
+
+            .item-title {
+                font-size: 38px;
+                color: #ffffff;
+                display: block;
+                position: relative;
+                z-index: 1;
+            }
+
+            .item-desc {
+                font-size: 22px;
+                color: #ffffff;
+                margin-top: 16px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .item-row {
+                display: flex;
+                align-items: center;
+            }
+
+            .price {
+                font-weight: 700;
+                font-size: 58px;
+
+                /* identical to box height */
+                color: #ffffff;
+                margin-top: 48px;
+                margin-bottom: 32px;
+                position: relative;
+                z-index: 1;
+            }
+
+            ul li {
+                > span {
+                    font-size: 18px;
+                    color: #ffffff;
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        margin-right: 12px;
+                    }
+
+                    &:last-child {
+                        margin-left: 16px;
+                        text-align: right;
+                    }
+                }
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            ul li + li {
+                margin-top: 32px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: radial-gradient(
+                        80.69% 208.78% at 108.28% 112.58%,
+                        #eabfff 0%,
+                        rgba(135, 38, 183, 0) 100%
+                    ),
+                    radial-gradient(80.38% 222.5% at -13.75% -12.36%, #98f9ff 0%, rgba(255, 255, 255, 0) 100%);
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                right: 2px;
+                bottom: 2px;
+                background: #000;
+                border-radius: 32px;
+            }
+
+            ul {
+                position: relative;
+                margin-bottom: 50px;
+                z-index: 1;
+            }
+
+            .item-btn {
+                display: block;
+                font-size: 16px;
+                color: #ffffff;
+                text-align: center;
+                border-radius: 8px;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                min-width: 150px;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    right: 2px;
+                    bottom: 2px;
+                    border-radius: 8px;
+                    background: #000;
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: radial-gradient(
+                            80.69% 208.78% at 108.28% 112.58%,
+                            #eabfff 0%,
+                            rgba(135, 38, 183, 0) 100%
+                        ),
+                        radial-gradient(80.38% 222.5% at -13.75% -12.36%, #98f9ff 0%, rgba(255, 255, 255, 0) 100%);
+                }
+
+                > span {
+                    display: block;
+                    padding: 17px 28px;
+                    white-space: nowrap;
+                    position: relative;
+                    z-index: 1;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 2px;
+                        left: 2px;
+                        right: 2px;
+                        bottom: 2px;
+                        border-radius: 8px;
+                        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                            radial-gradient(
+                                90.16% 143.01% at 15.32% 21.04%,
+                                rgba(165, 239, 255, 0.2) 0%,
+                                rgba(110, 191, 244, 0.0447917) 77.08%,
+                                rgba(70, 144, 213, 0) 100%
+                            );
+                    }
+
+                    > span {
+                        position: relative;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1199px) {
+        padding: 250px 50px 300px;
+        overflow: hidden;
+
+        .price-list .list-item .item-row > div {
+            margin-right: 32px;
+        }
+
+        .price-title > span {
+            font-size: 80px;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        .price-title > span {
+            font-size: 60px;
+
+            > span > svg {
+                width: 120%;
+                height: auto;
+                top: -10px;
+                left: -10px;
+            }
+        }
+
+        .price-list {
+            display: block;
+
+            .list-item + .list-item {
+                margin-top: 32px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding: 200px 24px 150px;
+
+        .pricing-row {
+            > p {
+                font-size: 15px;
+                line-height: 1.2;
+            }
+        }
+
+        .price-title > span {
+            font-size: 8vw;
+        }
+
+        .price-list {
+            margin-top: 40px;
+
+            .list-item {
+                padding: 48px 32px;
+
+                .item-row {
+                    display: block;
+
+                    > div {
+                        margin-right: 0;
+                        margin-bottom: 50px;
+                    }
+                }
+
+                .item-title {
+                    font-size: 24px;
+                }
+
+                .item-desc {
+                    font-size: 16px;
+                }
+
+                .price {
+                    font-size: 32px;
+                }
+
+                ul li > span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
