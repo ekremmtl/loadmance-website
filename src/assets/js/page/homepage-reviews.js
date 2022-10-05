@@ -9,18 +9,17 @@ function homeReviewsAni() {
     const homeReviewsLength = $(".home-reviews-slider .swiper-slide").length
 
     new Swiper('.home-reviews .swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 24,
+        slidesPerView: 3,
+        spaceBetween: 32,
+        centeredSlides: true,
+        roundLengths: true,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        loopAdditionalSlides: 30,
         speed: 800,
-        navigation: {
-            nextEl: '.home-reviews .home-reviews-content .slide-btn .btn-next',
-            prevEl: '.home-reviews .home-reviews-content .slide-btn .btn-prev',
-        },
-        breakpoints: {
-            992: {
-                spaceBetween: 60,
-            },
-        },
     });
 
     if ($(window).width() > 1200) {

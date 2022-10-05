@@ -3,6 +3,93 @@
     z-index: 1;
     padding: 260px 160px 570px;
 
+    &.home-pricing-container {
+        padding-bottom: 60px;
+        position: relative;
+
+        .switch-plan {
+            > span {
+                > span {
+                    font-size: 16px;
+                    color: #606277;
+                }
+
+                font-weight: 700;
+                opacity: 1;
+            }
+
+            input:checked ~ label .switch-bar > span {
+                transform: translate(22px, -50%);
+            }
+
+            .switch-item label .switch-bar {
+                margin: 0 16px;
+                height: 26px;
+                width: 46px;
+
+                > span {
+                    width: 26px;
+                    height: 25px;
+                    transform: translate(0, -50%);
+                }
+            }
+
+            margin-top: 70px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-row {
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1200px;
+                top: 16%;
+                transform: translate(0px, -50%);
+                left: -12%;
+                background-image: url("../img/home-gradient-bg.png");
+                background-size: contain;
+                background-position: top left;
+                background-repeat: no-repeat;
+                pointer-events: none;
+                z-index: 1;
+
+                @media only screen and (max-width: 767px) {
+                    top: 21%;
+                }
+            }
+
+            .price-title {
+                position: relative;
+
+                > img {
+                    position: absolute;
+                    top: -130px;
+                    left: 370px;
+                    z-index: 1;
+
+                    @media only screen and (max-width: 991px) {
+                        left: 100%;
+                        transform: translate(-70%, 0px);
+                        top: -200px;
+                    }
+
+                    @media only screen and (max-width: 767px) {
+                        top: -80px;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+
+        .price-title > span > span > svg {
+            z-index: 1;
+        }
+    }
+
     .pricing-row {
         max-width: 1114px;
         margin: 0 auto;
@@ -103,8 +190,6 @@
             .price {
                 font-weight: 700;
                 font-size: 58px;
-
-                /* identical to box height */
                 color: #ffffff;
                 margin-top: 48px;
                 margin-bottom: 32px;

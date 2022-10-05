@@ -265,6 +265,12 @@ $(function () {
 
                     if (data.next.namespace === "home-section") {
                         headerAni(preLoaderTimer, true)
+
+                        gsap.to(".pre-loader", {
+                            autoAlpha: 0,
+                            ease: "none",
+                            duration: 0.1,
+                        })
                     }
 
                     if (data.next.namespace === "pricing-section") {

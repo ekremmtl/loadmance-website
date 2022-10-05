@@ -2,6 +2,31 @@
     padding-top: 130px;
     margin: 0 32px;
 
+    &.home-quick-link {
+        position: relative;
+        z-index: 1;
+        padding-bottom: 530px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1600px;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url("../img/home-gradient-bg.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            pointer-events: none;
+        }
+
+        @media only screen and (max-width: 1199px) {
+            padding-bottom: 150px;
+        }
+    }
+
     &-container {
         max-width: 1114px;
         margin: 0 auto;

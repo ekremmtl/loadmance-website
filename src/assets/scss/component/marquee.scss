@@ -1,5 +1,7 @@
 .marquee-container {
     padding-top: 250px;
+    position: relative;
+    z-index: 2;
 
     .marquee-item {
         border-top: 1px solid #fff;

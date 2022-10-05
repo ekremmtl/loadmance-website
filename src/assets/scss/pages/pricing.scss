@@ -102,8 +102,8 @@
                     border-color: #fff0;
                 }
 
-                .s-container>span,
-                .plan-row .plan-title>span {
+                .s-container > span,
+                .plan-row .plan-title > span {
                     opacity: 0;
                 }
 
@@ -122,12 +122,12 @@
                     }
 
                     .price {
-                        >span:nth-child(1) {
+                        > span:nth-child(1) {
                             opacity: 0;
                             // height: 0;
                         }
 
-                        margin-top: 10px;
+                        margin-top: -10px;
                     }
 
                     a {
@@ -138,13 +138,13 @@
 
             .s-container {
                 background: #fff;
-                border: 1px solid #F1F1F1;
+                border: 1px solid #f1f1f1;
                 border-radius: 10px;
                 padding: 0 0;
                 transition: 0.4s;
                 position: relative;
 
-                >span {
+                > span {
                     display: block;
                     padding-left: 18px;
                     margin-top: 20px;
@@ -164,7 +164,7 @@
                     display: flex;
                     align-items: center;
 
-                    >span {
+                    > span {
                         font-size: 15px;
                         color: #171010;
                         display: block;
@@ -174,7 +174,7 @@
             }
 
             .plan-item {
-                flex: 0 0 calc(20% - 27px);
+                flex: 0 0 calc(15.9% - 27px);
                 padding: 40px 0;
                 display: flex;
                 flex-direction: column;
@@ -199,7 +199,7 @@
                     margin-top: 42px;
                     transition: 0.4s;
 
-                    >span {
+                    > span {
                         transition: 0.4s;
 
                         &:nth-child(1) {
@@ -214,14 +214,14 @@
                             letter-spacing: -0.04em;
                             color: #131211;
 
-                            >span:nth-child(1) {
+                            > span:nth-child(1) {
                                 font-size: 15px;
                             }
                         }
                     }
                 }
 
-                >span {
+                > span {
                     margin-top: 10px;
                     display: block;
                     font-size: 15px;
@@ -234,14 +234,14 @@
                     font-size: 15px;
                     color: #fff;
                     display: block;
-                    background: #0063F7;
+                    background: #0063f7;
                     border-radius: 10px;
                     padding: 16px;
                     text-align: center;
                     margin-top: 25px;
                     transition: 0.4s;
 
-                    @media (hover:hover) {
+                    @media (hover: hover) {
                         &:hover {
                             background: #3d87ff;
                         }
@@ -249,8 +249,8 @@
                 }
             }
 
-            .plan-item+.plan-item {
-                border-left: 2px solid #F1F1F1;
+            .plan-item + .plan-item {
+                border-left: 2px solid #f1f1f1;
                 margin-left: 18px;
                 padding-left: 18px;
             }
@@ -261,7 +261,7 @@
         margin-top: 90px;
 
         .body-item {
-            +.body-item {
+            + .body-item {
                 margin-top: 80px;
             }
 
@@ -281,7 +281,7 @@
                     color: #0f0808;
                 }
 
-                +.list-item {
+                + .list-item {
                     margin-top: -16px;
 
                     .list-row .row-item {
@@ -295,14 +295,14 @@
                     flex-wrap: wrap;
 
                     .row-item {
-                        flex: 0 0 calc(20% - 34px);
-                        max-width: calc(20% - 34px);
+                        flex: 0 0 calc(16% - 34px);
+                        max-width: calc(16% - 34px);
                         border-top: 1px dashed #f1f1f1;
                         border-bottom: 1px dashed #f1f1f1;
                         padding: 50px 0 60px;
 
-                        +.row-item {
-                            border-right: 2px solid #F1F1F1;
+                        + .row-item {
+                            border-right: 2px solid #f1f1f1;
                             margin-right: 18px;
                             padding-right: 18px;
                             margin-left: -18px;
@@ -329,7 +329,7 @@
                             display: block;
                             min-height: 42px;
 
-                            +span {
+                            + span {
                                 margin-top: 44px;
                                 line-height: 1.4;
                             }
@@ -395,10 +395,9 @@
                     margin-top: 14px;
                 }
 
-                .price>span {
+                .price > span {
                     &:nth-child(2) {
-                        >span {
-
+                        > span {
                             &:nth-child(2),
                             &:nth-child(3) {
                                 margin-bottom: -6px;
@@ -419,7 +418,7 @@
 
             &.active .plan-item {
                 .price {
-                    margin-top: -10px;
+                    margin-top: -30px;
                 }
 
                 a {
@@ -456,13 +455,13 @@
             }
 
             .plan-item {
-                flex: 0 0 calc(25% - 27px);
+                flex: 0 0 calc(19.7% - 27px);
             }
 
             .s-container {
                 max-width: 990px;
 
-                >span {
+                > span {
                     display: none;
                 }
             }
@@ -526,7 +525,7 @@
                 max-width: 100%;
                 margin: 0 10px;
 
-                >span {
+                > span {
                     display: none;
                 }
 
@@ -545,14 +544,22 @@
                         padding-left: 18px;
                         padding-right: 18px;
                         border-left: none;
-                        border-top: 2px solid #F1F1F1;
+                        border-top: 2px solid #f1f1f1;
                     }
 
                     &:nth-child(5) {
-                        border-top: 2px solid #F1F1F1;
+                        border-top: 2px solid #f1f1f1;
                         margin-right: -20px;
                         flex: 0 0 calc(50% - 18px);
                         padding-right: 18px;
+                    }
+
+                    &:last-child {
+                        padding: 30px 18px;
+                        margin: 0 -18px;
+                        border-top: 2px solid #f1f1f1;
+                        border-left: none;
+                        flex: 0 0100%;
                     }
 
                     a {
@@ -569,7 +576,7 @@
             .row-item {
                 padding: 30px 0;
 
-                span+span {
+                span + span {
                     margin-top: 30px;
                 }
             }
