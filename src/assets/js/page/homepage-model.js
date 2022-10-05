@@ -284,7 +284,7 @@ function homeModelAni(preLoaderTimer) {
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + window.innerHeight + "px bottom",
-                                end: "3000px top",
+                                end: "700px top",
                                 scrub: 1.5,
                             }
                         })
@@ -302,7 +302,7 @@ function homeModelAni(preLoaderTimer) {
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + window.innerHeight + "px bottom",
-                                end: "3000px top",
+                                end: "700px top",
                                 scrub: 1.5,
                             }
                         })
@@ -320,7 +320,7 @@ function homeModelAni(preLoaderTimer) {
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + window.innerHeight + "px bottom",
-                                end: "3000px top",
+                                end: "700px top",
                                 scrub: 1.5,
                             }
                         })
@@ -336,7 +336,7 @@ function homeModelAni(preLoaderTimer) {
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + window.innerHeight + "px bottom",
-                                end: "3000px top",
+                                end: "700px top",
                                 scrub: 1.5,
                             }
                         })
@@ -361,237 +361,237 @@ function homeModelAni(preLoaderTimer) {
                         })
 
                         // Step 3
-                        gsap.to(".world-info-container", {
-                            immediateRender: false,
+                        // gsap.to(".world-info-container", {
+                        //     immediateRender: false,
                             
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 3000) + "px bottom",
-                                end: "3500px top",
-                                scrub: 1,
-                                onEnter: () => {
-                                    $(".world-info-container .desc-item p:nth-child(1)").addClass('in-active')
-                                    $(".world-info-container .desc-item p:nth-child(2)").addClass('active')
-                                    $(".world-info-container .country-row .country-item:nth-child(1)").addClass('active')
-                                    $(".world-info-container .country-row .country-item:nth-child(2)").addClass('active')
-                                    $(".world-info-container .country-row .country-item:nth-child(3)").addClass('in-active')
-                                },
-                                onLeaveBack: () => {
-                                    $(".world-info-container .desc-item p:nth-child(1)").removeClass('in-active')
-                                    $(".world-info-container .desc-item p:nth-child(2)").removeClass('active')
-                                    $(".world-info-container .country-row .country-item:nth-child(1)").removeClass('active')
-                                    $(".world-info-container .country-row .country-item:nth-child(2)").removeClass('active')
-                                    $(".world-info-container .country-row .country-item:nth-child(3)").removeClass('in-active')
-                                },
-                            }
-                        })
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 3000) + "px bottom",
+                        //         end: "3500px top",
+                        //         scrub: 1,
+                        //         onEnter: () => {
+                        //             $(".world-info-container .desc-item p:nth-child(1)").addClass('in-active')
+                        //             $(".world-info-container .desc-item p:nth-child(2)").addClass('active')
+                        //             $(".world-info-container .country-row .country-item:nth-child(1)").addClass('active')
+                        //             $(".world-info-container .country-row .country-item:nth-child(2)").addClass('active')
+                        //             $(".world-info-container .country-row .country-item:nth-child(3)").addClass('in-active')
+                        //         },
+                        //         onLeaveBack: () => {
+                        //             $(".world-info-container .desc-item p:nth-child(1)").removeClass('in-active')
+                        //             $(".world-info-container .desc-item p:nth-child(2)").removeClass('active')
+                        //             $(".world-info-container .country-row .country-item:nth-child(1)").removeClass('active')
+                        //             $(".world-info-container .country-row .country-item:nth-child(2)").removeClass('active')
+                        //             $(".world-info-container .country-row .country-item:nth-child(3)").removeClass('in-active')
+                        //         },
+                        //     }
+                        // })
 
-                        gsap.fromTo(".world-info-container .color-check-1", {
-                            color: "#ffffff",
-                        }, {
-                            color: "#ff4d00",
+                        // gsap.fromTo(".world-info-container .color-check-1", {
+                        //     color: "#ffffff",
+                        // }, {
+                        //     color: "#ff4d00",
 
-                            immediateRender: false,
+                        //     immediateRender: false,
                             
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 3000) + "px bottom",
-                                end: "3500px top",
-                                scrub: true,
-                                onUpdate: self => {
-                                    model.children[0].material.color = new THREE.Color($(".world-info-container .color-check-1").css("color"))
-                                }
-                            }
-                        })
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 3000) + "px bottom",
+                        //         end: "3500px top",
+                        //         scrub: true,
+                        //         onUpdate: self => {
+                        //             model.children[0].material.color = new THREE.Color($(".world-info-container .color-check-1").css("color"))
+                        //         }
+                        //     }
+                        // })
 
-                        gsap.fromTo(".world-info-container .color-check-2", {
-                            color: "#ffffff",
-                        }, {
-                            color: "#ff0000",
+                        // gsap.fromTo(".world-info-container .color-check-2", {
+                        //     color: "#ffffff",
+                        // }, {
+                        //     color: "#ff0000",
 
-                            immediateRender: false,
+                        //     immediateRender: false,
                             
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 3000) + "px bottom",
-                                end: "3500px top",
-                                scrub: true,
-                                onUpdate: self => {
-                                    model.children[3].material.color = new THREE.Color($(".world-info-container .color-check-2").css("color"))
-                                }
-                            }
-                        })
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 3000) + "px bottom",
+                        //         end: "3500px top",
+                        //         scrub: true,
+                        //         onUpdate: self => {
+                        //             model.children[3].material.color = new THREE.Color($(".world-info-container .color-check-2").css("color"))
+                        //         }
+                        //     }
+                        // })
 
-                        gsap.fromTo(".world-info-container .color-check-3", {
-                            color: "#ffffff",
-                        }, {
-                            color: "#ff3000",
+                        // gsap.fromTo(".world-info-container .color-check-3", {
+                        //     color: "#ffffff",
+                        // }, {
+                        //     color: "#ff3000",
 
-                            immediateRender: false,
+                        //     immediateRender: false,
                             
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 3000) + "px bottom",
-                                end: "3500px top",
-                                scrub: true,
-                                onUpdate: self => {
-                                    model.children[2].material.color = new THREE.Color($(".world-info-container .color-check-3").css("color"))
-                                }
-                            }
-                        })
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 3000) + "px bottom",
+                        //         end: "3500px top",
+                        //         scrub: true,
+                        //         onUpdate: self => {
+                        //             model.children[2].material.color = new THREE.Color($(".world-info-container .color-check-3").css("color"))
+                        //         }
+                        //     }
+                        // })
 
-                        gsap.fromTo(".world-info-container .color-check-5", {
-                            color: "#ffffff",
-                        }, {
-                            color: "#141414",
+                        // gsap.fromTo(".world-info-container .color-check-5", {
+                        //     color: "#ffffff",
+                        // }, {
+                        //     color: "#141414",
 
-                            immediateRender: false,
+                        //     immediateRender: false,
                             
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 3000) + "px bottom",
-                                end: "3500px top",
-                                scrub: true,
-                                onUpdate: self => {
-                                    model.children[1].material.color = new THREE.Color($(".world-info-container .color-check-5").css("color"))
-                                    model.children[4].material.color = new THREE.Color($(".world-info-container .color-check-5").css("color"))
-                                }
-                            }
-                        })
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 3000) + "px bottom",
+                        //         end: "3500px top",
+                        //         scrub: true,
+                        //         onUpdate: self => {
+                        //             model.children[1].material.color = new THREE.Color($(".world-info-container .color-check-5").css("color"))
+                        //             model.children[4].material.color = new THREE.Color($(".world-info-container .color-check-5").css("color"))
+                        //         }
+                        //     }
+                        // })
 
-                        gsap.fromTo(".world-info-container .color-check-3", {
-                            color: "#ff3000",
-                        }, {
-                            color: "#141414",
+                        // gsap.fromTo(".world-info-container .color-check-3", {
+                        //     color: "#ff3000",
+                        // }, {
+                        //     color: "#141414",
 
-                            immediateRender: false,
+                        //     immediateRender: false,
                             
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 3500) + "px bottom",
-                                end: "4000px top",
-                                scrub: true,
-                                onUpdate: self => {
-                                    model.children[2].material.color = new THREE.Color($(".world-info-container .color-check-3").css("color"))
-                                }
-                            }
-                        })
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 3500) + "px bottom",
+                        //         end: "4000px top",
+                        //         scrub: true,
+                        //         onUpdate: self => {
+                        //             model.children[2].material.color = new THREE.Color($(".world-info-container .color-check-3").css("color"))
+                        //         }
+                        //     }
+                        // })
 
                         // Step 5 to UK
-                        gsap.fromTo(".world-info-container .color-check-4", {
-                            color: "#141414",
-                        }, {
-                            color: "#ffffff",
+                        // gsap.fromTo(".world-info-container .color-check-4", {
+                        //     color: "#141414",
+                        // }, {
+                        //     color: "#ffffff",
 
-                            immediateRender: false,
+                        //     immediateRender: false,
                             
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 4000) + "px bottom",
-                                end: "5000px top",
-                                scrub: true,
-                                onUpdate: self => {
-                                    model.children[1].material.color = new THREE.Color($(".world-info-container .color-check-4").css("color"))
-                                }
-                            }
-                        })
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 4000) + "px bottom",
+                        //         end: "5000px top",
+                        //         scrub: true,
+                        //         onUpdate: self => {
+                        //             model.children[1].material.color = new THREE.Color($(".world-info-container .color-check-4").css("color"))
+                        //         }
+                        //     }
+                        // })
+
+                        // gsap.fromTo(camera.position, {
+                        //     x: 45,
+                        //     y: 44,
+                        //     z: 250,
+                        // }, {
+                        //     x: 40,
+                        //     y: 77,
+                        //     z: 160,
+
+                        //     immediateRender: false,
+                            
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 4500) + "px bottom",
+                        //         end: "6000px top",
+                        //         scrub: 1.5,
+                        //     }
+                        // })
+
+                        // Step 6 Final
+                        // gsap.fromTo(".world-info-container .color-check-1", {
+                        //     color: "#ff4d00",
+                        // }, {
+                        //     color: "#ffffff",
+
+                        //     immediateRender: false,
+                            
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 6500) + "px bottom",
+                        //         end: "7000px top",
+                        //         scrub: true,
+                        //         onUpdate: self => {
+                        //             model.children[0].material.color = new THREE.Color($(".world-info-container .color-check-1").css("color"))
+                        //         }
+                        //     }
+                        // })
+
+                        // gsap.fromTo(".world-info-container .color-check-2", {
+                        //     color: "#ff0000",
+                        // }, {
+                        //     color: "#ffffff",
+
+                        //     immediateRender: false,
+                            
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 6500) + "px bottom",
+                        //         end: "7000px top",
+                        //         scrub: true,
+                        //         onUpdate: self => {
+                        //             model.children[3].material.color = new THREE.Color($(".world-info-container .color-check-2").css("color"))
+                        //         }
+                        //     }
+                        // })
+
+                        // gsap.fromTo(".world-info-container .color-check-3", {
+                        //     color: "#141414",
+                        // }, {
+                        //     color: "#ffffff",
+
+                        //     immediateRender: false,
+                            
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 6500) + "px bottom",
+                        //         end: "7000px top",
+                        //         scrub: true,
+                        //         onUpdate: self => {
+                        //             model.children[2].material.color = new THREE.Color($(".world-info-container .color-check-3").css("color"))
+                        //         }
+                        //     }
+                        // })
+
+                        // gsap.fromTo(".world-info-container .color-check-5", {
+                        //     color: "#141414",
+                        // }, {
+                        //     color: "#ffffff",
+
+                        //     immediateRender: false,
+                            
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 6500) + "px bottom",
+                        //         end: "7000px top",
+                        //         scrub: true,
+                        //         onUpdate: self => {
+                        //             model.children[4].material.color = new THREE.Color($(".world-info-container .color-check-5").css("color"))
+                        //         }
+                        //     }
+                        // })
 
                         gsap.fromTo(camera.position, {
                             x: 45,
                             y: 44,
                             z: 250,
-                        }, {
-                            x: 40,
-                            y: 77,
-                            z: 160,
-
-                            immediateRender: false,
-                            
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 4500) + "px bottom",
-                                end: "6000px top",
-                                scrub: 1.5,
-                            }
-                        })
-
-                        // Step 6 Final
-                        gsap.fromTo(".world-info-container .color-check-1", {
-                            color: "#ff4d00",
-                        }, {
-                            color: "#ffffff",
-
-                            immediateRender: false,
-                            
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "7000px top",
-                                scrub: true,
-                                onUpdate: self => {
-                                    model.children[0].material.color = new THREE.Color($(".world-info-container .color-check-1").css("color"))
-                                }
-                            }
-                        })
-
-                        gsap.fromTo(".world-info-container .color-check-2", {
-                            color: "#ff0000",
-                        }, {
-                            color: "#ffffff",
-
-                            immediateRender: false,
-                            
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "7000px top",
-                                scrub: true,
-                                onUpdate: self => {
-                                    model.children[3].material.color = new THREE.Color($(".world-info-container .color-check-2").css("color"))
-                                }
-                            }
-                        })
-
-                        gsap.fromTo(".world-info-container .color-check-3", {
-                            color: "#141414",
-                        }, {
-                            color: "#ffffff",
-
-                            immediateRender: false,
-                            
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "7000px top",
-                                scrub: true,
-                                onUpdate: self => {
-                                    model.children[2].material.color = new THREE.Color($(".world-info-container .color-check-3").css("color"))
-                                }
-                            }
-                        })
-
-                        gsap.fromTo(".world-info-container .color-check-5", {
-                            color: "#141414",
-                        }, {
-                            color: "#ffffff",
-
-                            immediateRender: false,
-                            
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "7000px top",
-                                scrub: true,
-                                onUpdate: self => {
-                                    model.children[4].material.color = new THREE.Color($(".world-info-container .color-check-5").css("color"))
-                                }
-                            }
-                        })
-
-                        gsap.fromTo(camera.position, {
-                            x: 40,
-                            y: 77,
-                            z: 160,
                         }, {
                             x: 1,
                             y: 1,
@@ -601,8 +601,8 @@ function homeModelAni(preLoaderTimer) {
                             
                             scrollTrigger: {
                                 trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "10000px top",
+                                start: "top+=" + (window.innerHeight + 1500) + "px bottom",
+                                end: "2000px top",
                                 scrub: 1.5,
                             }
                         })
@@ -619,8 +619,8 @@ function homeModelAni(preLoaderTimer) {
                             
                             scrollTrigger: {
                                 trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "10000px top",
+                                start: "top+=" + (window.innerHeight + 1500) + "px bottom",
+                                end: "2000px top",
                                 scrub: 1.5,
                             }
                         })
@@ -637,8 +637,8 @@ function homeModelAni(preLoaderTimer) {
                             
                             scrollTrigger: {
                                 trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "10000px top",
+                                start: "top+=" + (window.innerHeight + 1500) + "px bottom",
+                                end: "2000px top",
                                 scrub: 1.5,
                             }
                         })
@@ -653,8 +653,8 @@ function homeModelAni(preLoaderTimer) {
                             
                             scrollTrigger: {
                                 trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "10000px top",
+                                start: "top+=" + (window.innerHeight + 1500) + "px bottom",
+                                end: "2000px top",
                                 scrub: 1.5,
                             }
                         })
@@ -666,63 +666,63 @@ function homeModelAni(preLoaderTimer) {
                             
                             scrollTrigger: {
                                 trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "10000px top",
+                                start: "top+=" + (window.innerHeight + 1500) + "px bottom",
+                                end: "2000px top",
                                 scrub: 1,
                             }
                         })
 
-                        gsap.to(".world-info-container .title", {
-                            opacity: 0,
+                        // gsap.to(".world-info-container .title", {
+                        //     opacity: 0,
 
-                            immediateRender: false,
+                        //     immediateRender: false,
                             
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "8000px top",
-                                scrub: 1,
-                            }
-                        })
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 6500) + "px bottom",
+                        //         end: "8000px top",
+                        //         scrub: 1,
+                        //     }
+                        // })
 
-                        gsap.to(".world-info-container .desc-item", {
-                            opacity: 0,
+                        // gsap.to(".world-info-container .desc-item", {
+                        //     opacity: 0,
 
-                            immediateRender: false,
+                        //     immediateRender: false,
                             
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "8000px top",
-                                scrub: 1,
-                            }
-                        })
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 6500) + "px bottom",
+                        //         end: "8000px top",
+                        //         scrub: 1,
+                        //     }
+                        // })
 
-                        gsap.to(".world-info-container .line", {
-                            opacity: 0,
+                        // gsap.to(".world-info-container .line", {
+                        //     opacity: 0,
 
-                            immediateRender: false,
+                        //     immediateRender: false,
                             
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "8000px top",
-                                scrub: 1,
-                            }
-                        })
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 6500) + "px bottom",
+                        //         end: "8000px top",
+                        //         scrub: 1,
+                        //     }
+                        // })
 
-                        gsap.to(".world-info-container .country-row", {
-                            opacity: 0,
+                        // gsap.to(".world-info-container .country-row", {
+                        //     opacity: 0,
 
-                            immediateRender: false,
+                        //     immediateRender: false,
                             
-                            scrollTrigger: {
-                                trigger: "body",
-                                start: "top+=" + (window.innerHeight + 6500) + "px bottom",
-                                end: "8000px top",
-                                scrub: 1,
-                            }
-                        })
+                        //     scrollTrigger: {
+                        //         trigger: "body",
+                        //         start: "top+=" + (window.innerHeight + 6500) + "px bottom",
+                        //         end: "8000px top",
+                        //         scrub: 1,
+                        //     }
+                        // })
                     }
 
                     model.position.set(0, 5.6, 0)
@@ -824,8 +824,8 @@ function homeModelAni(preLoaderTimer) {
                     
                     scrollTrigger: {
                         trigger: "body",
-                        start: "top+=" + (window.innerHeight + 4000) + "px bottom",
-                        end: "6000px top",
+                        start: "top+=" + (window.innerHeight + 600) + "px bottom",
+                        end: "1000px top",
                         scrub: 1.5,
                     },
                     onUpdate: mixerUpdate
