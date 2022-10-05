@@ -13,6 +13,8 @@
 
         .item-wrapper {
             display: flex;
+            align-items: center;
+            width: max-content;
 
             span {
                 font-weight: 700;

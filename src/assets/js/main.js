@@ -9,7 +9,7 @@ import { homeFaq } from './page/homepage-faq'
 import { homeModelAni } from './page/homepage-model'
 import { homeReviewsAni } from './page/homepage-reviews' // All Animations
 
-import { faqPage } from './page/faq'
+import { faqPage, faqAni } from './page/faq'
 
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -19,6 +19,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
+gsap.config({ nullTargetWarn: false });
 
 //--
 
@@ -26,6 +27,23 @@ homeFaq()
 
 $(function () {
     let preLoaderTimer = 1;
+
+    function marqueeContainer() {
+        $(".marquee-container").each(function () {
+            $(this).find(".marquee-item").each(function () {
+                gsap.to($(this).find(".item-wrapper"), {
+                    xPercent: -30,
+
+                    scrollTrigger: {
+                        trigger: $(this),
+                        start: "top bottom",
+                        end: "bottom+=200px top",
+                        scrub: true,
+                    }
+                })
+            });
+        });
+    }
 
     function topInfo() {
         // Top Info
@@ -198,6 +216,7 @@ $(function () {
                         }, 5000);
 
                         headerAni(preLoaderTimer, true)
+                        marqueeContainer()
 
                         gsap.to(".pre-loader", {
                             autoAlpha: 1,
@@ -239,8 +258,10 @@ $(function () {
                     if (data.next.namespace === "faq-section") {
                         headerAni(preLoaderTimer, false)
                         topInfo()
+                        marqueeContainer()
 
                         faqPage()
+                        faqAni(true)
                     }
                 },
 
@@ -249,6 +270,8 @@ $(function () {
                     pricingAni(false)
 
                     useCaseAni(false)
+
+                    faqAni(false)
 
                     const loader = new GLTFLoader()
                     loader.load('./earth.glb', function () {
@@ -266,11 +289,13 @@ $(function () {
                     if (data.next.namespace === "home-section") {
                         headerAni(preLoaderTimer, true)
 
-                        gsap.to(".pre-loader", {
-                            autoAlpha: 0,
-                            ease: "none",
-                            duration: 0.1,
-                        })
+                        // gsap.to(".pre-loader", {
+                        //     autoAlpha: 0,
+                        //     ease: "none",
+                        //     duration: 0.1,
+                        // })
+
+                        marqueeContainer()
                     }
 
                     if (data.next.namespace === "pricing-section") {
@@ -308,6 +333,7 @@ $(function () {
 
                         $("body").addClass("overflow-initial")
 
+                        marqueeContainer()
                         faqPage()
                     }
                 },

@@ -7,6 +7,21 @@ function footerAni() {
     const easeValue = "Expo.easeOut";
 
     setTimeout(() => {
+        if ($(window).width() > 1200) {
+            gsap.fromTo("footer.home-footer .footer-earth", {
+                y: 100,
+            }, {
+                y: 0,
+
+                scrollTrigger: {
+                    trigger: "footer",
+                    start: "top-=60% bottom",
+                    end: "top center",
+                    scrub: true,
+                }
+            })
+        }
+
         function marqueeItem(item, reverse, duration) {
             const dur = duration;
             let ticker = document.querySelector(item)

@@ -113,7 +113,7 @@ function homeHeroAni(preLoaderTimer) {
                 //     delay: 0.5,
                 //     ease: easeValue,
                 // })
-                
+
                 gsap.timeline().fromTo(".home-hero .home-hero-content .content-title .title-row .title > span.support-img > .img-item svg", {
                     scaleX: 1,
                 }, {
@@ -261,6 +261,28 @@ function homeHeroAni(preLoaderTimer) {
                 }
             })
         }, 500);
+    }
+
+    // Sticky
+    if ($(window).width() <= 767) {
+        $(".world-info-list .list-content .content-item").each(function (index) {
+            $(this).append('<img src="' + ($(".world-info-list .list-img .list-img-sticky img:nth-child(" + (index + 1) + ")").attr("src")) + '" />')
+        });
+    } else {
+        // ScrollTrigger.create({
+        //     trigger: ".world-info-list .list-content .content-item:nth-child(1)",
+        //     start: "top bottom",
+        //     onEnter: () => {
+        //         gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(1)", {
+        //             opacity: 1,
+        //         })
+        //     },
+        //     onLeave: () => {
+        //         gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(1)", {
+        //             opacity: 0,
+        //         })
+        //     },
+        // })
     }
 }
 

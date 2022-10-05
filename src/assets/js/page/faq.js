@@ -13,4 +13,43 @@ function faqPage() {
     });
 }
 
-export { faqPage }
+function faqAni(enterCheck) {
+    const easeValue = "Expo.easeOut";
+
+    function allAnimation() {
+        gsap.to(".faq-container", {
+            y: 0,
+            opacity: 1,
+            delay: 1,
+            duration: 1,
+            ease: easeValue,
+        })
+
+        gsap.to(".faq-container .faq-item", {
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+            delay: 1,
+            duration: 1,
+            ease: easeValue,
+        })
+    }
+
+    if ($(window).width() > 1200) {
+        if ($(".faq-container").length) {
+            setTimeout(() => {
+                gsap.to(window, { duration: 0, scrollTo: 0 });
+
+                if (enterCheck === true) {
+                    setTimeout(() => {
+                        allAnimation()
+                    }, 400);
+                } else {
+                    allAnimation()
+                }
+            }, 300);
+        }
+    }
+}
+
+export { faqPage, faqAni }
