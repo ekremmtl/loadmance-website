@@ -37,8 +37,9 @@
                 }
 
                 p {
-                    font-size: 24px;
+                    font-size: 20px;
                     color: #ffffff;
+                    opacity: 0.9;
                     margin-top: 32px;
 
                     a {
@@ -225,8 +226,10 @@
     }
 
     @media only screen and (min-width: 1200px) {
-        opacity: 0;
-        transform: translate(0, 50px);
+        &:not(.home-faq-container) {
+            opacity: 0;
+            transform: translate(0, 50px);
+        }
 
         .faq-item {
             opacity: 0;
