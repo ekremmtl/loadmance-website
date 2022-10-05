@@ -269,20 +269,104 @@ function homeHeroAni(preLoaderTimer) {
             $(this).append('<img src="' + ($(".world-info-list .list-img .list-img-sticky img:nth-child(" + (index + 1) + ")").attr("src")) + '" />')
         });
     } else {
-        // ScrollTrigger.create({
-        //     trigger: ".world-info-list .list-content .content-item:nth-child(1)",
-        //     start: "top bottom",
-        //     onEnter: () => {
-        //         gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(1)", {
-        //             opacity: 1,
-        //         })
-        //     },
-        //     onLeave: () => {
-        //         gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(1)", {
-        //             opacity: 0,
-        //         })
-        //     },
-        // })
+        ScrollTrigger.create({
+            trigger: ".world-info-list .list-content .content-item:nth-child(1)",
+            start: "top bottom",
+            onEnter: () => {
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(1)", {
+                    opacity: 1,
+                })
+            },
+            onLeaveBack: () => {
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(1)", {
+                    opacity: 0,
+                })
+            },
+            onLeave: () => {
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(1)", {
+                    opacity: 0,
+                })
+            },
+        })
+
+        ScrollTrigger.create({
+            trigger: ".world-info-list .list-content .content-item:nth-child(2)",
+            start: "top bottom",
+            onEnter: () => {
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(1)", {
+                    opacity: 0,
+                })
+
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(2)", {
+                    opacity: 1,
+                })
+            },
+            onLeaveBack: () => {
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(2)", {
+                    opacity: 0,
+                })
+
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(1)", {
+                    opacity: 1,
+                })
+            },
+            onLeave: () => {
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(2)", {
+                    opacity: 0,
+                })
+            },
+        })
+
+        ScrollTrigger.create({
+            trigger: ".world-info-list .list-content .content-item:nth-child(3)",
+            start: "top bottom",
+            onEnter: () => {
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(2)", {
+                    opacity: 0,
+                })
+
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(3)", {
+                    opacity: 1,
+                })
+            },
+            onLeaveBack: () => {
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(3)", {
+                    opacity: 0,
+                })
+
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(2)", {
+                    opacity: 1,
+                })
+            },
+            onLeave: () => {
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(3)", {
+                    opacity: 0,
+                })
+            },
+        })
+
+        ScrollTrigger.create({
+            trigger: ".world-info-list .list-content .content-item:nth-child(4)",
+            start: "top bottom",
+            onEnter: () => {
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(3)", {
+                    opacity: 0,
+                })
+
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(4)", {
+                    opacity: 1,
+                })
+            },
+            onLeaveBack: () => {
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(4)", {
+                    opacity: 0,
+                })
+
+                gsap.to(".world-info-list .list-img .list-img-sticky img:nth-child(3)", {
+                    opacity: 1,
+                })
+            },
+        })
     }
 }
 

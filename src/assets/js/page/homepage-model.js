@@ -279,6 +279,8 @@ function homeModelAni(preLoaderTimer) {
                             x: 45,
                             y: 44,
                             z: 250,
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + window.innerHeight + "px bottom",
@@ -295,6 +297,8 @@ function homeModelAni(preLoaderTimer) {
                             x: 97,
                             y: 5.6,
                             z: 0,
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + window.innerHeight + "px bottom",
@@ -311,6 +315,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             x: 0.45,
                             y: 1,
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + window.innerHeight + "px bottom",
@@ -325,6 +331,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             x: -500,
                             z: 4000,
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + window.innerHeight + "px bottom",
@@ -342,6 +350,8 @@ function homeModelAni(preLoaderTimer) {
                             autoAlpha: 1,
                             ease: "none",
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 2000) + "px bottom",
@@ -352,6 +362,8 @@ function homeModelAni(preLoaderTimer) {
 
                         // Step 3
                         gsap.to(".world-info-container", {
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 3000) + "px bottom",
@@ -379,6 +391,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             color: "#ff4d00",
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 3000) + "px bottom",
@@ -395,6 +409,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             color: "#ff0000",
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 3000) + "px bottom",
@@ -411,6 +427,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             color: "#ff3000",
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 3000) + "px bottom",
@@ -427,6 +445,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             color: "#141414",
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 3000) + "px bottom",
@@ -444,6 +464,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             color: "#141414",
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 3500) + "px bottom",
@@ -461,6 +483,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             color: "#ffffff",
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 4000) + "px bottom",
@@ -481,6 +505,8 @@ function homeModelAni(preLoaderTimer) {
                             y: 77,
                             z: 160,
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 4500) + "px bottom",
@@ -495,6 +521,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             color: "#ffffff",
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -511,6 +539,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             color: "#ffffff",
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -527,6 +557,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             color: "#ffffff",
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -543,6 +575,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             color: "#ffffff",
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -563,6 +597,8 @@ function homeModelAni(preLoaderTimer) {
                             y: 1,
                             z: 350,
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -579,6 +615,8 @@ function homeModelAni(preLoaderTimer) {
                             x: 0,
                             y: 0,
                             z: 0,
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -595,6 +633,8 @@ function homeModelAni(preLoaderTimer) {
                             x: 0,
                             y: 0,
                             z: 0,
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -609,6 +649,8 @@ function homeModelAni(preLoaderTimer) {
                         }, {
                             x: 0,
                             y: 0,
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -620,6 +662,8 @@ function homeModelAni(preLoaderTimer) {
                         gsap.to("#earth-container", {
                             opacity: 0,
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -631,6 +675,8 @@ function homeModelAni(preLoaderTimer) {
                         gsap.to(".world-info-container .title", {
                             opacity: 0,
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -642,6 +688,8 @@ function homeModelAni(preLoaderTimer) {
                         gsap.to(".world-info-container .desc-item", {
                             opacity: 0,
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -653,6 +701,8 @@ function homeModelAni(preLoaderTimer) {
                         gsap.to(".world-info-container .line", {
                             opacity: 0,
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -664,6 +714,8 @@ function homeModelAni(preLoaderTimer) {
                         gsap.to(".world-info-container .country-row", {
                             opacity: 0,
 
+                            immediateRender: false,
+                            
                             scrollTrigger: {
                                 trigger: "body",
                                 start: "top+=" + (window.innerHeight + 6500) + "px bottom",
@@ -768,6 +820,8 @@ function homeModelAni(preLoaderTimer) {
                     snap: {
                         value: 0.00001
                     },
+                    immediateRender: false,
+                    
                     scrollTrigger: {
                         trigger: "body",
                         start: "top+=" + (window.innerHeight + 4000) + "px bottom",
