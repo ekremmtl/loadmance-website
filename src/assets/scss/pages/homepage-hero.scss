@@ -69,6 +69,7 @@
         }
 
         opacity: 0;
+        transform: translate(200px, 0px);
     }
 }
 
@@ -857,6 +858,10 @@
         &:nth-child(2) {
             margin-top: -90px;
         }
+    }
+
+    .world-info-list .list-img .list-img-sticky img{
+        transform: translate(100px, 0);
     }
 
     .world-info-list .list-content {
