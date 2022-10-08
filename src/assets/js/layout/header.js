@@ -58,7 +58,7 @@ function headerAni(preLoaderTimer, homeCheck) {
     if ($(window).width() > 1200) {
         if (homeCheck) {
             const loader = new GLTFLoader()
-            loader.load('./earth.glb', function () {
+            loader.load('./assets/model/earth.glb', function () {
                 setTimeout(() => {
                     ani()
                 }, 3000);

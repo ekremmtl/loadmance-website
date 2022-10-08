@@ -229,7 +229,7 @@ $(function () {
                         }, 500);
 
                         const loader = new GLTFLoader()
-                        loader.load('./earth.glb', function () {
+                        loader.load('./assets/model/earth.glb', function () {
                             setTimeout(() => {
                                 topInfo()
                                 homeHeroAni(preLoaderTimer)
@@ -274,7 +274,7 @@ $(function () {
                     faqAni(false)
 
                     const loader = new GLTFLoader()
-                    loader.load('./earth.glb', function () {
+                    loader.load('./assets/model/earth.glb', function () {
                         setTimeout(() => {
                             homeHeroAni(preLoaderTimer)
                             homeReviewsAni()
