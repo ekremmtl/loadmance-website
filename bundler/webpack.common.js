@@ -29,7 +29,7 @@ module.exports = {
                     { from: "./src/assets/js/lib/swiper.js", to: "assets/js/[name].js" },
                     { from: "./src/assets/js/lib/barba.js", to: "assets/js/[name].js" },
                     { from: "./src/assets/js/lib/jquery.blast.min.js", to: "assets/js/[name].js" },
-                    { from: path.resolve(__dirname, '../static') }
+                    // { from: path.resolve(__dirname, '../static') }
                 ],
             }),
             new BrowserSyncPlugin({
