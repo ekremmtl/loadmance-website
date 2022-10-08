@@ -1,4 +1,23 @@
 // Title
+@keyframes clientAstronaut {
+    0%,
+    100% {
+        transform: translate(0px, -55%);
+    }
+
+    50% {
+        transform: translate(0px, -50%);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .home-reviews-title {
+        img {
+            animation: clientAstronaut 8s infinite both ease-in-out;
+        }
+    }
+}
+
 .home-reviews-title {
     font-size: 94px;
     color: #ffffff;

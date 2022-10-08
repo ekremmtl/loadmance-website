@@ -4,6 +4,147 @@
     FAQ
 {% endblock %}
 
+{% set items = [
+    {
+        title: "Can I purchase from the site?",
+        desc: "
+        You can view the appropriate packages and prices in the pricing area of the site and choose any package suits you the most. When you press the buy button, the website will direct you to the application where firstly you will need to create an account. There is a free package automatically defined for each account. Then you can easily buy the package that suits you in the My Account section. If you have any problems during this process, you can send an e-mail to <a href='mailto:support@loadmance.com' target='_blank'>support@loadmance.com</a>. We will get back to you as soon as possible. 
+        "
+    },
+    {
+        title: "I cannot decide which plan is more suitable for my needs, what should I do?",
+        desc: "
+        Send an e-mail to <a href='mailto:sales@loadmance.com' target='_blank'>sales@loadmance.com</a> and our sales representatives will instantly contact and inform you about the solution that suits you the most.
+        "
+    },
+    {
+        title: "I would like to get more information about the features of the product. How should I proceed?",
+        desc: "
+        You can find more detailed information about the features of our product via the link <a href='https://loadmance.gitbook.io/loadmance/' target='_blank'>https://loadmance.gitbook.io/loadmance/</a>. Or you can reach our sales representatives via our e-mail address <a href='mailto:sales@loadmance.com' target='_blank'>sales@loadmance.com</a> and request a free demo.
+        "
+    },
+    {
+        title: "How can I change my Loadmance plan?",
+        desc: "
+        You can send your request by contacting your sales representative via the e-mail address <a href='mailto:sales@loadmance.com' target='_blank'>sales@loadmance.com</a>. We will assist you with package change in additional short time.
+        "
+    },
+    {
+        title: "I want to store my historical data for a longer period. What should I do?",
+        desc: "
+        You can get detailed information by contacting our sales team at <a href='mailto:sales@loadmance.com' target='_blank'>sales@loadmance.com</a>.
+        "
+    },
+    {
+        title: "How can I use different countries while running my tests?",
+        desc: "
+        When creating a test, you can choose the country that you desire from the Geolocation section. It is even possible to harness at the same time by selecting more than one country and assigning the rates you want to them.
+        "
+    },
+    {
+        title: "Can the network speed be adjusted according to my needs?",
+        desc: "
+        Yes, when creating a test, you can select the desired internet speed from the Network section.
+        "
+    },
+    {
+        title: "I registered to the platform and added the jmx I created in JMeter to my project; however, I can't start my run, what should I do?",
+        desc: "
+        Please check your payment plan in test settings or account settings.
+        "
+    },
+    {
+        title: "Is it possible to compare tests?",
+        desc: "
+        Yes, just enter the project screen with the tests you want to compare, click the Compare Mode button, select the tests you want to compare, and then select your test metrics!
+        "
+    },
+    {
+        title: "Can I be notified about the changes made by my team?",
+        desc: "
+        You can customize your notifications by selecting notification types from the account settings section and be informed about your projects and tests.
+        "
+    },
+    {
+        title: "I want to perform my test run by connecting remotely with VPN, however, I can't run with VPN in Loadmance even though I define IP in JMeter. Is there a way to achieve this?",
+        desc: "
+        Unfortunately, VPN is not allowed. IP definition must be made from Dedicated IP's in the account settings section. You should define as many IPs as how many server engines will be used.
+        "
+    },
+    {
+        title: "Can I use my own IP without purchasing an IP from the Dedicated IP section?",
+        desc: "
+        No. You can only purchase from the Loadmance sales unit. For more detailed information, you can contact <a href='mailto:sales@loadmance.com' target='_blank'>sales@loadmance.com</a>.
+        "
+    },
+    {
+        title: "I want the test scenario I created to run periodically, is this possible?",
+        desc: "
+        Yes, no matter which screen you are on the platform, you can easily switch to the schedules screen next to the Logout button. From here, you can select your tests and metrics, and you can execute an infinite number of runs at desired intervals and also in loops if you want to.
+        "
+    },
+    {
+        title: "In the Dashboard area I can display any metric I want with graphics. Is there a way I can access even more detailed data?",
+        desc: "
+        You can access detailed statistical data by switching to the Report area from the sidebar on the Dashboard screen.
+        "
+    },
+    {
+        title: "It is quite difficult to compare the values of different requests from the add new section in the Dashboard area, is there a place where we can make a selection and see the differences graphically?",
+        desc: "
+        By using the Filters tab in the Dashboard area, you can compare the requests you want much more easily.
+        "
+    },
+    {
+        title: "Who should I contact to give my feedback on the features of the Loadmance product?",
+        desc: "
+        You can send your inquiries and requests about the product to our e-mail address <a href='mailto:product@loadmance.com' target='_blank'>product@loadmance.com</a>.
+        "
+    },
+    {
+        title: "Where can I enter my jmeter variables?",
+        desc: '
+        You can define your values about Property Variable and Property Value by adding a new line under the "Advanced Settings" field in the test configuration section.
+        '
+    },
+    {
+        title: "Can I filter my projects?",
+        desc: "
+        Yes, it is possible to create special labels for projects and filter them according to these labels.
+        "
+    },
+    {
+        title: "I want to track my test results based on URL and metrics specific to my test. Is it possible?",
+        desc: "
+        Of course, you can create your own dashboards on the test run screen and customize your graphics from there.
+        "
+    },
+    {
+        title: "Can I transfer my account to another person?",
+        desc: "
+        Unfortunately, no, we are unable to perform transfers.
+        "
+    },
+    {
+        title: "I have a committed plan; can I terminate the contract unconditionally?",
+        desc: "
+        If you have approved a 1-year commitment, you can unconditionally cancel your contract within the first 15 days. For detailed questions and requests regarding payment and refund processes, please contact your sales representative.
+        "
+    },
+    {
+        title: "I bought a non-committal monthly package. Can I get a refund if I want to cancel after 15 days?",
+        desc: "
+        Since our product is prepaid for monthly purchases without commitment, we cannot refund the fee. We recommend that you continue using it until the end of the month. Your account will be closed automatically at the end of the month.
+        "
+    },
+    {
+        title: "I have purchased a plan with a 1-year commitment but then I realized that I did not want to use the product within the commitment period. Can I get a refund?",
+        desc: "
+        Discounts are applied in annual agreements as commitments are made. In case of withdrawal, the discount given to you during the period you use is calculated and reflected to you as the withdrawal fee. You can directly cancel your contract by paying the withdrawal fee. You will need to reach your sales representative to inform withdrawal processes. Or, you can send your request to our sales team via <a href='mailto:sales@loadmance.com' target='_blank'>sales@loadmance.com</a> e-mail address, we will get back to you as soon as possible.
+        "
+    }
+] %}
+
 {% block header %}
     {% from "../layouts/header.njk" import header %}
     <main data-barba="container" data-barba-namespace="faq-section">
@@ -24,419 +165,27 @@
                     <p>We Asked our Customers What Has Improved Since Using Loadmance.</p>
                 </div>
 
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            I want to buy on the site. How should I proceed?
-                        </span>
+                {% for item in items %}
+                    <div class="faq-item">
+                        <div class="item-header">
+                            <span>
+                                <span>✦</span>
+                                {{item.title}}
+                            </span>
 
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+
+                        <div class="item-body">
+                            <p>
+                                {{item.desc|safe}}
+                            </p>
+                        </div>
                     </div>
-
-                    <div class="item-body">
-                        <p>You can view the appropriate packages and prices in the pricing area of the site and choose the most suitable package for you. When you press the buy button, the website will direct you to the application. Firstly you need to create a account. The free package is automatically defined for each account. Then you can easily buy the package that suits you in the My Account section. If you have problems during this process, you can send an e-mail to <a href="mailto:support@loadmance.com">support@loadmance.com</a>. We will get back to you as soon as possible.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            I can't decide which of the packages on the website is most suitable for me. What should I do?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>If you can send an e-mail to <a href="mailto:sales@loadmance.com">sales@loadmance.com</a>, our sales representatives will contact you and inform you about the most suitable package and solution.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            I would like to get more detailed information about the features of the product. How can I get more detailed information?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>You can find more detailed information about the features of our product via the link <a href="https://loadmance.gitbook.io/loadmance/" target="_blank">https://loadmance.gitbook.io/loadmance/</a>. Or you can reach our sales representatives via our e-mail address <a href="mailto:sales@loadmance.com">sales@loadmance.com</a> and request a free demo.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            I want to change my loadmance package. How should I proceed?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>You can send your request by contacting your sales representative via the e-mail address <a href="mailto:sales@loadmance.com">sales@loadmance.com</a>. We will assist you with package change in additional short time.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            I want to keep my historical data longer. How should I go about this?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>You can get detailed information by contacting our sales team at <a href="mailto:sales@loadmance.com">sales@loadmance.com</a>.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            How can i do my test run from different countries?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>When creating a test, you can choose the country you want from the Geolocation section. It is even possible to harness at the same time by selecting more than one country and assigning the rates you want to them.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            I need to test run according to network speed. Can I provide this?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>When creating a test, you can select the desired internet speed from the Network section and run tests for the use of your application.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            I registered to the application and added the jmx I created in JMeter to my project, but I can't start my run, what should I do?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>Check your payment plan in test settings or account settings.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            Is it possible to compare between tests I ran?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>It is enough to enter the project screen with the tests you want to compare, click the Compare Mode button, select the tests you want to compare, and then select your test metrics.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            Can I be informed about the changes of the team I created in my projects or tests?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>You can customize your notifications by selecting notification types from the account settings section, and be informed about your projects and tests.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            I will do my test run by connecting remotely with VPN, I can't run with VPN in Loadmance even though I define IP in JMeter?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>IP definition must be made from Dedicated IP's in the account settings section. You should define as many IPs as how many server engines will be used.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            Do I have the opportunity to use my own IP without purchasing an IP in the Dedicated IP section?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>No. You can only purchase from the Loadmance sales unit. For more detailed information, you can contact <a href="mailto:sales@loadmance.com">sales@loadmance.com</a>.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            I want the test project I created to run at certain intervals, is this possible?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>No matter which screen you are on on the Loadmance site, you can switch to the schedules screen next to the Logout button. From here, you can select your tests and metrics, and you can run an infinite number of runs at desired intervals and in that loop if you want.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            In the Dashboard area, I can display any metric I want with graphics. But where can I access even more detailed data?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>You can access detailed statistical data by switching to the Report area from the sidebar on the Dashboard screen.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            It is quite difficult to compare the values of different requests from the add new section section in the Dashboard area, is there a place where we can make a selection and see the differences graphically?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>By using the Filters tab in the Dashboard area, you can compare the requests you want much more easily.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            Who should I contact to give my feedback on the features of the Loadmance product?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>You can send your opinions, requests and requests regarding the product to our e-mail address <a href="mailto:product@loadmance.com">product@loadmance.com</a>.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            Where can I enter my jmeter variables.
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>You can define your values about Property Variable and Property Value by adding a new line under the "Advanced Settings" field in the test configuration section.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            Can I filter my projects?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>It is possible to create special labels for projects and filter them according to these labels.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            I want to track my run based on url and metrics specific to my test. Is it possible?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>Of course, you can create your own dashboards on the test run screen and customize your graphics from there.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            Can I transfer my account to another person?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>Unfortunately, we are unable to perform a transfer.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                            I bought a committed package. How long can I terminate the contract unconditionally if I am not satisfied?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>If you have made a 1-year commitment, you can unconditionally cancel your contract within the first 15 days. For detailed questions and requests regarding payment and return processes, please contact your sales representative.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                        I bought a non-committal monthly package. Can I get a refund if I want to cancel after 15 days?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>Since our product is prepaid for monthly purchases without commitment, we cannot refund the fee. We recommend that you continue using it until the end of the month. Your account will be closed automatically at the end of the month.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="item-header">
-                        <span>
-                            <span>✦</span>
-                        I had purchased a product with a 1-year commitment, but I realized that I did not want to use the product within the commitment period. How can I progress?
-                        </span>
-
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16H27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 5V27" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-
-                    <div class="item-body">
-                        <p>Discounts are applied in annual agreements, as commitments are made. In case of withdrawal, the discounts given to you during the period you use are calculated and reflected to you as the withdrawal fee. You can cancel your contract by paying the withdrawal fee. You need to reach your sales representative for withdrawal processes. Or, if you can send your request to our sales team via <a href="mailto:sales@loadmance.com">sales@loadmance.com</a> e-mail address, we will get back to you as soon as possible.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
 
             <div class="quick-link">
@@ -465,13 +214,13 @@
                 <div class="marquee-item">
                     <div class="item-wrapper">
                         <span>#17 Companies</span>
-                        <span>#Used by 48 Countires</span>
+                        <span>#Used by 48 Countries</span>
                         <span>#50+ Customer</span>
                         <span>#17 Companies</span>
-                        <span>#Used by 48 Countires</span>
+                        <span>#Used by 48 Countries</span>
                         <span>#50+ Customer</span>
                         <span>#17 Companies</span>
-                        <span>#Used by 48 Countires</span>
+                        <span>#Used by 48 Countries</span>
                         <span>#50+ Customer</span>
                     </div>
                 </div>
@@ -479,13 +228,13 @@
                 <div class="marquee-item">
                     <div class="item-wrapper">
                         <span>#17 Companies</span>
-                        <span>#Used by 48 Countires</span>
+                        <span>#Used by 48 Countries</span>
                         <span>#50+ Customer</span>
                         <span>#17 Companies</span>
-                        <span>#Used by 48 Countires</span>
+                        <span>#Used by 48 Countries</span>
                         <span>#50+ Customer</span>
                         <span>#17 Companies</span>
-                        <span>#Used by 48 Countires</span>
+                        <span>#Used by 48 Countries</span>
                         <span>#50+ Customer</span>
                     </div>
                 </div>

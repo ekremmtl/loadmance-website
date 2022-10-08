@@ -94,11 +94,11 @@ $(function () {
     function switchPlan() {
         $(".switch-plan .switch-item > input").change(function () {
             if ($(this).is(":checked")) {
-                $(".annual-item").css("display", "none")
-                $(".monthly-item").css("display", "inline-block")
-            } else {
                 $(".annual-item").css("display", "inline-block")
                 $(".monthly-item").css("display", "none")
+            } else {
+                $(".annual-item").css("display", "none")
+                $(".monthly-item").css("display", "inline-block")
             }
         })
     }
@@ -205,6 +205,8 @@ $(function () {
                     })
 
                     if (data.next.namespace === "home-section") {
+                        switchPlan()
+
                         setTimeout(() => {
                             $("body").addClass("overflow-hidden")
                             $("body").removeClass("overflow-initial")

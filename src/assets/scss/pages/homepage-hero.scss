@@ -1,3 +1,20 @@
+@keyframes heroAstronaut {
+    0%,
+    100% {
+        transform: translate(0px, -5px);
+    }
+
+    50% {
+        transform: translate(0px, 5px);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .home-hero .home-hero-content .content-title .title-row .title > span.support-img > .img-item .img > div > img {
+        animation: heroAstronaut 8s infinite both ease-in-out;
+    }
+}
+
 @keyframes scrollDown {
     0% {
         transform: translate(0, -6px);
@@ -59,6 +76,7 @@
     .list-img-sticky {
         position: sticky;
         top: 0;
+        overflow: hidden;
     }
 
     .list-img .list-img-sticky img {
@@ -860,7 +878,7 @@
         }
     }
 
-    .world-info-list .list-img .list-img-sticky img{
+    .world-info-list .list-img .list-img-sticky img {
         transform: translate(100px, 0);
     }
 

@@ -58,8 +58,8 @@ function footerAni() {
             resize();
         }
 
-        marqueeItem(".marquee-1", false, 25)
-        marqueeItem(".marquee-2", true, 50)
+        marqueeItem(".marquee-1", false, 50)
+        marqueeItem(".marquee-2", true, 20)
     }, 300);
 }
 

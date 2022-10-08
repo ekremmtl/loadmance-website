@@ -1,0 +1,117 @@
+{% extends "../main.njk" %}
+
+{% block page_title %}
+   Health - Use Cases
+{% endblock %}
+
+{% block header %}
+    {% from "../layouts/header.njk" import header %}
+    <main data-barba="container" data-barba-namespace="use-cases-section">
+        {{ header() }}
+    {% endblock %}
+
+    {% block content %}
+        <section class="page-banner">
+            <div class="banner-bg"></div>
+
+            <div class="banner-circle circle-2"></div>
+            <div class="banner-circle circle-1"></div>
+
+            <div class="s-container">
+                <div class="banner-breadcrumb">
+                    {# <span>Privicy Policy</span> #}
+                </div>
+
+                <div class="banner-title">
+                    <h1>Privicy Policy</h1>
+                </div>
+        </div>
+        </section>
+
+        <section class="usecase-detail">
+            <div class="detail-container">
+                <div class="detail-item">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quas accusantium deleniti, quisquam iusto odio ut? Nesciunt quia commodi ullam repellendus quae impedit distinctio, mollitia laudantium? Illo temporibus vitae sit.</p>
+                </div>
+
+                <div class="detail-item">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quas accusantium deleniti, quisquam iusto odio ut? Nesciunt quia commodi ullam repellendus quae impedit distinctio, mollitia laudantium? Illo temporibus vitae sit.</p>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-text">
+                        <h2>Enim quas accusantium deleniti</h2>
+
+                        <p>
+                            <span>'</span>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim quas accusantium deleniti,
+                    <span>'</span>
+                        </p>
+
+                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui exercitationem architecto officiis recusandae consectetur, assumenda perferendis, officia, facilis eius alias distinctio ducimus atque quia culpa magni illo provident facere repudiandae!
+                <br>
+                        <br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quae voluptas placeat, nostrum aperiam corporis odit dolorum mollitia quia nemo laudantium illum dicta officia similique voluptatem ratione quam. Tempore, officiis. 
+                <br>
+                        <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui exercitationem architecto officiis recusandae consectetur, assumenda perferendis, officia, facilis eius alias distinctio ducimus atque quia culpa magni illo provident facere repudiandae!
+                <br>
+                        <br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum quae voluptas placeat, nostrum aperiam corporis odit dolorum mollitia quia nemo laudantium illum dicta officia similique voluptatem ratione quam. Tempore, officiis. 
+            </p>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-text">
+                        <h2>Qui exercitationem architecto</h2>
+
+                        <p>
+                            <span>'</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui exercitationem architecto officiis recusandae consectetur, assumenda perferendis.
+                    <span>'</span>
+                        </p>
+
+                        <span>Qui exercitationem architecto, assumenda perferendis</span>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt tempora reiciendis earum veritatis voluptatibus numquam sapiente ducimus, quisquam nam veniam sint voluptates ullam exercitationem officia illo odit! Nulla, dolorem reprehenderit?
+                <br>
+                        <br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora perspiciatis doloribus facere, maiores minus officia voluptas fugit autem harum laboriosam expedita eveniet. Minus ipsum eos sit magni voluptatibus facilis hic.
+                <br>
+                        <br>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias recusandae eaque odit sit consequuntur error asperiores explicabo laborum molestias reiciendis voluptatem cum amet aliquam sapiente voluptatum, magnam temporibus dignissimos deserunt.
+                </p>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-text">
+                        <h2>Id libero architecto corporis</h2>
+
+                        <p>
+                            <span>'</span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id libero architecto corporis asperiores impedit praesentium odio earum, provident aspernatur
+                    <span>'</span>
+                        </p>
+
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+
+    {% block footer %}
+        {% from "../layouts/footer.njk" import footer %}
+        {{ footer(false, "") }}
+    </main>
+{% endblock %}
