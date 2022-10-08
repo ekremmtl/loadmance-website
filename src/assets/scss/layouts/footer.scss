@@ -297,6 +297,24 @@ footer {
                 color: rgba(214, 211, 255, 0.7);
             }
 
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -10px;
+
+                li {
+                    margin: 0 10px;
+
+                    a {
+                        transition: 0.4s;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+
             a > span {
                 font-weight: 600;
             }
@@ -438,13 +456,33 @@ footer {
         }
     }
 
+    @media (max-width: 991px) {
+        .footer-copyright {
+            .footer-container {
+                display: block;
+                text-align: center;
+
+                ul {
+                    margin: 40px 0;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
     @media (max-width: 767px) {
         .footer-copyright {
             padding: 24px 0;
 
             .footer-container {
-                display: block;
-                text-align: center;
+                ul {
+                    margin: 20px 0;
+
+                    li a {
+                        display: inline-block;
+                        padding: 5px 0;
+                    }
+                }
 
                 p {
                     margin-bottom: 16px;

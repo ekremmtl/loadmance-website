@@ -265,6 +265,13 @@ $(function () {
                         faqPage()
                         faqAni(true)
                     }
+
+                    if (data.next.namespace === "contract-section") {
+                        headerAni(preLoaderTimer, false)
+                        topInfo()
+
+                        useCaseAni(false)
+                    }
                 },
 
                 async once(data) {
@@ -337,6 +344,20 @@ $(function () {
 
                         marqueeContainer()
                         faqPage()
+                    }
+
+                    if (data.next.namespace === "contract-section") {
+                        headerAni(preLoaderTimer, false)
+
+                        gsap.to(".pre-loader", {
+                            autoAlpha: 0,
+                            ease: "none",
+                            duration: 0.1,
+                        })
+
+                        $("body").addClass("overflow-initial")
+
+                        useCaseAni()
                     }
                 },
             },

@@ -1,3 +1,12 @@
+.table-responsive {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    table {
+        border-spacing: 0px;
+    }
+}
+
 .page-banner {
     position: relative;
     padding-top: calc(110px + 90px);
@@ -21,7 +30,7 @@
         height: 900px;
         width: 900px;
         border-radius: 100%;
-        background: #100C5D;
+        background: #100c5d;
         filter: blur(190px);
         opacity: 0.8;
     }
@@ -39,7 +48,7 @@
             color: #e7a1ee;
             position: relative;
 
-            +span {
+            + span {
                 margin-left: 10px;
 
                 &:before {
@@ -90,7 +99,6 @@
 
         .s-container {
             .banner-title {
-
                 h1,
                 p {
                     transform: translate(0px, 30px);
@@ -154,10 +162,36 @@
         margin: 0 auto;
         padding: 64px 32px;
 
-        p {
-            color: #04202A;
+        .detail-item + .detail-item {
+            margin-top: 60px;
+        }
+
+        ul,
+        ol {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        p,
+        li,
+        td,
+        th {
+            color: #04202a;
             font-size: 18px;
             line-height: 1.4;
+        }
+
+        table {
+            border: 1px solid rgb(4 32 42 / 50%);
+        }
+
+        td,
+        th {
+            border: 1px solid rgb(4 32 42 / 50%);
+            padding: 20px;
+        }
+
+        p {
             margin-bottom: 24px;
         }
 
@@ -175,7 +209,7 @@
                 text-align: left;
             }
 
-            >span {
+            > span {
                 display: block;
                 margin-bottom: 24px;
                 font-size: 18px;
@@ -187,8 +221,8 @@
                 font-size: 50px;
                 margin-top: 60px;
 
-                >span {
-                    color: #3367E6;
+                > span {
+                    color: #3367e6;
                 }
             }
         }
@@ -213,8 +247,13 @@
         }
 
         @media (max-width: 991px) {
-            .detail-text p {
-                font-size: 32px;
+            .detail-text {
+                p,
+                li,
+                th,
+                td {
+                    font-size: 32px;
+                }
             }
 
             h2 {
@@ -226,7 +265,10 @@
             max-width: 100%;
             padding: 44px 24px;
 
-            p {
+            p,
+            li,
+            th,
+            td {
                 font-size: 16px;
             }
 
@@ -243,7 +285,7 @@
                     margin-top: 40px;
                 }
 
-                >span {
+                > span {
                     padding: 0;
                     font-size: 14px;
                     line-height: normal;
@@ -292,7 +334,7 @@
 
                 .card-item {
                     border-radius: 10px;
-                    background: #0063F7;
+                    background: #0063f7;
                     min-height: 300px;
                     flex: 0 0 calc(33% - 20px);
                     margin: 0 10px;
@@ -337,7 +379,7 @@
             font-size: 20px;
             color: #fff;
             border: 1px solid #0c2549;
-            background-color: #07071C;
+            background-color: #07071c;
             padding: 16px 24px;
             border-radius: 100px;
             display: inline-block;
@@ -352,7 +394,6 @@
         }
 
         .usecase-cards .s-container {
-
             h3,
             .cards-list .card-item {
                 transform: translate(0px, 30px);
@@ -361,7 +402,6 @@
         }
 
         .usecase-extra {
-
             h4,
             p,
             .extra-link {
