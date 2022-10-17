@@ -66,6 +66,8 @@ body {
 }
 
 .switch-plan {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +76,22 @@ body {
     > span {
         color: #fff;
         font-size: 17px;
-        opacity: 0.9;
+        font-weight: 700;
+        min-width: 192px;
+
+        > span {
+            font-size: 16px;
+            color: #606277;
+        }
+     
+        &:nth-child(1) {
+            text-align: right;
+        }
+
+        @media only screen and (max-width: 767px) {
+            min-width: initial;
+            width: 110px;
+        }
     }
 
     .switch-item {
@@ -110,9 +127,21 @@ body {
                 transition: 0.4s;
             }
         }
+    }
 
-        input:checked ~ label .switch-bar > span {
-            transform: translate(22px, -50%);
+    input:checked ~ label .switch-bar > span {
+        transform: translate(22px, -50%);
+    }
+
+    .switch-item label .switch-bar {
+        margin: 0 16px;
+        height: 26px;
+        width: 46px;
+
+        > span {
+            width: 26px;
+            height: 25px;
+            transform: translate(0, -50%);
         }
     }
 }

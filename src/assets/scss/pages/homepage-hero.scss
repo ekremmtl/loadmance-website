@@ -42,12 +42,12 @@
         margin-top: 100vh;
 
         .content-item {
-            max-width: 550px;
+            max-width: 29vw;
             height: 100vh;
 
             > span {
                 font-weight: 700;
-                font-size: 14px;
+                font-size: 0.75vw;
                 letter-spacing: 3px;
                 text-transform: uppercase;
                 color: #0642ff;
@@ -55,39 +55,36 @@
 
             .item-title {
                 font-weight: 700;
-                font-size: 48px;
-
-                /* or 58px */
+                font-size: 2.5vw;
                 color: #ffffff;
-                margin-top: 16px;
+                margin-top: 0.85vw;
             }
 
             p {
-                font-size: 24px;
-                line-height: 36px;
-
-                /* or 150% */
-                color: #606277;
-                margin-top: 16px;
+                font-size: 1.26vw;
+                line-height: 1.9vw;
+                color: #d7d8df;
+                margin-top: 0.85vw;
             }
         }
     }
 
-    .list-img-sticky {
-        position: sticky;
-        top: 0;
-        overflow: hidden;
-    }
+    .list-img {
+        flex: 1;
 
-    .list-img .list-img-sticky img {
-        + img {
-            position: absolute;
+        .list-img-sticky {
+            position: sticky;
             top: 0;
-            left: 0;
-        }
+            overflow: hidden;
+            height: 100vh;
 
-        opacity: 0;
-        transform: translate(200px, 0px);
+            img {
+                position: absolute;
+                top: 50%;
+                opacity: 0;
+                transform: translate(200px, -43%);
+            }
+        }
     }
 }
 
@@ -280,6 +277,7 @@
 
     .marquee-container {
         overflow: hidden;
+        padding-top: 400px;
         padding-bottom: 50px;
 
         .marquee-item {
@@ -288,6 +286,10 @@
                 0px 22.6663px 75.4909px rgba(0, 0, 0, 0.0332666);
             border: none;
             padding: 43px 0px;
+
+            img {
+                max-width: 300px;
+            }
 
             &:first-child {
                 background: #023dd3;
@@ -298,6 +300,14 @@
                 margin-right: -10px;
                 margin-left: -10px;
             }
+        }
+
+        @media only screen and (max-width: 1199px) {
+            padding-top: 250px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            padding-top: 150px;
         }
     }
 
@@ -879,7 +889,7 @@
     }
 
     .world-info-list .list-img .list-img-sticky img {
-        transform: translate(100px, 0);
+        transform: translate(100px, -43%);
     }
 
     .world-info-list .list-content {

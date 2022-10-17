@@ -92,7 +92,19 @@ $(function () {
     }
 
     function switchPlan() {
-        $(".switch-plan .switch-item > input").change(function () {
+        $(".annual-item").css("display", "none")
+        
+        $(".home-pricing-container .switch-plan .switch-item > input").change(function () {
+            if ($(this).is(":checked")) {
+                $(".annual-item").css("display", "flex")
+                $(".monthly-item").css("display", "none")
+            } else {
+                $(".annual-item").css("display", "none")
+                $(".monthly-item").css("display", "flex")
+            }
+        })
+        
+        $(".pricing-banner .switch-plan .switch-item > input").change(function () {
             if ($(this).is(":checked")) {
                 $(".annual-item").css("display", "inline-block")
                 $(".monthly-item").css("display", "none")

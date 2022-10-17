@@ -24,46 +24,85 @@
         padding-bottom: 60px;
         position: relative;
 
-        .switch-plan {
-            > span {
-                > span {
-                    font-size: 16px;
-                    color: #606277;
-                }
+        .price-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
 
-                font-weight: 700;
-                opacity: 1;
-                min-width: 192px;
-
-                &:nth-child(1) {
-                    text-align: right;
-                }
-
-                @media only screen and (max-width: 767px) {
-                    min-width: initial;
-                    width: 110px;
-                }
+            @media only screen and (max-width: 991px) {
+                display: block;
             }
+        }
 
-            input:checked ~ label .switch-bar > span {
-                transform: translate(22px, -50%);
-            }
-
-            .switch-item label .switch-bar {
-                margin: 0 16px;
-                height: 26px;
-                width: 46px;
-
-                > span {
-                    width: 26px;
-                    height: 25px;
-                    transform: translate(0, -50%);
-                }
-            }
-
-            margin-top: 70px;
+        .price-btn {
+            display: inline-block;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+            border-radius: 8px;
             position: relative;
             z-index: 1;
+            overflow: hidden;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                right: 2px;
+                bottom: 2px;
+                border-radius: 8px;
+                background: #000;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: radial-gradient(80.69% 208.78% at 108.28% 112.58%, #eabfff 0%, rgba(135, 38, 183, 0) 100%),
+                    radial-gradient(80.38% 222.5% at -13.75% -12.36%, #98f9ff 0%, rgba(255, 255, 255, 0) 100%);
+            }
+
+            > span {
+                display: block;
+                padding: 13px 53px;
+                white-space: nowrap;
+                position: relative;
+                z-index: 1;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    right: 2px;
+                    bottom: 2px;
+                    border-radius: 8px;
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                        radial-gradient(
+                            90.16% 143.01% at 15.32% 21.04%,
+                            rgba(165, 239, 255, 0.2) 0%,
+                            rgba(110, 191, 244, 0.0447917) 77.08%,
+                            rgba(70, 144, 213, 0) 100%
+                        );
+                }
+
+                > span {
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+
+            @media only screen and (max-width: 991px) {
+                margin-top: 40px;
+            }
+        }
+
+        .switch-plan {
+            margin-top: 70px;
         }
 
         .pricing-row {
@@ -121,6 +160,7 @@
         max-width: 1114px;
         margin: 0 auto;
 
+        .price-content > p,
         > p {
             font-size: 24px;
             line-height: 35px;
@@ -390,6 +430,7 @@
         padding: 200px 24px 150px;
 
         .pricing-row {
+            .price-content > p,
             > p {
                 font-size: 15px;
                 line-height: 1.2;

@@ -199,6 +199,12 @@
             padding: 48px;
             position: relative;
             z-index: 1;
+
+            img {
+                &.small-img {
+                    max-width: 100px;
+                }
+            }
         }
     }
 
