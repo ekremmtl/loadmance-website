@@ -16,6 +16,16 @@ ul {
     list-style: none;
 }
 
+// Class
+.bg-black {
+    background-color: #000;
+}
+
+.pin-spacer {
+    pointer-events: none;
+}
+
+// Container
 .s-container {
     max-width: 1280px;
     margin: 0 auto;
@@ -26,6 +36,7 @@ ul {
     }
 }
 
+// Body
 body {
     font-family: "ObjectSans";
     line-height: 1;
@@ -53,14 +64,7 @@ body {
     }
 }
 
-.bg-black {
-    background-color: #000;
-}
-
-.pin-spacer {
-    pointer-events: none;
-}
-
+// Switch Price
 .annual-item {
     display: none;
 }
@@ -146,34 +150,7 @@ body {
     }
 }
 
-div#container:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 300px;
-    height: 600px;
-    filter: blur(220px);
-    background: #419efc;
-    opacity: 0.4;
-}
-
-div#container:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 400px;
-    height: 500px;
-    filter: blur(220px);
-    background: #6d507b;
-    opacity: 0.8;
-}
-
-div#container {
-    background: #161620;
-}
-
+// Earth
 div#earth-container {
     position: fixed;
     top: 0;

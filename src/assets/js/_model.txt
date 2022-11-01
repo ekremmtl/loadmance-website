@@ -1,7 +1,0 @@
-https://codepen.io/tr13ze/pen/pbjWwg
-https://www.vantajs.com/?effect=fog#(backgroundAlpha:1,baseColor:0,blurFactor:0.75,gyroControls:!f,highlightColor:0,lowlightColor:0,midtoneColor:9765119,minHeight:200,minWidth:200,mouseControls:!t,scale:2,scaleMobile:4,speed:2.3000000000000003,touchControls:!t,zoom:1)
-https://speckyboy.com/shaders-realistic-special-effects-web-design/
-http://colordodge.com/tag/three-js/
-
-https://www.youtube.com/watch?v=NgWGllOjkbs
-https://www.youtube.com/watch?v=t1_kviNJsy4

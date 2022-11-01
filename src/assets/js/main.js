@@ -7,7 +7,7 @@ import { useCaseAni } from './page/use-case'
 import { homeHeroAni } from './page/homepage-hero'
 import { homeFaq } from './page/homepage-faq'
 import { homeModelAni } from './page/homepage-model'
-import { homeReviewsAni } from './page/homepage-reviews' // All Animations
+import { homeSectionsAni } from './page/homepage-sections' // All Animations
 
 import { faqPage, faqAni } from './page/faq'
 
@@ -247,7 +247,7 @@ $(function () {
                             setTimeout(() => {
                                 topInfo()
                                 homeHeroAni(preLoaderTimer)
-                                homeReviewsAni()
+                                homeSectionsAni()
                                 footerAni();
                             }, 3000);
                         });
@@ -298,7 +298,7 @@ $(function () {
                     loader.load('./assets/model/earth.glb', function () {
                         setTimeout(() => {
                             homeHeroAni(preLoaderTimer)
-                            homeReviewsAni()
+                            homeSectionsAni()
                         }, 2500);
                     });
 

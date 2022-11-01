@@ -17,10 +17,6 @@ module.exports = {
     devtool: 'source-map',
     plugins:
         [
-            // new webpack.ProvidePlugin({
-            //     $: 'jquery',
-            //     jQuery: 'jquery'
-            // }),
             new CopyWebpackPlugin({
                 patterns: [
                     { from: "./src/assets/favicon", to: "assets/favicon" },
@@ -29,7 +25,6 @@ module.exports = {
                     { from: "./src/assets/js/lib/swiper.js", to: "assets/js/[name].js" },
                     { from: "./src/assets/js/lib/barba.js", to: "assets/js/[name].js" },
                     { from: "./src/assets/js/lib/jquery.blast.min.js", to: "assets/js/[name].js" },
-                    // { from: path.resolve(__dirname, '../static') }
                 ],
             }),
             new BrowserSyncPlugin({
